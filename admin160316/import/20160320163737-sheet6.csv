@@ -1,0 +1,69 @@
+Active (0/1);Name *;Categories (x,y,z...);Reference #;Tags,(x,y,z...);Feature(Name:Value:Position)
+1;Taj mahal;4,8;Agra;Agra,Taj,mahal;State:Agra,Dist/Location:Agra,Taj,mahal
+1;Puri Jagannath;4,8;Puri;Puri,Puri,Jagannath;State:Puri,Dist/Location:Puri,Puri,Jagannath
+1;Konak sun Temple;4,8;Khurda;Khurda,Konak,sun,Temple;State:Khurda,Dist/Location:Khurda,Konak,sun,Temple
+1;Chilika lake;4,8;Khurda,Ganjam;Khurda,Ganjam,Chilika,lake;State:Khurda,Ganjam,Dist/Location:Khurda,Ganjam,Chilika,lake
+1;Lingaraj Temple;4,8;Khurda;Khurda,Lingaraj,Temple;State:Khurda,Dist/Location:Khurda,Lingaraj,Temple
+1;Puri Beach;4,8;Puri;Puri,Puri,Beach;State:Puri,Dist/Location:Puri,Puri,Beach
+1;Lokonatha Shiv temple;4,8;Puri;Puri,Lokonatha,Shiv,temple;State:Puri,Dist/Location:Puri,Lokonatha,Shiv,temple
+1;Mata Matha;4,8;Puri;Puri,Mata,Matha;State:Puri,Dist/Location:Puri,Mata,Matha
+1;Dhauligiri Caves;4,8;Khurda;Khurda,Dhauligiri,Caves;State:Khurda,Dist/Location:Khurda,Dhauligiri,Caves
+1;Udayagiri Caves;4,8;Khurda;Khurda,Udayagiri,Caves;State:Khurda,Dist/Location:Khurda,Udayagiri,Caves
+1;Kandagiri Caves;4,8;Khurda;Khurda,Kandagiri,Caves;State:Khurda,Dist/Location:Khurda,Kandagiri,Caves
+1;Raja Rani Temple;4,8;Khurda;Khurda,Raja,Rani,Temple;State:Khurda,Dist/Location:Khurda,Raja,Rani,Temple
+1;Similipal National Park;4,8;Mayurbhanj;Mayurbhanj,Similipal,National,Park;State:Mayurbhanj,Dist/Location:Mayurbhanj,Similipal,National,Park
+1;Nandan Kanan;4,8;Bhubaneswar;Bhubaneswar,Nandan,Kanan;State:Bhubaneswar,Dist/Location:Bhubaneswar,Nandan,Kanan
+1;Barabati Durga;4,8;Cuttack;Cuttack,Barabati,Durga;State:Cuttack,Dist/Location:Cuttack,Barabati,Durga
+1;Ratna Giri;4,8;Jajpur;Jajpur,Ratna,Giri;State:Jajpur,Dist/Location:Jajpur,Ratna,Giri
+1;Kapilasa;4,8;Dhenkanal;Dhenkanal,Kapilasa;State:Dhenkanal,Dist/Location:Dhenkanal,Kapilasa
+1;Sapta Sajya;4,8;Dhenkanal;Dhenkanal,Sapta,Sajya;State:Dhenkanal,Dist/Location:Dhenkanal,Sapta,Sajya
+1;Khandadhar;4,8;Keonjhar;Keonjhar,Khandadhar;State:Keonjhar,Dist/Location:Keonjhar,Khandadhar
+1;Joranda Gadi;4,8;Dhenkanal;Dhenkanal,Joranda,Gadi;State:Dhenkanal,Dist/Location:Dhenkanal,Joranda,Gadi
+1;Kalijai Temple;4,8;Khurdha;Khurdha,Kalijai,Temple;State:Khurdha,Dist/Location:Khurdha,Kalijai,Temple
+1;Puri Baliharchandi Temple;4,8;Puri;Puri,Puri,Baliharchandi,Temple;State:Puri,Dist/Location:Puri,Puri,Baliharchandi,Temple
+1;Daringbadi;4,8;Phulbani;Phulbani,Daringbadi;State:Phulbani,Dist/Location:Phulbani,Daringbadi
+1;Paradeep Port;4,8;Jagatsinghpur;Jagatsinghpur,Paradeep,Port;State:Jagatsinghpur,Dist/Location:Jagatsinghpur,Paradeep,Port
+1;Gopalapur Port;4,8;Ganjam;Ganjam,Gopalapur,Port;State:Ganjam,Dist/Location:Ganjam,Gopalapur,Port
+1;Kolab Dam;4,8;Koraput;Koraput,Kolab,Dam;State:Koraput,Dist/Location:Koraput,Kolab,Dam
+1;Duduma Waterfall;4,8;Koraput;Koraput,Duduma,Waterfall;State:Koraput,Dist/Location:Koraput,Duduma,Waterfall
+1;Gupteswara;4,8;Koraput;Koraput,Gupteswara;State:Koraput,Dist/Location:Koraput,Gupteswara
+1;Tikarpada;4,8;Anugul;Anugul,Tikarpada;State:Anugul,Dist/Location:Anugul,Tikarpada
+1;Hirakud Dam;4,8;Sambalpur;Sambalpur,Hirakud,Dam;State:Sambalpur,Dist/Location:Sambalpur,Hirakud,Dam
+1;Sanaghagara Waterfall;4,8;Keonjhar;Keonjhar,Sanaghagara,Waterfall;State:Keonjhar,Dist/Location:Keonjhar,Sanaghagara,Waterfall
+1;Badaghagara Waterfall;4,8;Keonjhar;Keonjhar,Badaghagara,Waterfall;State:Keonjhar,Dist/Location:Keonjhar,Badaghagara,Waterfall
+1;Maa Tarini Temple ,Ghatgaon;4,8;Keonjhar;Keonjhar,Maa,Tarini,Temple,Ghatgaon;State:Keonjhar,Dist/Location:Keonjhar,Maa,Tarini,Temple,Ghatgaon
+1;Taptapani;4,8;Ganjam;Ganjam,Taptapani;State:Ganjam,Dist/Location:Ganjam,Taptapani
+1;Panchalingeswar;4,8;Baleswar;Baleswar,Panchalingeswar;State:Baleswar,Dist/Location:Baleswar,Panchalingeswar
+1;Devkund;4,8;Mayurbhanj;Mayurbhanj,Devkund;State:Mayurbhanj,Dist/Location:Mayurbhanj,Devkund
+1;Harishankar Waterfall;4,8;Balangir;Balangir,Harishankar,Waterfall;State:Balangir,Dist/Location:Balangir,Harishankar,Waterfall
+1;Pradhanpath Waterfall;4,8;Deogarh;Deogarh,Pradhanpath,Waterfall;State:Deogarh,Dist/Location:Deogarh,Pradhanpath,Waterfall
+1;Hatipathar Waterfall;4,8;Rayagada;Rayagada,Hatipathar,Waterfall;State:Rayagada,Dist/Location:Rayagada,Hatipathar,Waterfall
+1;Phurli Jharan Waterfall;4,8;Kalahandi,Bhabanipatna;Kalahandi,Bhabanipatna,Phurli,Jharan,Waterfall;State:Kalahandi,Bhabanipatna,Dist/Location:Kalahandi,Bhabanipatna,Phurli,Jharan,Waterfall
+1;Nrusimhanath Waterfall;4,8;Bargarh;Bargarh,Nrusimhanath,Waterfall;State:Bargarh,Dist/Location:Bargarh,Nrusimhanath,Waterfall
+1;Mruga Mahadev Waterfall;4,8;Keonjhar;Keonjhar,Mruga,Mahadev,Waterfall;State:Keonjhar,Dist/Location:Keonjhar,Mruga,Mahadev,Waterfall
+1;Handibhanga Waterfall;4,8;Mayurbhanj;Mayurbhanj,Handibhanga,Waterfall;State:Mayurbhanj,Dist/Location:Mayurbhanj,Handibhanga,Waterfall
+1;Khanduala Waterfall;4,8;Kalahandi,Bhabanipatna;Kalahandi,Bhabanipatna,Khanduala,Waterfall;State:Kalahandi,Bhabanipatna,Dist/Location:Kalahandi,Bhabanipatna,Khanduala,Waterfall
+1;Miriglotah Waterfall;4,8;Rourkela;Rourkela,Miriglotah,Waterfall;State:Rourkela,Dist/Location:Rourkela,Miriglotah,Waterfall
+1;Putudi Waterfall;4,8;Phulbani;Phulbani,Putudi,Waterfall;State:Phulbani,Dist/Location:Phulbani,Putudi,Waterfall
+1;Maa Chandi Temple;4,8;Cuttack;Cuttack,Maa,Chandi,Temple;State:Cuttack,Dist/Location:Cuttack,Maa,Chandi,Temple
+1;Dhabaleswara Temple;4,8;Cuttack;Cuttack,Dhabaleswara,Temple;State:Cuttack,Dist/Location:Cuttack,Dhabaleswara,Temple
+1;Barehipani Waterfalls;4,8;Mayurbhanj;Mayurbhanj,Barehipani,Waterfalls;State:Mayurbhanj,Dist/Location:Mayurbhanj,Barehipani,Waterfalls
+1;Bagra Waterfall;4,8;Koraput;Koraput,Bagra,Waterfall;State:Koraput,Dist/Location:Koraput,Bagra,Waterfall
+1;Bhitarkanika National Forest;8;Kendrapada;Kendrapada,Bhitarkanika,National,Forest;State:Kendrapada,Dist/Location:Kendrapada,Bhitarkanika,National,Forest
+1;Ushakothi,Badrama  Wildlife Sanctuary;8;Sambalpur;Sambalpur,Ushakothi,Badrama,Wildlife,Sanctuary;State:Sambalpur,Dist/Location:Sambalpur,Ushakothi,Badrama,Wildlife,Sanctuary
+1;Baisipalli  Wildlife Sanctuary;8;Nayagarh;Nayagarh,Baisipalli,Wildlife,Sanctuary;State:Nayagarh,Dist/Location:Nayagarh,Baisipalli,Wildlife,Sanctuary
+1;Balukhand Konark  Wildlife Sanctuary;8;Puri;Puri,Balukhand,Konark,Wildlife,Sanctuary;State:Puri,Dist/Location:Puri,Balukhand,Konark,Wildlife,Sanctuary
+1;Bhitarkanika  Wildlife Sanctuary;8;Kendrapada;Kendrapada,Bhitarkanika,Wildlife,Sanctuary;State:Kendrapada,Dist/Location:Kendrapada,Bhitarkanika,Wildlife,Sanctuary
+1;Chandaka Dampara  Wildlife Sanctuary;8;Bhubaneswar;Bhubaneswar,Chandaka,Dampara,Wildlife,Sanctuary;State:Bhubaneswar,Dist/Location:Bhubaneswar,Chandaka,Dampara,Wildlife,Sanctuary
+1;Chilika (Nalaban)  Wildlife Sanctuary;8;Khurda,Ganjam;Khurda,Ganjam,Chilika,(Nalaban),Wildlife,Sanctuary;State:Khurda,Ganjam,Dist/Location:Khurda,Ganjam,Chilika,(Nalaban),Wildlife,Sanctuary
+1;Debrigarh  Wildlife Sanctuary;8;Bargarh;Bargarh,Debrigarh,Wildlife,Sanctuary;State:Bargarh,Dist/Location:Bargarh,Debrigarh,Wildlife,Sanctuary
+1;Gahirmatha (Marine)  Wildlife Sanctuary;8;Kendrapada;Kendrapada,Gahirmatha,(Marine),Wildlife,Sanctuary;State:Kendrapada,Dist/Location:Kendrapada,Gahirmatha,(Marine),Wildlife,Sanctuary
+1;Hadgarh  Wildlife Sanctuary;8;Keonjhar;Keonjhar,Hadgarh,Wildlife,Sanctuary;State:Keonjhar,Dist/Location:Keonjhar,Hadgarh,Wildlife,Sanctuary
+1;Karlapat  Wildlife Sanctuary;8;Kalahandi,Bhabanipatna;Kalahandi,Bhabanipatna,Karlapat,Wildlife,Sanctuary;State:Kalahandi,Bhabanipatna,Dist/Location:Kalahandi,Bhabanipatna,Karlapat,Wildlife,Sanctuary
+1;Khalasuni  Wildlife Sanctuary;8;Sambalpur;Sambalpur,Khalasuni,Wildlife,Sanctuary;State:Sambalpur,Dist/Location:Sambalpur,Khalasuni,Wildlife,Sanctuary
+1;Kotagarh  Wildlife Sanctuary;8;Kandhamal;Kandhamal,Kotagarh,Wildlife,Sanctuary;State:Kandhamal,Dist/Location:Kandhamal,Kotagarh,Wildlife,Sanctuary
+1;Kuldiha  Wildlife Sanctuary;8;Baleswar;Baleswar,Kuldiha,Wildlife,Sanctuary;State:Baleswar,Dist/Location:Baleswar,Kuldiha,Wildlife,Sanctuary
+1;Lakhari Valley  Wildlife Sanctuary;8;Ganjam;Ganjam,Lakhari,Valley,Wildlife,Sanctuary;State:Ganjam,Dist/Location:Ganjam,Lakhari,Valley,Wildlife,Sanctuary
+1;Satkosia Gorge  Wildlife Sanctuary;8;Anugul;Anugul,Satkosia,Gorge,Wildlife,Sanctuary;State:Anugul,Dist/Location:Anugul,Satkosia,Gorge,Wildlife,Sanctuary
+1;Sunabeda  Wildlife Sanctuary;8;Nuapada;Nuapada,Sunabeda,Wildlife,Sanctuary;State:Nuapada,Dist/Location:Nuapada,Sunabeda,Wildlife,Sanctuary
+1;Gahirmatha Beach;8;Kendrapada;Kendrapada,Gahirmatha,Beach;State:Kendrapada,Dist/Location:Kendrapada,Gahirmatha,Beach

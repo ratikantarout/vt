@@ -1,0 +1,305 @@
+ID;Active (0/1);Name *;Categories (x,y,z...);Reference #;EAN13;Tags,(x,y,z...);Feature(Name:Value:Position)
+75;1;Gateway of india;8;mumbai;Maharashtra;Gateway,of,india,mumbai,Maharashtra;State:Maharashtra,Dist/Location:mumbai
+76;1;Mahalakshmi Temple;8;mumbai;Maharashtra;Mahalakshmi,Temple,mumbai,Maharashtra;State:Maharashtra,Dist/Location:mumbai
+77;1;Siddhivinayak temple;8;mumbai;Maharashtra;Siddhivinayak,temple,mumbai,Maharashtra;State:Maharashtra,Dist/Location:mumbai
+78;1;Chhatrapati Shivaji Terminus;8;mumbai;Maharashtra;Chhatrapati,Shivaji,Terminus,mumbai,Maharashtra;State:Maharashtra,Dist/Location:mumbai
+79;1;Bhimashankar Temple;8;Khed;Maharashtra;Bhimashankar,Temple,Khed,Maharashtra;State:Maharashtra,Dist/Location:Khed
+80;1;Dagdusheth Ganpati;8;Pune;Maharashtra;Dagdusheth,Ganpati,Pune,Maharashtra;State:Maharashtra,Dist/Location:Pune
+81;1;Mahalakshmi Temple;8;Kolhapur;Maharashtra;Mahalakshmi,Temple,Kolhapur,Maharashtra;State:Maharashtra,Dist/Location:Kolhapur
+82;1;Mount Mary Church;8;mumbai;Maharashtra;Mount,Mary,Church,mumbai,Maharashtra;State:Maharashtra,Dist/Location:mumbai
+83;1;Global Vipassana Pagoda;8;mumbai;Maharashtra;Global,Vipassana,Pagoda,mumbai,Maharashtra;State:Maharashtra,Dist/Location:mumbai
+84;1;Babulnath;8;mumbai;Maharashtra;Babulnath,mumbai,Maharashtra;State:Maharashtra,Dist/Location:mumbai
+85;1;Tadoba National Park;8;Chandrapur;Maharashtra;Tadoba,National,Park,Chandrapur,Maharashtra;State:Maharashtra,Dist/Location:Chandrapur
+86;1;Karla Caves;8;Lonavala;Maharashtra;Karla,Caves,Lonavala,Maharashtra;State:Maharashtra,Dist/Location:Lonavala
+87;1;Essel World;8;Gorai,mumbai;Maharashtra;Essel,World,Gorai,mumbai,Maharashtra;State:Maharashtra,Dist/Location:Gorai,mumbai
+88;1;Elephanta Caves and island;8;Gharapuri;Maharashtra;Elephanta,Caves,and,island,Gharapuri,Maharashtra;State:Maharashtra,Dist/Location:Gharapuri
+89;1;Adlabs Imagica;8;Khopoli;Maharashtra;Adlabs,Imagica,Khopoli,Maharashtra;State:Maharashtra,Dist/Location:Khopoli
+90;1;Aga Khan Palace;8;Pune;Maharashtra;Aga,Khan,Palace,Pune,Maharashtra;State:Maharashtra,Dist/Location:Pune
+91;1;Shaniwar Wada;8;Pune;Maharashtra;Shaniwar,Wada,Pune,Maharashtra;State:Maharashtra,Dist/Location:Pune
+92;1;Sinhagad Fort;8;Sinhagad;Maharashtra;Sinhagad,Fort,Sinhagad,Maharashtra;State:Maharashtra,Dist/Location:Sinhagad
+93;1;Raja Dinkar Kelkar Museum;8;Pune;Maharashtra;Raja,Dinkar,Kelkar,Museum,Pune,Maharashtra;State:Maharashtra,Dist/Location:Pune
+94;1;Parvati Hill;8;Pune;Maharashtra;Parvati,Hill,Pune,Maharashtra;State:Maharashtra,Dist/Location:Pune
+95;1;Haji Ali Dargah;8;Pune;Maharashtra;Haji,Ali,Dargah,Pune,Maharashtra;State:Maharashtra,Dist/Location:Pune
+96;1;Pataleshwar;8;Pune;Maharashtra;Pataleshwar,Pune,Maharashtra;State:Maharashtra,Dist/Location:Pune
+97;1;Sanjay Gandhi National Park;8;mumbai;Maharashtra;Sanjay,Gandhi,National,Park,mumbai,Maharashtra;State:Maharashtra,Dist/Location:mumbai
+98;1;Kanheri Caves;8;mumbai;Maharashtra;Kanheri,Caves,mumbai,Maharashtra;State:Maharashtra,Dist/Location:mumbai
+99;1;Girgaum Chowpatty;8;mumbai;Maharashtra;Girgaum,Chowpatty,mumbai,Maharashtra;State:Maharashtra,Dist/Location:mumbai
+100;1;Bibi Ka Maqbara;8;Aurangabad;Maharashtra;Bibi,Ka,Maqbara,Aurangabad,Maharashtra;State:Maharashtra,Dist/Location:Aurangabad
+101;1;Lohagad;8;Lonavala;Maharashtra;Lohagad,Lonavala,Maharashtra;State:Maharashtra,Dist/Location:Lonavala
+102;1;Chaturshringi Temple;8;Pune;Maharashtra;Chaturshringi,Temple,Pune,Maharashtra;State:Maharashtra,Dist/Location:Pune
+103;1;Rajiv Gandhi Zoological Park;8;Pune;Maharashtra;Rajiv,Gandhi,Zoological,Park,Pune,Maharashtra;State:Maharashtra,Dist/Location:Pune
+104;1;Bhushi Dam;8;Lonavala;Maharashtra;Bhushi,Dam,Lonavala,Maharashtra;State:Maharashtra,Dist/Location:Lonavala
+105;1;Raigad Fort;8;mumbai;Maharashtra;Raigad,Fort,mumbai,Maharashtra;State:Maharashtra,Dist/Location:mumbai
+106;1;Murud-Janjira;8;Raigad;Maharashtra;Murud-Janjira,Raigad,Maharashtra;State:Maharashtra,Dist/Location:Raigad
+107;1;Jehangir Art Gallery;8;mumbai;Maharashtra;Jehangir,Art,Gallery,mumbai,Maharashtra;State:Maharashtra,Dist/Location:mumbai
+108;1;Sula Vineyards;8;Nashik;Maharashtra;Sula,Vineyards,Nashik,Maharashtra;State:Maharashtra,Dist/Location:Nashik
+109;1;Khadakwasla Dam;8;Pune;Maharashtra;Khadakwasla,Dam,Pune,Maharashtra;State:Maharashtra,Dist/Location:Pune
+110;1;Saptashrungi;8;Nashik;Maharashtra;Saptashrungi,Nashik,Maharashtra;State:Maharashtra,Dist/Location:Nashik
+111;1;Pandavleni Caves;8;Nashik;Maharashtra;Pandavleni,Caves,Nashik,Maharashtra;State:Maharashtra,Dist/Location:Nashik
+112;1;Mumba Devi Temple;8;mumbai;Maharashtra;Mumba,Devi,Temple,mumbai,Maharashtra;State:Maharashtra,Dist/Location:mumbai
+113;1;Rankala Lake;8;Kolhapur;Maharashtra;Rankala,Lake,Kolhapur,Maharashtra;State:Maharashtra,Dist/Location:Kolhapur
+114;1;Kamala Nehru Park;8;mumbai;Maharashtra;Kamala,Nehru,Park,mumbai,Maharashtra;State:Maharashtra,Dist/Location:mumbai
+115;1;Panhala Fort;8;Panhala;Maharashtra;Panhala,Fort,Panhala,Maharashtra;State:Maharashtra,Dist/Location:Panhala
+116;1;Kalsubai;8;Nasik,Akole,Ahmednagar;Maharashtra;Kalsubai,Nasik,Akole,Ahmednagar,Maharashtra;State:Maharashtra,Dist/Location:Nasik,Akole,Ahmednagar
+117;1;Panchakki;8;Aurangabad;Maharashtra;Panchakki,Aurangabad,Maharashtra;State:Maharashtra,Dist/Location:Aurangabad
+118;1;Hazur Sahib Nanded;8;Nanded;Maharashtra;Hazur,Sahib,Nanded,Nanded,Maharashtra;State:Maharashtra,Dist/Location:Nanded
+119;1;Shivneri;8;Pune;Maharashtra;Shivneri,Pune,Maharashtra;State:Maharashtra,Dist/Location:Pune
+120;1;Shivaji Park;8;mumbai;Maharashtra;Shivaji,Park,mumbai,Maharashtra;State:Maharashtra,Dist/Location:mumbai
+121;1;Ellora Caves;8;Aurangabad;Maharashtra;Ellora,Caves,Aurangabad,Maharashtra;State:Maharashtra,Dist/Location:Aurangabad
+122;1;Marine Drive;8;mumbai;Maharashtra;Marine,Drive,mumbai,Maharashtra;State:Maharashtra,Dist/Location:mumbai
+123;1;Colaba;8;mumbai;Maharashtra;Colaba,mumbai,Maharashtra;State:Maharashtra,Dist/Location:mumbai
+124;1;Mahabaleshwar;8;Satara;Maharashtra;Mahabaleshwar,Satara,Maharashtra;State:Maharashtra,Dist/Location:Satara
+125;1;Malsej Ghat;8;Pune;Maharashtra;Malsej,Ghat,Pune,Maharashtra;State:Maharashtra,Dist/Location:Pune
+126;1;Sri balaji Temple;8;mumbai;Maharashtra;Sri,balaji,Temple,mumbai,Maharashtra;State:Maharashtra,Dist/Location:mumbai
+127;1;Prithvi Theatre;8;mumbai;Maharashtra;Prithvi,Theatre,mumbai,Maharashtra;State:Maharashtra,Dist/Location:mumbai
+128;1;Nariman Point;8;mumbai;Maharashtra;Nariman,Point,mumbai,Maharashtra;State:Maharashtra,Dist/Location:mumbai
+129;1;Matheran;8;Karjat;Maharashtra;Matheran,Karjat,Maharashtra;State:Maharashtra,Dist/Location:Karjat
+130;1;Victoria Memorial;8;Kolkata;West Bengal;Victoria,Memorial,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+131;1;Dakshineswar Kali Temple;8;Kolkata;West Bengal;Dakshineswar,Kali,Temple,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+132;1;Indian Museum;8;Kolkata;West Bengal;Indian,Museum,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+133;1;Science City Kolkata;8;Kolkata;West Bengal;Science,City,Kolkata,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+134;1;Sundarbans National Park;8;Kolkata;West Bengal;Sundarbans,National,Park,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+135;1;Tiger Hill;8;Darjeeling;West Bengal;Tiger,Hill,Darjeeling,West,Bengal;State:West Bengal,Dist/Location:Darjeeling
+136;1;Darjeeling Himalayan Railway;8;Darjeeling;West Bengal;Darjeeling,Himalayan,Railway,Darjeeling,West,Bengal;State:West Bengal,Dist/Location:Darjeeling
+137;1;Eden Gardens;8;Kolkata;West Bengal;Eden,Gardens,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+138;1;Padmaja Naidu Himalayan Zoological Park;8;Kolkata;West Bengal;Padmaja,Naidu,Himalayan,Zoological,Park,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+139;1;Howrah Bridge;8;Kolkata;West Bengal;Howrah,Bridge,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+140;1;Peace Pagoda, Darjeeling;8;Darjeeling;West Bengal;Peace,Pagoda,Darjeeling,Darjeeling,West,Bengal;State:West Bengal,Dist/Location:Darjeeling
+141;1;Batasia Loop;8;Darjeeling;West Bengal;Batasia,Loop,Darjeeling,West,Bengal;State:West Bengal,Dist/Location:Darjeeling
+142;1;New Town Eco Park;8;Kolkata;West Bengal;New,Town,Eco,Park,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+143;1;Belur Math;8;Kolkata;West Bengal;Belur,Math,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+144;1;Gorumara National Park;8;Jalpaiguri;West Bengal;Gorumara,National,Park,Jalpaiguri,West,Bengal;State:West Bengal,Dist/Location:Jalpaiguri
+145;1;Kalighat Kali Temple;8;Kolkata;West Bengal;Kalighat,Kali,Temple,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+146;1;Fort William, India;8;Kolkata;West Bengal;Fort,William,India,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+147;1;Marble Palace;8;Kolkata;West Bengal;Marble,Palace,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+148;1;Nakhoda Masjid;8;Kolkata;West Bengal;Nakhoda,Masjid,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+149;1;Birla Industrial & Technological Museum;8;Kolkata;West Bengal;Birla,Industrial,&,Technological,Museum,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+150;1;Shaheed Minar;8;Kolkata;West Bengal;Shaheed,Minar,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+151;1;Nicco park;8;Kolkata;West Bengal;Nicco,park,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+152;1;Vidyasagar Setu;8;Kolkata;West Bengal;Vidyasagar,Setu,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+153;1;Maidan;8;Kolkata;West Bengal;Maidan,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+154;1;Birla Mandir, Kolkata;8;Kolkata;West Bengal;Birla,Mandir,Kolkata,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+155;1;Raj Bhavan;8;Kolkata;West Bengal;Raj,Bhavan,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+156;1;Rabindra Sarobar;8;Kolkata;West Bengal;Rabindra,Sarobar,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+157;1;Alipore Zoological Gardens;8;Kolkata;West Bengal;Alipore,Zoological,Gardens,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+158;1;Aquatica;8;Kolkata;West Bengal;Aquatica,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+159;1;Academy of Fine Arts;8;Kolkata;West Bengal;Academy,of,Fine,Arts,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+160;1;The Great Banyan;8;Kolkata;West Bengal;The,Great,Banyan,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+161;1;Metropolitan Building;8;Kolkata;West Bengal;Metropolitan,Building,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+162;1;Salt Lake Stadium;8;Kolkata;West Bengal;Salt,Lake,Stadium,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+163;1;Bhutia Busty Monastery;8;Darjeeling;West Bengal;Bhutia,Busty,Monastery,Darjeeling,West,Bengal;State:West Bengal,Dist/Location:Darjeeling
+164;1;Tipu Sultan Mosque;8;Kolkata;West Bengal;Tipu,Sultan,Mosque,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+165;1;Malda Museum;8;Malda;West Bengal;Malda,Museum,Malda,West,Bengal;State:West Bengal,Dist/Location:Malda
+166;1;St. Paul's Cathedral;8;Kolkata;West Bengal;St.,Paul's,Cathedral,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+167;1;Bandel Church;8;Bandel, Hooghly;West Bengal;Bandel,Church,Bandel,Hooghly,West,Bengal;State:West Bengal,Dist/Location:Bandel, Hooghly
+168;1;Acharya Jagadish Chandra Bose Indian Botanic Garden;8;Kolkata;West Bengal;Acharya,Jagadish,Chandra,Bose,Indian,Botanic,Garden,Kolkata,West,Bengal;State:West Bengal,Dist/Location:Kolkata
+169;1;Bakranath Temple;8;Birbhum;West Bengal;Bakranath,Temple,Birbhum,West,Bengal;State:West Bengal,Dist/Location:Birbhum
+170;1;Balrampur Jain Temple;8;Purulia;West Bengal;Balrampur,Jain,Temple,Purulia,West,Bengal;State:West Bengal,Dist/Location:Purulia
+171;1;Bansuli Templ;8;Purulia ;West Bengal;Bansuli,Templ,Purulia,West,Bengal;State:West Bengal,Dist/Location:Purulia 
+172;1; Mandarmani beach;8;‎Purba, Medinipur;West Bengal;,Mandarmani,beach,‎Purba,Medinipur,West,Bengal;State:West Bengal,Dist/Location:‎Purba, Medinipur
+173;1; Shankarpur beach;8;Midnapore ;West Bengal;,Shankarpur,beach,Midnapore,West,Bengal;State:West Bengal,Dist/Location:Midnapore 
+174;1; Bakkhali beach;8;South 24 Parganas;West Bengal;,Bakkhali,beach,South,24,Parganas,West,Bengal;State:West Bengal,Dist/Location:South 24 Parganas
+175;1;Digha sea beach;8;Midnapore ;West Bengal;Digha,sea,beach,Midnapore,West,Bengal;State:West Bengal,Dist/Location:Midnapore 
+176;1;The Red Fort;8;Delhi;Delhi;The,Red,Fort,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+177;1;Qutb Minar;8;Delhi;Delhi;Qutb,Minar,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+178;1;Humayun's Tomb;8;Delhi;Delhi;Humayun's,Tomb,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+179;1;Lotus Temple;8;Delhi;Delhi;Lotus,Temple,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+180;1;Akshardham;8;Delhi;Delhi;Akshardham,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+181;1;Lodi Gardens;8;Delhi;Delhi;Lodi,Gardens,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+182;1;India Gate;8;Delhi;Delhi;India,Gate,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+183;1;Gurudwara Bangla Sahib;8;Delhi;Delhi;Gurudwara,Bangla,Sahib,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+184;1;Jama Masjid, Delhi;8;Delhi;Delhi;Jama,Masjid,Delhi,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+185;1;Jantar Mantar, New Delhi;8;Delhi;Delhi;Jantar,Mantar,New,Delhi,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+186;1;Purana Qila;8;Delhi;Delhi;Purana,Qila,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+187;1;Chandni Chowk;8;Delhi;Delhi;Chandni,Chowk,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+188;1;Rashtrapati Bhavan;8;Delhi;Delhi;Rashtrapati,Bhavan,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+189;1;Raj Ghat and associated memorials;8;Delhi;Delhi;Raj,Ghat,and,associated,memorials,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+190;1;National Museum, New Delhi;8;Delhi;Delhi;National,Museum,New,Delhi,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+191;1;Laxminarayan Temple;8;Delhi;Delhi;Laxminarayan,Temple,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+192;1;ISKCON Temple Delhi;8;Delhi;Delhi;ISKCON,Temple,Delhi,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+193;1;Qutb complex;8;Delhi;Delhi;Qutb,complex,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+194;1;Nizamuddin Dargah;8;Delhi;Delhi;Nizamuddin,Dargah,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+195;1;Parliament House;8;Delhi;Delhi;Parliament,House,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+196;1;Gandhi Smriti;8;Delhi;Delhi;Gandhi,Smriti,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+197;1;National Rail Museum, New Delhi;8;Delhi;Delhi;National,Rail,Museum,New,Delhi,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+198;1;National Zoological Park Delhi;8;Delhi;Delhi;National,Zoological,Park,Delhi,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+199;1;Garden of Five Senses;8;Delhi;Delhi;Garden,of,Five,Senses,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+200;1;Hauz Khas Complex;8;Delhi;Delhi;Hauz,Khas,Complex,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+201;1;Agrasen ki Baoli;8;Delhi;Delhi;Agrasen,ki,Baoli,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+202;1;Jamali Kamali Mosque and Tomb;8;Delhi;Delhi;Jamali,Kamali,Mosque,and,Tomb,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+203;1;National Science Centre, Delhi;8;Delhi;Delhi;National,Science,Centre,Delhi,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+204;1;Kalka Mandir, Delhi;8;Delhi;Delhi;Kalka,Mandir,Delhi,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+205;1;Cathedral Church of the Redemption;8;Delhi;Delhi;Cathedral,Church,of,the,Redemption,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+206;1;Gurudwara Sis Ganj Sahib;8;Delhi;Delhi;Gurudwara,Sis,Ganj,Sahib,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+207;1;Sri Digambar Jain Lal Mandir;8;Delhi;Delhi;Sri,Digambar,Jain,Lal,Mandir,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+208;1;Tomb of Balban;8;Delhi;Delhi;Tomb,of,Balban,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+209;1;Iron pillar of Delhi;8;Delhi;Delhi;Iron,pillar,of,Delhi,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+210;1;Hanuman Temple, Connaught Place;8;Delhi;Delhi;Hanuman,Temple,Connaught,Place,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+211;1;Yogmaya Temple;8;Delhi;Delhi;Yogmaya,Temple,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+212;1;Teen Murti Bhavan;8;Delhi;Delhi;Teen,Murti,Bhavan,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+213;1;Nehru Planetarium;8;Delhi;Delhi;Nehru,Planetarium,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+214;1;Shankar's International Dolls Museum;8;Delhi;Delhi;Shankar's,International,Dolls,Museum,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+215;1;Sacred Heart Cathedral, New Delhi;8;Delhi;Delhi;Sacred,Heart,Cathedral,New,Delhi,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+216;1;Fatehpuri Masjid;8;Delhi;Delhi;Fatehpuri,Masjid,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+217;1;Nehru Memorial Museum & Library;8;Delhi;Delhi;Nehru,Memorial,Museum,&,Library,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+218;1;Khirki Mosque;8;Delhi;Delhi;Khirki,Mosque,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+219;1;Jawaharlal Nehru Stadium;8;Delhi;Delhi;Jawaharlal,Nehru,Stadium,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+220;1;Pragati Maidan;8;Delhi;Delhi;Pragati,Maidan,Delhi,Delhi;State:Delhi,Dist/Location:Delhi
+221;1;Venkateswara Temple, Tirumala;8;Chittoor;Andhra Pradesh;Venkateswara,Temple,Tirumala,Chittoor,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Chittoor
+222;1;Golkonda;8;Hyderabad;Andhra Pradesh;Golkonda,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad
+223;1;Kailasagiri;8;Visakhapatnam;Andhra Pradesh;Kailasagiri,Visakhapatnam,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Visakhapatnam
+224;1;Undavalli caves;8;Guntur;Andhra Pradesh;Undavalli,caves,Guntur,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Guntur
+225;1;Charminar;8;Hyderabad,;Andhra Pradesh;Charminar,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad,
+226;1;Simhachalam Temple;8;Visakhapatnam ;Andhra Pradesh;Simhachalam,Temple,Visakhapatnam,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Visakhapatnam 
+227;1;Kanaka Durga Temple;8;Vijayawada;Andhra Pradesh;Kanaka,Durga,Temple,Vijayawada,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Vijayawada
+228;1;Mallikarjuna Jyotirlinga;8;Srisailam ;Andhra Pradesh;Mallikarjuna,Jyotirlinga,Srisailam,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Srisailam 
+229;1;Birla Mandir, Hyderabad;8;Hyderabad;Andhra Pradesh;Birla,Mandir,Hyderabad,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad
+230;1;Nagarjuna Sagar Dam;8;Guntur;Andhra Pradesh;Nagarjuna,Sagar,Dam,Guntur,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Guntur
+231;1;Hussain Sagar;8;Hyderabad;Andhra Pradesh;Hussain,Sagar,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad
+232;1;Prasanthi Nilayam;8;Anantapur;Andhra Pradesh;Prasanthi,Nilayam,Anantapur,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Anantapur
+233;1;Birla Science Museum;8;Hyderabad;Andhra Pradesh;Birla,Science,Museum,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad
+234;1;Salar Jung Museum;8;Hyderabad;Andhra Pradesh;Salar,Jung,Museum,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad
+235;1;Makkah Masjid;8;Hyderabad;Andhra Pradesh;Makkah,Masjid,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad
+236;1;Qutb Shahi tombs;8;Hyderabad;Andhra Pradesh;Qutb,Shahi,tombs,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad
+237;1;Indira Gandhi Zoological Park;8;Visakhapatnam;Andhra Pradesh;Indira,Gandhi,Zoological,Park,Visakhapatnam,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Visakhapatnam
+238;1;Srikalahasteeswara Temple;8;Srikalahasti;Andhra Pradesh;Srikalahasteeswara,Temple,Srikalahasti,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Srikalahasti
+239;1;Ramoji Film City;8;Hyderabad;Andhra Pradesh;Ramoji,Film,City,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad
+240;1;Falaknuma Palace;8;Hyderabad;Andhra Pradesh;Falaknuma,Palace,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad
+241;1;Chowmahalla Palace;8;Hyderabad ;Andhra Pradesh;Chowmahalla,Palace,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad 
+242;1;Nehru Zoological Park;8;Hyderabad;Andhra Pradesh;Nehru,Zoological,Park,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad
+243;1;Osman Saga;8;Hyderabad;Andhra Pradesh;Osman,Saga,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad
+244;1;Veerabhadra Temple, Lepakshi;8;Anantapur ;Andhra Pradesh;Veerabhadra,Temple,Lepakshi,Anantapur,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Anantapur 
+245;1;Nizam Museum;8;Hyderabad;Andhra Pradesh;Nizam,Museum,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad
+246;1;Chilkur Balaji Temple;8;Hyderabad;Andhra Pradesh;Chilkur,Balaji,Temple,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad
+247;1;Suryalanka Beach;8;Guntur;Andhra Pradesh;Suryalanka,Beach,Guntur,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Guntur
+248;1;Lumbini Park;8;Hyderabad;Andhra Pradesh;Lumbini,Park,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad
+249;1;NTR Gardens;8;Hyderabad;Andhra Pradesh;NTR,Gardens,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad
+250;1;Paigah Tombs;8;Hyderabad;Andhra Pradesh;Paigah,Tombs,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad
+251;1;Mahavir Harina Vanasthali National Park;8;Hyderabad;Andhra Pradesh;Mahavir,Harina,Vanasthali,National,Park,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad
+252;1;Taramati Baradari;8;Hyderabad;Andhra Pradesh;Taramati,Baradari,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad
+253;1;Mir Alam Tank;8;Hyderabad;Andhra Pradesh;Mir,Alam,Tank,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad
+254;1;Bhavani Island, Vijayawada;8;Vijayawada;Andhra Pradesh;Bhavani,Island,Vijayawada,Vijayawada,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Vijayawada
+255;1;Visakha Museum;8;Visakhapatnam ;Andhra Pradesh;Visakha,Museum,Visakhapatnam,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Visakhapatnam 
+256;1;Durgam Cheruv;8;Rangareddy ;Andhra Pradesh;Durgam,Cheruv,Rangareddy,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Rangareddy 
+257;1;Sanjeevaiah Park;8;Hyderabad;Andhra Pradesh;Sanjeevaiah,Park,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad
+258;1;Himayat Sagar;8;Hyderabad ;Andhra Pradesh;Himayat,Sagar,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad 
+259;1;Mrugavani National Park;8;Hyderabad;Andhra Pradesh;Mrugavani,National,Park,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad
+260;1;Anantagiri Hills;8;Ranga Reddy ;Andhra Pradesh;Anantagiri,Hills,Ranga,Reddy,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Ranga Reddy 
+261;1;Shamirpet Lake;8;Hyderabad;Andhra Pradesh;Shamirpet,Lake,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad
+262;1;Kasu Brahmananda Reddy National Park;8;Hyderabad;Andhra Pradesh;Kasu,Brahmananda,Reddy,National,Park,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad
+263;1;Snow World;8;Hyderabad;Andhra Pradesh;Snow,World,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad
+264;1;AP State Archaeology Museum;8;Hyderabad;Andhra Pradesh;AP,State,Archaeology,Museum,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad
+265;1;Gnana Saraswati Temple, Basar;8;Adilabad ;Andhra Pradesh;Gnana,Saraswati,Temple,Basar,Adilabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Adilabad 
+266;1;Ravindra Bharathi;8;Hyderabad;Andhra Pradesh;Ravindra,Bharathi,Hyderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Hyderabad
+267;1;Yadagirigutta Temple;8;Bhuvana Yadadri;Andhra Pradesh;Yadagirigutta,Temple,Bhuvana,Yadadri,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Bhuvana Yadadri
+268;1;Secunderabad Junction railway station;8;Secunderabad;Andhra Pradesh;Secunderabad,Junction,railway,station,Secunderabad,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Secunderabad
+269;1;Uppada Beach;8;kakinada;Andhra Pradesh;Uppada,Beach,kakinada,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:kakinada
+270;1;Yanam;8;kakinada;Andhra Pradesh;Yanam,kakinada,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:kakinada
+271;1;Manginapudi Beach;8;Vijayawada;Andhra Pradesh;Manginapudi,Beach,Vijayawada,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Vijayawada
+272;1;Vodarevu Beach – Chirala;8;Vijayawada;Andhra Pradesh;Vodarevu,Beach,–,Chirala,Vijayawada,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Vijayawada
+273;1;Bheemili Beach;8;Vizag;Andhra Pradesh;Bheemili,Beach,Vizag,Andhra,Pradesh;State:Andhra Pradesh,Dist/Location:Vizag
+274;1;Tawang Town;8;Tawang;Arunachal Pradesh;Tawang,Town,Tawang,Arunachal,Pradesh;State:Arunachal Pradesh,Dist/Location:Tawang
+275;1;Namdapha National Park;8;Changlang;Arunachal Pradesh;Namdapha,National,Park,Changlang,Arunachal,Pradesh;State:Arunachal Pradesh,Dist/Location:Changlang
+276;1;Basar, Telangana;8;Adilabad ;Arunachal Pradesh;Basar,Telangana,Adilabad,Arunachal,Pradesh;State:Arunachal Pradesh,Dist/Location:Adilabad 
+277;1;Ziro;8;Subansiri ;Arunachal Pradesh;Ziro,Subansiri,Arunachal,Pradesh;State:Arunachal Pradesh,Dist/Location:Subansiri 
+278;1;Pasighat;8;Siang ;Arunachal Pradesh;Pasighat,Siang,Arunachal,Pradesh;State:Arunachal Pradesh,Dist/Location:Siang 
+279;1;Roing;8;Dibang Valley;Arunachal Pradesh;Roing,Dibang,Valley,Arunachal,Pradesh;State:Arunachal Pradesh,Dist/Location:Dibang Valley
+280;1;Pakke Tiger Reserve;8;Kameng ;Arunachal Pradesh;Pakke,Tiger,Reserve,Kameng,Arunachal,Pradesh;State:Arunachal Pradesh,Dist/Location:Kameng 
+281;1;Daporijo;8;Subansiri ;Arunachal Pradesh;Daporijo,Subansiri,Arunachal,Pradesh;State:Arunachal Pradesh,Dist/Location:Subansiri 
+282;1;Dibang Wildlife Sanctuary;8;Dibang Valley ;Arunachal Pradesh;Dibang,Wildlife,Sanctuary,Dibang,Valley,Arunachal,Pradesh;State:Arunachal Pradesh,Dist/Location:Dibang Valley 
+283;1;Amer Fort;8;Jaipur;Rajastan;Amer,Fort,Jaipur,Rajastan;State:Rajastan,Dist/Location:Jaipur
+284;1;City Palace;8;Jaipur;Rajastan;City,Palace,Jaipur,Rajastan;State:Rajastan,Dist/Location:Jaipur
+285;1;Hawa Mahal;8;Jaipur;Rajastan;Hawa,Mahal,Jaipur,Rajastan;State:Rajastan,Dist/Location:Jaipur
+286;1;Mehrangarh Fort;8;Jodhpur;Rajastan;Mehrangarh,Fort,Jodhpur,Rajastan;State:Rajastan,Dist/Location:Jodhpur
+287;1;City Palace;8;Udaipur;Rajastan;City,Palace,Udaipur,Rajastan;State:Rajastan,Dist/Location:Udaipur
+288;1;Jantar Mantar;8;Jaipur;Rajastan;Jantar,Mantar,Jaipur,Rajastan;State:Rajastan,Dist/Location:Jaipur
+289;1;Jaigarh Fort;8;Jaipur;Rajastan;Jaigarh,Fort,Jaipur,Rajastan;State:Rajastan,Dist/Location:Jaipur
+290;1;Lake Pichola;8;Udaipur ;Rajastan;Lake,Pichola,Udaipur,Rajastan;State:Rajastan,Dist/Location:Udaipur 
+291;1;Jaisalmer Fort;8;Jaisalmer;Rajastan;Jaisalmer,Fort,Jaisalmer,Rajastan;State:Rajastan,Dist/Location:Jaisalmer
+292;1;Birla Mandir;8;Jaipur;Rajastan;Birla,Mandir,Jaipur,Rajastan;State:Rajastan,Dist/Location:Jaipur
+293;1;Kumbhalgarh;8;Rajsamand ;Rajastan;Kumbhalgarh,Rajsamand,Rajastan;State:Rajastan,Dist/Location:Rajsamand 
+294;1;Umaid Bhawan Palace;8;Jodhpur;Rajastan;Umaid,Bhawan,Palace,Jodhpur,Rajastan;State:Rajastan,Dist/Location:Jodhpur
+295;1;Nahargarh Fort;8;Jaipur ;Rajastan;Nahargarh,Fort,Jaipur,Rajastan;State:Rajastan,Dist/Location:Jaipur 
+296;1;Jal Mahal;8;Jaipur;Rajastan;Jal,Mahal,Jaipur,Rajastan;State:Rajastan,Dist/Location:Jaipur
+297;1;Lake Palace;8;Udaipur;Rajastan;Lake,Palace,Udaipur,Rajastan;State:Rajastan,Dist/Location:Udaipur
+298;1;Jagdish Temple;8;Udaipur;Rajastan;Jagdish,Temple,Udaipur,Rajastan;State:Rajastan,Dist/Location:Udaipur
+299;1;Keoladeo National Park;8;Bharatpur;Rajastan;Keoladeo,National,Park,Bharatpur,Rajastan;State:Rajastan,Dist/Location:Bharatpur
+300;1;Govind Dev Ji Temple;8;Jaipur;Rajastan;Govind,Dev,Ji,Temple,Jaipur,Rajastan;State:Rajastan,Dist/Location:Jaipur
+301;1;Junagarh Fort;8;Bikanagar;Rajastan;Junagarh,Fort,Bikanagar,Rajastan;State:Rajastan,Dist/Location:Bikanagar
+302;1;Jag Mandir;8;Udaipur;Rajastan;Jag,Mandir,Udaipur,Rajastan;State:Rajastan,Dist/Location:Udaipur
+303;1;Dilwara Temples;8;Mount Abu,;Rajastan;Dilwara,Temples,Mount,Abu,Rajastan;State:Rajastan,Dist/Location:Mount Abu,
+304;1;Fateh Sagar Lake;8;Udaipur ;Rajastan;Fateh,Sagar,Lake,Udaipur,Rajastan;State:Rajastan,Dist/Location:Udaipur 
+305;1;Monsoon Palace;8;Udaipur;Rajastan;Monsoon,Palace,Udaipur,Rajastan;State:Rajastan,Dist/Location:Udaipur
+306;1;Aravalli Range;8;;Rajastan;Aravalli,Range,Rajastan;State:Rajastan,Dist/Location:
+307;1;Saheliyon-ki-Bari;8;Udaipur ;Rajastan;Saheliyon-ki-Bari,Udaipur,Rajastan;State:Rajastan,Dist/Location:Udaipur 
+308;1;Albert Hall Museum;8;Jaipur;Rajastan;Albert,Hall,Museum,Jaipur,Rajastan;State:Rajastan,Dist/Location:Jaipur
+309;1;Jaswant Thada;8;Jodhpur;Rajastan;Jaswant,Thada,Jodhpur,Rajastan;State:Rajastan,Dist/Location:Jodhpur
+310;1;Chittorgarh Fort;8;Chittorgarh;Rajastan;Chittorgarh,Fort,Chittorgarh,Rajastan;State:Rajastan,Dist/Location:Chittorgarh
+311;1;Pushkar Lake;8;Ajmer ;Rajastan;Pushkar,Lake,Ajmer,Rajastan;State:Rajastan,Dist/Location:Ajmer 
+312;1;Rambagh Palace;8;Jaipur;Rajastan;Rambagh,Palace,Jaipur,Rajastan;State:Rajastan,Dist/Location:Jaipur
+313;1;Balsamand Lake;8;Jodhpur ;Rajastan;Balsamand,Lake,Jodhpur,Rajastan;State:Rajastan,Dist/Location:Jodhpur 
+314;1;Kaylana Lake;8;Jodhpur ;Rajastan;Kaylana,Lake,Jodhpur,Rajastan;State:Rajastan,Dist/Location:Jodhpur 
+315;1;Chand Baori;8;Jaipur ;Rajastan;Chand,Baori,Jaipur,Rajastan;State:Rajastan,Dist/Location:Jaipur 
+316;1;Brahma Temple;8;Pushkar;Rajastan;Brahma,Temple,Pushkar,Rajastan;State:Rajastan,Dist/Location:Pushkar
+317;1;Taragarh Fort;8;Bundi ;Rajastan;Taragarh,Fort,Bundi,Rajastan;State:Rajastan,Dist/Location:Bundi 
+318;1;Lalgarh Palace;8;Bikaner ;Rajastan;Lalgarh,Palace,Bikaner,Rajastan;State:Rajastan,Dist/Location:Bikaner 
+319;1;Raj Mandir Cinema;8;Jaipur;Rajastan;Raj,Mandir,Cinema,Jaipur,Rajastan;State:Rajastan,Dist/Location:Jaipur
+320;1;Moti Magri;8;Udaipur;Rajastan;Moti,Magri,Udaipur,Rajastan;State:Rajastan,Dist/Location:Udaipur
+321;1;Gangaur Ghat;8;Udaipur;Rajastan;Gangaur,Ghat,Udaipur,Rajastan;State:Rajastan,Dist/Location:Udaipur
+322;1;Shiv Niwas Palace;8;Udaipur;Rajastan;Shiv,Niwas,Palace,Udaipur,Rajastan;State:Rajastan,Dist/Location:Udaipur
+323;1;Ana Sagar Lake;8;Ajmer ;Rajastan;Ana,Sagar,Lake,Ajmer,Rajastan;State:Rajastan,Dist/Location:Ajmer 
+324;1;Salim Singh Ki Haveli;8;Jaisalmer;Rajastan;Salim,Singh,Ki,Haveli,Jaisalmer,Rajastan;State:Rajastan,Dist/Location:Jaisalmer
+325;1;Kuldhara;8;Jiyai;Rajastan;Kuldhara,Jiyai,Rajastan;State:Rajastan,Dist/Location:Jiyai
+326;1;Nakki Lake;8;Mount Abu;Rajastan;Nakki,Lake,Mount,Abu,Rajastan;State:Rajastan,Dist/Location:Mount Abu
+327;1;Lake Foy Sagar;8;Ajmer ;Rajastan;Lake,Foy,Sagar,Ajmer,Rajastan;State:Rajastan,Dist/Location:Ajmer 
+328;1;Deeg Palace;8;Bharatpur ;Rajastan;Deeg,Palace,Bharatpur,Rajastan;State:Rajastan,Dist/Location:Bharatpur 
+329;1;Ranthambore National Park;8;Madhopur;Rajastan;Ranthambore,National,Park,Madhopur,Rajastan;State:Rajastan,Dist/Location:Madhopur
+330;1;Sariska Tiger Reserve;8;Alwar ;Rajastan;Sariska,Tiger,Reserve,Alwar,Rajastan;State:Rajastan,Dist/Location:Alwar 
+331;1;Thekkady;8;‎Idukki;Kerela;Thekkady,‎Idukki,Kerela;State:Kerela,Dist/Location:‎Idukki
+332;1;Padmanabhaswamy Temple;8;Thiruvananthapuram;Kerela;Padmanabhaswamy,Temple,Thiruvananthapuram,Kerela;State:Kerela,Dist/Location:Thiruvananthapuram
+333;1;Attukal Temple;8;Attukal;Kerela;Attukal,Temple,Attukal,Kerela;State:Kerela,Dist/Location:Attukal
+334;1;Vadakkunnathan Temple;8;Thrissur;Kerela;Vadakkunnathan,Temple,Thrissur,Kerela;State:Kerela,Dist/Location:Thrissur
+335;1;Guruvayur Temple;8;Guruvayur;Kerela;Guruvayur,Temple,Guruvayur,Kerela;State:Kerela,Dist/Location:Guruvayur
+336;1;Muzhappilangad Beach;8;Kannur ;Kerela;Muzhappilangad,Beach,Kannur,Kerela;State:Kerela,Dist/Location:Kannur 
+337;1;Cherai Beach;8;Kochi;Kerela;Cherai,Beach,Kochi,Kerela;State:Kerela,Dist/Location:Kochi
+338;1;Vembanad;8;Kumarakom;Kerela;Vembanad,Kumarakom,Kerela;State:Kerela,Dist/Location:Kumarakom
+339;1;Mattancherry Palace;8;Kochi;Kerela;Mattancherry,Palace,Kochi,Kerela;State:Kerela,Dist/Location:Kochi
+340;1;Paradesi Synagogue;8;Kochi;Kerela;Paradesi,Synagogue,Kochi,Kerela;State:Kerela,Dist/Location:Kochi
+341;1;Thirunelli Temple;8;Thirunelly;Kerela;Thirunelli,Temple,Thirunelly,Kerela;State:Kerela,Dist/Location:Thirunelly
+342;1;Santa Cruz Basilica;8;Kochi;Kerela;Santa,Cruz,Basilica,Kochi,Kerela;State:Kerela,Dist/Location:Kochi
+343;1;St. Francis Church;8;Kochi;Kerela;St.,Francis,Church,Kochi,Kerela;State:Kerela,Dist/Location:Kochi
+344;1;Kumarakom Bird Sanctuary;8;Kottayam;Kerela;Kumarakom,Bird,Sanctuary,Kottayam,Kerela;State:Kerela,Dist/Location:Kottayam
+345;1;Eravikulam National Park;8;Idukki;Kerela;Eravikulam,National,Park,Idukki,Kerela;State:Kerela,Dist/Location:Idukki
+346;1;Hill Palace;8;Tripunithura;Kerela;Hill,Palace,Tripunithura,Kerela;State:Kerela,Dist/Location:Tripunithura
+347;1;Napier Museum;8;Thiruvananthapuram;Kerela;Napier,Museum,Thiruvananthapuram,Kerela;State:Kerela,Dist/Location:Thiruvananthapuram
+348;1;Chembra Peak;8;Meppady ;Kerela;Chembra,Peak,Meppady,Kerela;State:Kerela,Dist/Location:Meppady 
+349;1;Devikulam;8;Idukki ;Kerela;Devikulam,Idukki,Kerela;State:Kerela,Dist/Location:Idukki 
+350;1;Alappuzha Beach;8;‎Alappuzha;Kerela;Alappuzha,Beach,‎Alappuzha,Kerela;State:Kerela,Dist/Location:‎Alappuzha
+351;1;Mattupetty Dam;8;Mattupetty;Kerela;Mattupetty,Dam,Mattupetty,Kerela;State:Kerela,Dist/Location:Mattupetty
+352;1;Anamudi;8;;Kerela;Anamudi,Kerela;State:Kerela,Dist/Location:
+353;1;Ambalappuzha Sri Krishna Temple;8;Ambalapuzha;Kerela;Ambalappuzha,Sri,Krishna,Temple,Ambalapuzha,Kerela;State:Kerela,Dist/Location:Ambalapuzha
+354;1;Krishnapuram Palace;8;Alappuzha ;Kerela;Krishnapuram,Palace,Alappuzha,Kerela;State:Kerela,Dist/Location:Alappuzha 
+355;1;Bhoothathankettu;8;Ernakulam;Kerela;Bhoothathankettu,Ernakulam,Kerela;State:Kerela,Dist/Location:Ernakulam
+356;1;Kannur Beach;8;Kannur ;Kerela;Kannur,Beach,Kannur,Kerela;State:Kerela,Dist/Location:Kannur 
+357;1;Pallipuram Fort;8;Ernakulam ;Kerela;Pallipuram,Fort,Ernakulam,Kerela;State:Kerela,Dist/Location:Ernakulam 
+358;1;Jawaharlal Nehru Stadium;8;Kochi;Kerela;Jawaharlal,Nehru,Stadium,Kochi,Kerela;State:Kerela,Dist/Location:Kochi
+359;1;Cheraman Juma Mosque;8;Thrissur ;Kerela;Cheraman,Juma,Mosque,Thrissur,Kerela;State:Kerela,Dist/Location:Thrissur 
+360;1;Pathiramanal;8;Alappuzha;Kerela;Pathiramanal,Alappuzha,Kerela;State:Kerela,Dist/Location:Alappuzha
+361;1;Indo-Portuguese Museum;8;Kochi;Kerela;Indo-Portuguese,Museum,Kochi,Kerela;State:Kerela,Dist/Location:Kochi
+362;1;Edakkal Caves;8;Edakkal;Kerela;Edakkal,Caves,Edakkal,Kerela;State:Kerela,Dist/Location:Edakkal
+363;1;Arakkal Museum;8;Kannur;Kerela;Arakkal,Museum,Kannur,Kerela;State:Kerela,Dist/Location:Kannur
+364;1;Veegaland;8;Kochi;Kerela;Veegaland,Kochi,Kerela;State:Kerela,Dist/Location:Kochi
+365;1;Shakthan Thampuran Palace;8;Thrissur ;Kerela;Shakthan,Thampuran,Palace,Thrissur,Kerela;State:Kerela,Dist/Location:Thrissur 
+366;1;Ernakulam Shiva Temple;8;Ernakulam;Kerela;Ernakulam,Shiva,Temple,Ernakulam,Kerela;State:Kerela,Dist/Location:Ernakulam
+367;1;St. Mary's Syro-Malabar Catholic Forane Church;8;Champakulam;Kerela;St.,Mary's,Syro-Malabar,Catholic,Forane,Church,Champakulam,Kerela;State:Kerela,Dist/Location:Champakulam
+368;1;Aranmula Parthasarathy Temple;8;Pathanamthitta ;Kerela;Aranmula,Parthasarathy,Temple,Pathanamthitta,Kerela;State:Kerela,Dist/Location:Pathanamthitta 
+369;1;Tellicherry Fort;8;Kannur ;Kerela;Tellicherry,Fort,Kannur,Kerela;State:Kerela,Dist/Location:Kannur 
+370;1;Rajarajeshwara Temple;8;Kannur ;Kerela;Rajarajeshwara,Temple,Kannur,Kerela;State:Kerela,Dist/Location:Kannur 
+371;1;Thiruvambadi Sri Krishna Temple;8;Thrissur;Kerela;Thiruvambadi,Sri,Krishna,Temple,Thrissur,Kerela;State:Kerela,Dist/Location:Thrissur
+372;1;Vismaya;8;Kannur;Kerela;Vismaya,Kannur,Kerela;State:Kerela,Dist/Location:Kannur
+373;1;Mananchira Square;8;Kozhikode;Kerela;Mananchira,Square,Kozhikode,Kerela;State:Kerela,Dist/Location:Kozhikode
+374;1;Chettikulangara Devi Temple;8;Alappuzha ;Kerela;Chettikulangara,Devi,Temple,Alappuzha,Kerela;State:Kerela,Dist/Location:Alappuzha 
+375;1;Parassinikkadavu Snake Park;8;Kannur ;Kerela;Parassinikkadavu,Snake,Park,Kannur,Kerela;State:Kerela,Dist/Location:Kannur 
+376;1;Our Lady of Dolours Syro-Malabar Catholic Basilica;8;Thrissur;Kerela;Our,Lady,of,Dolours,Syro-Malabar,Catholic,Basilica,Thrissur,Kerela;State:Kerela,Dist/Location:Thrissur
+377;1;Periyar National Park;8;Idukki, Kottayam and Pathanamthitta,;Kerela;Periyar,National,Park,Idukki,Kottayam,and,Pathanamthitta,Kerela;State:Kerela,Dist/Location:Idukki, Kottayam and Pathanamthitta,
+378;1;Fort Kochi;8;Kochi ;Kerela;Fort,Kochi,Kochi,Kerela;State:Kerela,Dist/Location:Kochi 

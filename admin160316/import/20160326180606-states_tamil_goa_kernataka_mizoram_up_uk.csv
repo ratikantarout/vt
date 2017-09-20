@@ -1,0 +1,329 @@
+ID;Active (0/1);Name *;Categories (x,y,z...);Reference #;EAN13;Tags,(x,y,z...);Feature(Name:Value:Position)
+453;1;Mysore;8;Mysuru;Karnataka;Mysore,Mysuru,Karnataka;State:Karnataka,Dist/Location:Mysuru
+454;1;Mangalore;8;Mangalore;Karnataka;Mangalore,Mangalore,Karnataka;State:Karnataka,Dist/Location:Mangalore
+455;1;Hampi;8;Hampi;Karnataka;Hampi,Hampi,Karnataka;State:Karnataka,Dist/Location:Hampi
+456;1;Madikeri;8;Kodagu;Karnataka;Madikeri,Kodagu,Karnataka;State:Karnataka,Dist/Location:Kodagu
+457;1;Shimoga;8;Shimoga;Karnataka;Shimoga,Shimoga,Karnataka;State:Karnataka,Dist/Location:Shimoga
+458;1;Udupi;8;Udupi;Karnataka;Udupi,Udupi,Karnataka;State:Karnataka,Dist/Location:Udupi
+459;1;Karwar;8;Uttara Kannada;Karnataka;Karwar,Uttara,Kannada,Karnataka;State:Karnataka,Dist/Location:Uttara Kannada
+460;1;Gokarna;8;Uttara Kannada;Karnataka;Gokarna,Uttara,Kannada,Karnataka;State:Karnataka,Dist/Location:Uttara Kannada
+461;1;Hubli;8;Hubballi;Karnataka;Hubli,Hubballi,Karnataka;State:Karnataka,Dist/Location:Hubballi
+462;1;Belgaum;8;Belgaum;Karnataka;Belgaum,Belgaum,Karnataka;State:Karnataka,Dist/Location:Belgaum
+463;1;Dandeli;8;Uttara Kannada;Karnataka;Dandeli,Uttara,Kannada,Karnataka;State:Karnataka,Dist/Location:Uttara Kannada
+464;1;Chikmagalur;8;Chikkamagaluru;Karnataka;Chikmagalur,Chikkamagaluru,Karnataka;State:Karnataka,Dist/Location:Chikkamagaluru
+465;1;Bijapur;8;Bijapur;Karnataka;Bijapur,Bijapur,Karnataka;State:Karnataka,Dist/Location:Bijapur
+466;1;Gulbarga;8;Kalaburagi;Karnataka;Gulbarga,Kalaburagi,Karnataka;State:Karnataka,Dist/Location:Kalaburagi
+467;1;Sakleshpur;8;Hassan;Karnataka;Sakleshpur,Hassan,Karnataka;State:Karnataka,Dist/Location:Hassan
+468;1;Bidar;8;Bidar;Karnataka;Bidar,Bidar,Karnataka;State:Karnataka,Dist/Location:Bidar
+469;1;Hassan;8;Hassan;Karnataka;Hassan,Hassan,Karnataka;State:Karnataka,Dist/Location:Hassan
+470;1;Hospet;8;Bellary;Karnataka;Hospet,Bellary,Karnataka;State:Karnataka,Dist/Location:Bellary
+471;1;Badami;8;Bagalkot;Karnataka;Badami,Bagalkot,Karnataka;State:Karnataka,Dist/Location:Bagalkot
+472;1;Bellary;8;Ballari;Karnataka;Bellary,Ballari,Karnataka;State:Karnataka,Dist/Location:Ballari
+473;1;Srirangapatna;8;Mandya;Karnataka;Srirangapatna,Mandya,Karnataka;State:Karnataka,Dist/Location:Mandya
+474;1;Nandi Hills;8;Chikkaballapura;Karnataka;Nandi,Hills,Chikkaballapura,Karnataka;State:Karnataka,Dist/Location:Chikkaballapura
+475;1;Subramanya;8;Dakshina Kannada;Karnataka;Subramanya,Dakshina,Kannada,Karnataka;State:Karnataka,Dist/Location:Dakshina Kannada
+476;1;Bandipur National Park;8;Mysore;Karnataka;Bandipur,National,Park,Mysore,Karnataka;State:Karnataka,Dist/Location:Mysore
+477;1;Nagarhole National Park;8;Mysuru;Karnataka;Nagarhole,National,Park,Mysuru,Karnataka;State:Karnataka,Dist/Location:Mysuru
+478;1;Davangere;8;Davanagere;Karnataka;Davangere,Davanagere,Karnataka;State:Karnataka,Dist/Location:Davanagere
+479;1;Kushalanagar;8;Kodagu;Karnataka;Kushalanagar,Kodagu,Karnataka;State:Karnataka,Dist/Location:Kodagu
+480;1;Kollur;8;Udupi;Karnataka;Kollur,Udupi,Karnataka;State:Karnataka,Dist/Location:Udupi
+481;1;Murudeshwara;8;Uttara Kannada;Karnataka;Murudeshwara,Uttara,Kannada,Karnataka;State:Karnataka,Dist/Location:Uttara Kannada
+482;1;Agumbe;8;Shimoga;Karnataka;Agumbe,Shimoga,Karnataka;State:Karnataka,Dist/Location:Shimoga
+483;1;Sringeri;8;Chikkamagaluru;Karnataka;Sringeri,Chikkamagaluru,Karnataka;State:Karnataka,Dist/Location:Chikkamagaluru
+484;1;Sirsi;8;Uttara Kannada;Karnataka;Sirsi,Uttara,Kannada,Karnataka;State:Karnataka,Dist/Location:Uttara Kannada
+485;1;Dharmasthala;8;Mangalore;Karnataka;Dharmasthala,Mangalore,Karnataka;State:Karnataka,Dist/Location:Mangalore
+486;1;Belur;8;Hassan;Karnataka;Belur,Hassan,Karnataka;State:Karnataka,Dist/Location:Hassan
+487;1;Manipal;8;Manipal;Karnataka;Manipal,Manipal,Karnataka;State:Karnataka,Dist/Location:Manipal
+488;1;Tumkur;8;Tumkur;Karnataka;Tumkur,Tumkur,Karnataka;State:Karnataka,Dist/Location:Tumkur
+489;1;Talakad;8;Talakadu;Karnataka;Talakad,Talakadu,Karnataka;State:Karnataka,Dist/Location:Talakadu
+490;1;Kemmangundi;8;Chikkamagaluru;Karnataka;Kemmangundi,Chikkamagaluru,Karnataka;State:Karnataka,Dist/Location:Chikkamagaluru
+491;1;Raichur;8;Raichur;Karnataka;Raichur,Raichur,Karnataka;State:Karnataka,Dist/Location:Raichur
+492;1;Chitradurga;8;Chitradurga;Karnataka;Chitradurga,Chitradurga,Karnataka;State:Karnataka,Dist/Location:Chitradurga
+493;1;Shravanabelagola;8;Hassan;Karnataka;Shravanabelagola,Hassan,Karnataka;State:Karnataka,Dist/Location:Hassan
+494;1;Kundapur;8;Kundapur Taluk;Karnataka;Kundapur,Kundapur,Taluk,Karnataka;State:Karnataka,Dist/Location:Kundapur Taluk
+495;1;Chikkaballapur;8;Chikkaballapura;Karnataka;Chikkaballapur,Chikkaballapura,Karnataka;State:Karnataka,Dist/Location:Chikkaballapura
+496;1;Savandurga;8;Magadi road;Karnataka;Savandurga,Magadi,road,Karnataka;State:Karnataka,Dist/Location:Magadi road
+497;1;Yana;8;Uttara Kannada;Karnataka;Yana,Uttara,Kannada,Karnataka;State:Karnataka,Dist/Location:Uttara Kannada
+498;1;Halebidu;8;Hassan;Karnataka;Halebidu,Hassan,Karnataka;State:Karnataka,Dist/Location:Hassan
+499;1;Virajpet;8;Kodagu;Karnataka;Virajpet,Kodagu,Karnataka;State:Karnataka,Dist/Location:Kodagu
+500;1;Coorg;8;Kodagu;Karnataka;Coorg,Kodagu,Karnataka;State:Karnataka,Dist/Location:Kodagu
+501;1;Hubli-Dharwad;8;Hubli & Dharwad;Karnataka;Hubli-Dharwad,Hubli,&,Dharwad,Karnataka;State:Karnataka,Dist/Location:Hubli & Dharwad
+502;1;Vidhana Soudha;8;Bangalore;Karnataka;Vidhana,Soudha,Bangalore,Karnataka;State:Karnataka,Dist/Location:Bangalore
+503;1;Government Museum;8;Bangalore;Karnataka;Government,Museum,Bangalore,Karnataka;State:Karnataka,Dist/Location:Bangalore
+504;1;Cubbon Park;8;Bangalore;Karnataka;Cubbon,Park,Bangalore,Karnataka;State:Karnataka,Dist/Location:Bangalore
+505;1;Lal Bagh Gardens;8;Bangalore;Karnataka;Lal,Bagh,Gardens,Bangalore,Karnataka;State:Karnataka,Dist/Location:Bangalore
+506;1;The Jawaharlal Nehru Planetarium;8;Bangalore;Karnataka;The,Jawaharlal,Nehru,Planetarium,Bangalore,Karnataka;State:Karnataka,Dist/Location:Bangalore
+507;1;The Bull Temple;8;Bangalore;Karnataka;The,Bull,Temple,Bangalore,Karnataka;State:Karnataka,Dist/Location:Bangalore
+508;1;Amba Vilas Palace;8;Mysore;Karnataka;Amba,Vilas,Palace,Mysore,Karnataka;State:Karnataka,Dist/Location:Mysore
+509;1;Mysore Zoo;8;Mysore;Karnataka;Mysore,Zoo,Mysore,Karnataka;State:Karnataka,Dist/Location:Mysore
+510;1;Brindavan Gardens;8;Mysore;Karnataka;Brindavan,Gardens,Mysore,Karnataka;State:Karnataka,Dist/Location:Mysore
+511;1;Krishnaraja Sagara Dam;8;Mysore;Karnataka;Krishnaraja,Sagara,Dam,Mysore,Karnataka;State:Karnataka,Dist/Location:Mysore
+512;1;Iruppu WaterWaterfalls;8;Coorg;Karnataka;Iruppu,WaterWaterfalls,Coorg,Karnataka;State:Karnataka,Dist/Location:Coorg
+513;1;Raja's Seat;8;Coorg;Karnataka;Raja's,Seat,Coorg,Karnataka;State:Karnataka,Dist/Location:Coorg
+514;1;Abbey Waterfalls;8;Coorg;Karnataka;Abbey,Waterfalls,Coorg,Karnataka;State:Karnataka,Dist/Location:Coorg
+515;1;Kudremukh National Park;8;Chikmagalur;Karnataka;Kudremukh,National,Park,Chikmagalur,Karnataka;State:Karnataka,Dist/Location:Chikmagalur
+516;1;Sharadamba Temple;8;Chikmagalur;Karnataka;Sharadamba,Temple,Chikmagalur,Karnataka;State:Karnataka,Dist/Location:Chikmagalur
+517;1;Mullayanagiri;8;Chikmagalur;Karnataka;Mullayanagiri,Chikmagalur,Karnataka;State:Karnataka,Dist/Location:Chikmagalur
+518;1;Karkala;8;Mangalore;Karnataka;Karkala,Mangalore,Karnataka;State:Karnataka,Dist/Location:Mangalore
+519;1;Mudabidiri;8;Mangalore;Karnataka;Mudabidiri,Mangalore,Karnataka;State:Karnataka,Dist/Location:Mangalore
+520;1;Sringeri;8;Mangalore;Karnataka;Sringeri,Mangalore,Karnataka;State:Karnataka,Dist/Location:Mangalore
+521;1;Onake Abbi Waterfalls;8;Udupi;Karnataka;Onake,Abbi,Waterfalls,Udupi,Karnataka;State:Karnataka,Dist/Location:Udupi
+522;1;Kudlu Theertha Waterfalls;8;Udupi;Karnataka;Kudlu,Theertha,Waterfalls,Udupi,Karnataka;State:Karnataka,Dist/Location:Udupi
+523;1;Jomlu Theertha Waterfalls;8;Udupi;Karnataka;Jomlu,Theertha,Waterfalls,Udupi,Karnataka;State:Karnataka,Dist/Location:Udupi
+524;1;Jogi Gundi Waterfalls;8;Udupi;Karnataka;Jogi,Gundi,Waterfalls,Udupi,Karnataka;State:Karnataka,Dist/Location:Udupi
+525;1;Barkana Waterfalls;8;Udupi;Karnataka;Barkana,Waterfalls,Udupi,Karnataka;State:Karnataka,Dist/Location:Udupi
+526;1;Achakanya Waterfalls;8;Udupi;Karnataka;Achakanya,Waterfalls,Udupi,Karnataka;State:Karnataka,Dist/Location:Udupi
+527;1;Ambutheertha;8;Udupi;Karnataka;Ambutheertha,Udupi,Karnataka;State:Karnataka,Dist/Location:Udupi
+528;1;Balmuri And Edumuri WaterWaterfalls;8;Srirangapatna;Karnataka;Balmuri,And,Edumuri,WaterWaterfalls,Srirangapatna,Karnataka;State:Karnataka,Dist/Location:Srirangapatna
+529;1;Sirimane Waterfalls;8;Sringeri;Karnataka;Sirimane,Waterfalls,Sringeri,Karnataka;State:Karnataka,Dist/Location:Sringeri
+530;1;Hanuman Gundi Waterfalls;8;Sringeri;Karnataka;Hanuman,Gundi,Waterfalls,Sringeri,Karnataka;State:Karnataka,Dist/Location:Sringeri
+531;1;Chunchanakatte Waterfalls;8;Mysore;Karnataka;Chunchanakatte,Waterfalls,Mysore,Karnataka;State:Karnataka,Dist/Location:Mysore
+532;1;Koosalli WaterWaterfalls;8;Murudeshwar;Karnataka;Koosalli,WaterWaterfalls,Murudeshwar,Karnataka;State:Karnataka,Dist/Location:Murudeshwar
+533;1;Hidlumane Waterfalls;8;Murudeshwar;Karnataka;Hidlumane,Waterfalls,Murudeshwar,Karnataka;State:Karnataka,Dist/Location:Murudeshwar
+534;1;Kudumari / Chaktikal WaterWaterfalls;8;Murudeshwar;Karnataka;Kudumari,/,Chaktikal,WaterWaterfalls,Murudeshwar,Karnataka;State:Karnataka,Dist/Location:Murudeshwar
+535;1;Arisina Gundi Waterfalls;8;Murudeshwar;Karnataka;Arisina,Gundi,Waterfalls,Murudeshwar,Karnataka;State:Karnataka,Dist/Location:Murudeshwar
+536;1;Apsara Konda Waterfalls;8;Murudeshwar;Karnataka;Apsara,Konda,Waterfalls,Murudeshwar,Karnataka;State:Karnataka,Dist/Location:Murudeshwar
+537;1;Shanti Waterfalls;8;Kemmanagundi;Karnataka;Shanti,Waterfalls,Kemmanagundi,Karnataka;State:Karnataka,Dist/Location:Kemmanagundi
+538;1;Kalhatti / Kalhattagiri / Kalahasthi Waterfalls;8;Kemmanagundi;Karnataka;Kalhatti,/,Kalhattagiri,/,Kalahasthi,Waterfalls,Kemmanagundi,Karnataka;State:Karnataka,Dist/Location:Kemmanagundi
+539;1;Hebbe Waterfalls;8;Kemmanagundi;Karnataka;Hebbe,Waterfalls,Kemmanagundi,Karnataka;State:Karnataka,Dist/Location:Kemmanagundi
+540;1;Unchalli Waterfalls;8;Sirsi;Karnataka;Unchalli,Waterfalls,Sirsi,Karnataka;State:Karnataka,Dist/Location:Sirsi
+541;1;Bennehole Waterfalls;8;Sirsi;Karnataka;Bennehole,Waterfalls,Sirsi,Karnataka;State:Karnataka,Dist/Location:Sirsi
+542;1;Mallali Waterfalls;8;Coorg;Karnataka;Mallali,Waterfalls,Coorg,Karnataka;State:Karnataka,Dist/Location:Coorg
+543;1;Ganges;8;;Uttar Pradesh;Ganges,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:
+544;1;Tomb of I'timad-ud-Daulah;8;Agra;Uttar Pradesh;Tomb,of,I'timad-ud-Daulah,Agra,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Agra
+545;1;Agra Fort;8;Agra;Uttar Pradesh;Agra,Fort,Agra,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Agra
+546;1;Kashi Vishwanath Temple;8;Varanasi;Uttar Pradesh;Kashi,Vishwanath,Temple,Varanasi,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Varanasi
+547;1;Tomb of Akbar the Great;8;Agra;Uttar Pradesh;Tomb,of,Akbar,the,Great,Agra,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Agra
+548;1;Manikarnika Ghat;8;Varansi;Uttar Pradesh;Manikarnika,Ghat,Varansi,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Varansi
+549;1;Dhamek Stupa;8;Varanasi;Uttar Pradesh;Dhamek,Stupa,Varanasi,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Varanasi
+550;1;Mehtab Bagh;8;Agra;Uttar Pradesh;Mehtab,Bagh,Agra,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Agra
+551;1;Panch Mahal;8;Fatehpur;Uttar Pradesh;Panch,Mahal,Fatehpur,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Fatehpur
+552;1;Shri Krishna Janmabhoomi;8;Mathura;Uttar Pradesh;Shri,Krishna,Janmabhoomi,Mathura,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Mathura
+553;1;Banke Bihari Temple;8;Mathura;Uttar Pradesh;Banke,Bihari,Temple,Mathura,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Mathura
+554;1;Dashashwamedh Ghat;8;;Uttar Pradesh;Dashashwamedh,Ghat,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:
+555;1;Assi Ghat;8;Varanasi;Uttar Pradesh;Assi,Ghat,Varanasi,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Varanasi
+556;1;Khusro Bagh;8;Allahabad;Uttar Pradesh;Khusro,Bagh,Allahabad,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Allahabad
+557;1;Jama Mosque;8;Agra;Uttar Pradesh;Jama,Mosque,Agra,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Agra
+558;1;Prem Mandir;8;Vrindavan;Uttar Pradesh;Prem,Mandir,Vrindavan,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Vrindavan
+559;1;Chota Imambara;8;Lucknow;Uttar Pradesh;Chota,Imambara,Lucknow,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Lucknow
+560;1;Allahabad Fort;8;Allahabad;Uttar Pradesh;Allahabad,Fort,Allahabad,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Allahabad
+561;1;Ramnagar Fort;8;Varanasi;Uttar Pradesh;Ramnagar,Fort,Varanasi,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Varanasi
+562;1;Triveni Sangam;8;Allahabad;Uttar Pradesh;Triveni,Sangam,Allahabad,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Allahabad
+563;1;Chaukhandi Stupa;8;Varanasi;Uttar Pradesh;Chaukhandi,Stupa,Varanasi,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Varanasi
+564;1;Allen Forest Zoo;8;Kanpur;Uttar Pradesh;Allen,Forest,Zoo,Kanpur,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Kanpur
+565;1;Sarnath Museum;8;Sarnath;Uttar Pradesh;Sarnath,Museum,Sarnath,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Sarnath
+566;1;Hanumangarhi;8;Ayodhya;Uttar Pradesh;Hanumangarhi,Ayodhya,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Ayodhya
+567;1;Tomb of Mariam-uz-Zamani;8;Agra;Uttar Pradesh;Tomb,of,Mariam-uz-Zamani,Agra,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Agra
+568;1;Musamman Burj;8;Agra;Uttar Pradesh;Musamman,Burj,Agra,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Agra
+569;1;Aligarh Fort;8;Aligarh;Uttar Pradesh;Aligarh,Fort,Aligarh,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Aligarh
+570;1;Chini Ka Rauza;8;Agra;Uttar Pradesh;Chini,Ka,Rauza,Agra,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Agra
+571;1;Swaraj Bhavan;8;Allahabad;Uttar Pradesh;Swaraj,Bhavan,Allahabad,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Allahabad
+572;1;Govardhan hill;8;Vrindavana;Uttar Pradesh;Govardhan,hill,Vrindavana,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Vrindavana
+573;1;Jawahar Planetarium;8;Allahabad;Uttar Pradesh;Jawahar,Planetarium,Allahabad,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Allahabad
+574;1;Moti Masjid;8;Agra;Uttar Pradesh;Moti,Masjid,Agra,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Agra
+575;1;Ram Bagh;8;Agra;Uttar Pradesh;Ram,Bagh,Agra,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Agra
+576;1;Jama Mosque;8;Fatehpur;Uttar Pradesh;Jama,Mosque,Fatehpur,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Fatehpur
+577;1;Government Museum;8;Mathura;Uttar Pradesh;Government,Museum,Mathura,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Mathura
+578;1;Nawabganj Bird Sanctuary;8;Ravanhar;Uttar Pradesh;Nawabganj,Bird,Sanctuary,Ravanhar,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Ravanhar
+579;1;Babri Masjid;8;Ayodhya;Uttar Pradesh;Babri,Masjid,Ayodhya,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Ayodhya
+580;1;Gyanvapi Mosque;8;Varanasi;Uttar Pradesh;Gyanvapi,Mosque,Varanasi,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Varanasi
+581;1;Moti Jheel;8;Kanpur;Uttar Pradesh;Moti,Jheel,Kanpur,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Kanpur
+582;1;Buddh International Circuit;8;Greater Noida;Uttar Pradesh;Buddh,International,Circuit,Greater,Noida,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Greater Noida
+583;1;Devdari Waterfalls;8;Chandauli;Uttar Pradesh;Devdari,Waterfalls,Chandauli,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Chandauli
+584;1;Shabari Waterfalls;8;Chitrakoot;Uttar Pradesh;Shabari,Waterfalls,Chitrakoot,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Chitrakoot
+585;1;Lakhaniya Dari Waterfalls;8;Mirzapur;Uttar Pradesh;Lakhaniya,Dari,Waterfalls,Mirzapur,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Mirzapur
+586;1;Vindham waterfall;8;Mirzapur;Uttar Pradesh;Vindham,waterfall,Mirzapur,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Mirzapur
+587;1;Sidhnath Dari Waterfalls;8;Mirzapur;Uttar Pradesh;Sidhnath,Dari,Waterfalls,Mirzapur,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Mirzapur
+588;1;Dabdaba Waterfalls;8;Jawahar;Uttar Pradesh;Dabdaba,Waterfalls,Jawahar,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Jawahar
+589;1;Wyndham Falls;8;Mirzapur;Uttar Pradesh;Wyndham,Falls,Mirzapur,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:Mirzapur
+590;1;Rajdari;8;;Uttar Pradesh;Rajdari,Uttar,Pradesh;State:Uttar Pradesh,Dist/Location:
+591;1;Nainital;8;Nainital;Uttarakhand;Nainital,Nainital,Uttarakhand;State:Uttarakhand,Dist/Location:Nainital
+592;1;Rishikesh;8;Rishikesh;Uttarakhand;Rishikesh,Rishikesh,Uttarakhand;State:Uttarakhand,Dist/Location:Rishikesh
+593;1;Dehradun;8;Dehradun;Uttarakhand;Dehradun,Dehradun,Uttarakhand;State:Uttarakhand,Dist/Location:Dehradun
+594;1;Haridwar;8;Haridwar;Uttarakhand;Haridwar,Haridwar,Uttarakhand;State:Uttarakhand,Dist/Location:Haridwar
+595;1;Mussoorie;8;Dehradun;Uttarakhand;Mussoorie,Dehradun,Uttarakhand;State:Uttarakhand,Dist/Location:Dehradun
+596;1;Jim Corbett National Park;8;Ramnagar;Uttarakhand;Jim,Corbett,National,Park,Ramnagar,Uttarakhand;State:Uttarakhand,Dist/Location:Ramnagar
+597;1;Auli;8;Garhwal;Uttarakhand;Auli,Garhwal,Uttarakhand;State:Uttarakhand,Dist/Location:Garhwal
+598;1;Ranikhet;8;Almora;Uttarakhand;Ranikhet,Almora,Uttarakhand;State:Uttarakhand,Dist/Location:Almora
+599;1;Badrinath;8;Chamoli;Uttarakhand;Badrinath,Chamoli,Uttarakhand;State:Uttarakhand,Dist/Location:Chamoli
+600;1;Almora;8;Almora;Uttarakhand;Almora,Almora,Uttarakhand;State:Uttarakhand,Dist/Location:Almora
+601;1;Valley of Flowers National Park;8;;Uttarakhand;Valley,of,Flowers,National,Park,Uttarakhand;State:Uttarakhand,Dist/Location:
+602;1;Lansdowne;8;Garhwal;Uttarakhand;Lansdowne,Garhwal,Uttarakhand;State:Uttarakhand,Dist/Location:Garhwal
+603;1;Kedarnath;8;Rudraprayag;Uttarakhand;Kedarnath,Rudraprayag,Uttarakhand;State:Uttarakhand,Dist/Location:Rudraprayag
+604;1;Kausani;8;Bageshwar;Uttarakhand;Kausani,Bageshwar,Uttarakhand;State:Uttarakhand,Dist/Location:Bageshwar
+605;1;Gangotri;8;Uttarkashi;Uttarakhand;Gangotri,Uttarkashi,Uttarakhand;State:Uttarakhand,Dist/Location:Uttarkashi
+606;1;Dhanaulti;8;Mussoorie;Uttarakhand;Dhanaulti,Mussoorie,Uttarakhand;State:Uttarakhand,Dist/Location:Mussoorie
+607;1;Uttarkashi;8;Uttarkashi;Uttarakhand;Uttarkashi,Uttarkashi,Uttarakhand;State:Uttarakhand,Dist/Location:Uttarkashi
+608;1;Mukteshwar;8;;Uttarakhand;Mukteshwar,Uttarakhand;State:Uttarakhand,Dist/Location:
+609;1;Munsiyari;8;Pithoragarh;Uttarakhand;Munsiyari,Pithoragarh,Uttarakhand;State:Uttarakhand,Dist/Location:Pithoragarh
+610;1;Bhimtal;8;Nainital;Uttarakhand;Bhimtal,Nainital,Uttarakhand;State:Uttarakhand,Dist/Location:Nainital
+611;1;Chakrata;8;Dehradun;Uttarakhand;Chakrata,Dehradun,Uttarakhand;State:Uttarakhand,Dist/Location:Dehradun
+612;1;Kanatal;8;;Uttarakhand;Kanatal,Uttarakhand;State:Uttarakhand,Dist/Location:
+613;1;Jyotirmath;8;Chamoli;Uttarakhand;Jyotirmath,Chamoli,Uttarakhand;State:Uttarakhand,Dist/Location:Chamoli
+614;1;Chopta;8;Chopta;Uttarakhand;Chopta,Chopta,Uttarakhand;State:Uttarakhand,Dist/Location:Chopta
+615;1;Kathgodam;8;Nainital;Uttarakhand;Kathgodam,Nainital,Uttarakhand;State:Uttarakhand,Dist/Location:Nainital
+616;1;Nanda Devi National Park;8;Joshimath;Uttarakhand;Nanda,Devi,National,Park,Joshimath,Uttarakhand;State:Uttarakhand,Dist/Location:Joshimath
+617;1;Tehri;8;Tehri;Uttarakhand;Tehri,Tehri,Uttarakhand;State:Uttarakhand,Dist/Location:Tehri
+618;1;Rajaji National Park;8;Haridwar & Dehradun & Pauri;Uttarakhand;Rajaji,National,Park,Haridwar,&,Dehradun,&,Pauri,Uttarakhand;State:Uttarakhand,Dist/Location:Haridwar & Dehradun & Pauri
+619;1;Rudraprayag;8;Rudraprayag;Uttarakhand;Rudraprayag,Rudraprayag,Uttarakhand;State:Uttarakhand,Dist/Location:Rudraprayag
+620;1;Roorkee;8;Roorkee;Uttarakhand;Roorkee,Roorkee,Uttarakhand;State:Uttarakhand,Dist/Location:Roorkee
+621;1;Chaukori;8;Kumaon;Uttarakhand;Chaukori,Kumaon,Uttarakhand;State:Uttarakhand,Dist/Location:Kumaon
+622;1;Ramgarh;8;Nainital;Uttarakhand;Ramgarh,Nainital,Uttarakhand;State:Uttarakhand,Dist/Location:Nainital
+623;1;Devprayag;8;Garhwal;Uttarakhand;Devprayag,Garhwal,Uttarakhand;State:Uttarakhand,Dist/Location:Garhwal
+624;1;Kotdwar temple & river;8;Garhwal;Uttarakhand;Kotdwar,temple,&,river,Garhwal,Uttarakhand;State:Uttarakhand,Dist/Location:Garhwal
+625;1;Harsil;8;;Uttarakhand;Harsil,Uttarakhand;State:Uttarakhand,Dist/Location:
+626;1;Bageshwar;8;Bageshwar;Uttarakhand;Bageshwar,Bageshwar,Uttarakhand;State:Uttarakhand,Dist/Location:Bageshwar
+627;1;Kashipur;8;Udham Singh Nagar;Uttarakhand;Kashipur,Udham,Singh,Nagar,Uttarakhand;State:Uttarakhand,Dist/Location:Udham Singh Nagar
+628;1;Srinagar;8;Garhwal;Uttarakhand;Srinagar,Garhwal,Uttarakhand;State:Uttarakhand,Dist/Location:Garhwal
+629;1;Pangot;8;Nainital;Uttarakhand;Pangot,Nainital,Uttarakhand;State:Uttarakhand,Dist/Location:Nainital
+630;1;Chamba;8;Garhwal;Uttarakhand;Chamba,Garhwal,Uttarakhand;State:Uttarakhand,Dist/Location:Garhwal
+631;1;Ukhimath;8;Rudraprayag;Uttarakhand;Ukhimath,Rudraprayag,Uttarakhand;State:Uttarakhand,Dist/Location:Rudraprayag
+632;1;Pithoragarh;8;Almora;Uttarakhand;Pithoragarh,Almora,Uttarakhand;State:Uttarakhand,Dist/Location:Almora
+633;1;Landour;8;Mussoorie;Uttarakhand;Landour,Mussoorie,Uttarakhand;State:Uttarakhand,Dist/Location:Mussoorie
+634;1;Lohaghat;8;Champawat;Uttarakhand;Lohaghat,Champawat,Uttarakhand;State:Uttarakhand,Dist/Location:Champawat
+635;1;kempty Waterfalls;8;Dehradun;Uttarakhand;kempty,Waterfalls,Dehradun,Uttarakhand;State:Uttarakhand,Dist/Location:Dehradun
+636;1;Corbett Waterfalls;8;Ramnagar;Uttarakhand;Corbett,Waterfalls,Ramnagar,Uttarakhand;State:Uttarakhand,Dist/Location:Ramnagar
+637;1;jharia pani Waterfalls;8;Dehradun;Uttarakhand;jharia,pani,Waterfalls,Dehradun,Uttarakhand;State:Uttarakhand,Dist/Location:Dehradun
+638;1;Bhatta Waterfalls;8;Mussoorie;Uttarakhand;Bhatta,Waterfalls,Mussoorie,Uttarakhand;State:Uttarakhand,Dist/Location:Mussoorie
+639;1;Birthi Waterfalls;8;Pithoragarh;Uttarakhand;Birthi,Waterfalls,Pithoragarh,Uttarakhand;State:Uttarakhand,Dist/Location:Pithoragarh
+640;1;Tiger Waterfall ;8;;Uttarakhand;Tiger,Waterfall,Uttarakhand;State:Uttarakhand,Dist/Location:
+641;1;heena waterfall;8;;Uttarakhand;heena,waterfall,Uttarakhand;State:Uttarakhand,Dist/Location:
+642;1;Guwahati;8;Guwahati;Assam;Guwahati,Guwahati,Assam;State:Assam,Dist/Location:Guwahati
+643;1;Kaziranga National Park;8;Golaghat and Nagaon ;Assam;Kaziranga,National,Park,Golaghat,and,Nagaon,Assam;State:Assam,Dist/Location:Golaghat and Nagaon 
+644;1;Dibrugarh;8;Dibrugarh;Assam;Dibrugarh,Dibrugarh,Assam;State:Assam,Dist/Location:Dibrugarh
+645;1;Tezpur;8;Sonitpur;Assam;Tezpur,Sonitpur,Assam;State:Assam,Dist/Location:Sonitpur
+646;1;Majuli;8;;Assam;Majuli,Assam;State:Assam,Dist/Location:
+647;1;Manas National Park;8;Barpeta;Assam;Manas,National,Park,Barpeta,Assam;State:Assam,Dist/Location:Barpeta
+648;1;Silchar;8;Guwahati;Assam;Silchar,Guwahati,Assam;State:Assam,Dist/Location:Guwahati
+649;1;Jorhat;8;Jorhat;Assam;Jorhat,Jorhat,Assam;State:Assam,Dist/Location:Jorhat
+650;1;Sivasagar;8;Sivasagar;Assam;Sivasagar,Sivasagar,Assam;State:Assam,Dist/Location:Sivasagar
+651;1;Haflong;8;North Cachar Hills;Assam;Haflong,North,Cachar,Hills,Assam;State:Assam,Dist/Location:North Cachar Hills
+652;1;Dibru-Saikhowa National Park;8;Tinsukia;Assam;Dibru-Saikhowa,National,Park,Tinsukia,Assam;State:Assam,Dist/Location:Tinsukia
+653;1;Nameri National Park;8;Tezpur;Assam;Nameri,National,Park,Tezpur,Assam;State:Assam,Dist/Location:Tezpur
+654;1;Digboi;8;Digboi;Assam;Digboi,Digboi,Assam;State:Assam,Dist/Location:Digboi
+655;1;Kohora;8;Kohora;Assam;Kohora,Kohora,Assam;State:Assam,Dist/Location:Kohora
+656;1;Lumding;8;Nagaon;Assam;Lumding,Nagaon,Assam;State:Assam,Dist/Location:Nagaon
+657;1;Diphu;8;Diphu;Assam;Diphu,Diphu,Assam;State:Assam,Dist/Location:Diphu
+658;1;Abhayapuri;8;Abhayapuri;Assam;Abhayapuri,Abhayapuri,Assam;State:Assam,Dist/Location:Abhayapuri
+659;1;Sivakunda Waterfall;8;Morigaon;Assam;Sivakunda,Waterfall,Morigaon,Assam;State:Assam,Dist/Location:Morigaon
+660;1;Akashiganga;8;Nagaon;Assam;Akashiganga,Nagaon,Assam;State:Assam,Dist/Location:Nagaon
+661;1;Champawati Kunda;8;Nagaon;Assam;Champawati,Kunda,Nagaon,Assam;State:Assam,Dist/Location:Nagaon
+662;1;Brihadeeswarar Temple;8;Thanjavur;Tamil Nadu;Brihadeeswarar,Temple,Thanjavur,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Thanjavur
+663;1;Kapaleeshwarar Temple;8;Chennai;Tamil Nadu;Kapaleeshwarar,Temple,Chennai,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Chennai
+664;1;Vivekananda Rock Memorial;8;Kanyakumari;Tamil Nadu;Vivekananda,Rock,Memorial,Kanyakumari,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Kanyakumari
+665;1;Ramanathaswamy Temple;8;Rameswaram;Tamil Nadu;Ramanathaswamy,Temple,Rameswaram,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Rameswaram
+666;1;Madras Crocodile Bank Trust;8;Mahabalipuram;Tamil Nadu;Madras,Crocodile,Bank,Trust,Mahabalipuram,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Mahabalipuram
+667;1;Pancha Rathas;8;Mahabalipuram;Tamil Nadu;Pancha,Rathas,Mahabalipuram,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Mahabalipuram
+668;1;Ranganathaswamy Temple, Srirangam;8;Thiruvarangam;Tamil Nadu;Ranganathaswamy,Temple,Srirangam,Thiruvarangam,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Thiruvarangam
+669;1;Vadapalani Andavar Temple;8;Chennai;Tamil Nadu;Vadapalani,Andavar,Temple,Chennai,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Chennai
+670;1;Meenakshi Amman Temple;8;Madurai;Tamil Nadu;Meenakshi,Amman,Temple,Madurai,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Madurai
+671;1;Dhyanalinga;8;Coimbatore;Tamil Nadu;Dhyanalinga,Coimbatore,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Coimbatore
+672;1;Airavatesvara Temple;8;Kumbakonam;Tamil Nadu;Airavatesvara,Temple,Kumbakonam,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Kumbakonam
+673;1;Marina Beach;8;Chennai;Tamil Nadu;Marina,Beach,Chennai,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Chennai
+674;1;Edward Elliot's Beach;8;Chennai;Tamil Nadu;Edward,Elliot's,Beach,Chennai,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Chennai
+675;1;Berijam Lake;8;Dindigul;Tamil Nadu;Berijam,Lake,Dindigul,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Dindigul
+676;1;Nilgiri Mountain Railway;8;;Tamil Nadu;Nilgiri,Mountain,Railway,Tamil,Nadu;State:Tamil Nadu,Dist/Location:
+677;1;Nilgiri mountains;8;;Tamil Nadu;Nilgiri,mountains,Tamil,Nadu;State:Tamil Nadu,Dist/Location:
+678;1;Ooty Lake;8;Nilgiri;Tamil Nadu;Ooty,Lake,Nilgiri,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Nilgiri
+679;1;Padmanabhapuram Palace;8;Padmanabhapuram;Tamil Nadu;Padmanabhapuram,Palace,Padmanabhapuram,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Padmanabhapuram
+680;1;Arignar Anna Zoological Park;8;Chennai;Tamil Nadu;Arignar,Anna,Zoological,Park,Chennai,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Chennai
+681;1;Guindy National Park;8;Chennai;Tamil Nadu;Guindy,National,Park,Chennai,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Chennai
+682;1;Thiruvalluvar Statue;8;Kanyakumari;Tamil Nadu;Thiruvalluvar,Statue,Kanyakumari,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Kanyakumari
+683;1;Doddabetta;8;Nilgiri;Tamil Nadu;Doddabetta,Nilgiri,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Nilgiri
+684;1;Vattakottai Fort;8;Vattakkottai;Tamil Nadu;Vattakottai,Fort,Vattakkottai,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Vattakkottai
+685;1;Thanumalayan Temple;8;Suchindram;Tamil Nadu;Thanumalayan,Temple,Suchindram,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Suchindram
+686;1;Anaimalai Hills;8;;Tamil Nadu;Anaimalai,Hills,Tamil,Nadu;State:Tamil Nadu,Dist/Location:
+687;1;Government Rose Garden;8;Ooty;Tamil Nadu;Government,Rose,Garden,Ooty,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Ooty
+688;1;Thirumalai Nayakkar Mahal;8;Madurai;Tamil Nadu;Thirumalai,Nayakkar,Mahal,Madurai,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Madurai
+689;1;Government Botanical Gardens;8;Ooty;Tamil Nadu;Government,Botanical,Gardens,Ooty,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Ooty
+690;1;Gandhi Memorial Museum;8;Madurai;Tamil Nadu;Gandhi,Memorial,Museum,Madurai,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Madurai
+691;1;Kodaikanal Lake;8;Dindigul;Tamil Nadu;Kodaikanal,Lake,Dindigul,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Dindigul
+692;1;Kiliyur Falls;8;Pattipadi;Tamil Nadu;Kiliyur,Falls,Pattipadi,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Pattipadi
+693;1;St. Thomas Mount;8;Chennai;Tamil Nadu;St.,Thomas,Mount,Chennai,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Chennai
+694;1;Siruvani Waterfalls;8;Coimbatore;Tamil Nadu;Siruvani,Waterfalls,Coimbatore,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Coimbatore
+695;1;Shore Temple;8;Mahabalipuram;Tamil Nadu;Shore,Temple,Mahabalipuram,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Mahabalipuram
+696;1;Suruli Falls;8;Theni;Tamil Nadu;Suruli,Falls,Theni,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Theni
+697;1;Koodal Azhagar Temple;8;Madurai;Tamil Nadu;Koodal,Azhagar,Temple,Madurai,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Madurai
+698;1;Black Thunder;8;Coimbatore;Tamil Nadu;Black,Thunder,Coimbatore,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Coimbatore
+699;1;Covelong;8;Chennai;Tamil Nadu;Covelong,Chennai,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Chennai
+700;1;Vandiyur Mariamman Teppakulam;8;;Tamil Nadu;Vandiyur,Mariamman,Teppakulam,Tamil,Nadu;State:Tamil Nadu,Dist/Location:
+701;1;Pamban Bridge;8;Pamban;Tamil Nadu;Pamban,Bridge,Pamban,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Pamban
+702;1;Government Museum;8;Chennai;Tamil Nadu;Government,Museum,Chennai,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Chennai
+703;1;Fort St. George;8;Chennai;Tamil Nadu;Fort,St.,George,Chennai,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Chennai
+704;1;Stone House;8;Ooty;Tamil Nadu;Stone,House,Ooty,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Ooty
+705;1;Mathur Aqueduct;8;Kanyakumari;Tamil Nadu;Mathur,Aqueduct,Kanyakumari,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Kanyakumari
+706;1;Athisayam;8;Madurai;Tamil Nadu;Athisayam,Madurai,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Madurai
+707;1;Mudumalai National Park;8;Nilgiri;Tamil Nadu;Mudumalai,National,Park,Nilgiri,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Nilgiri
+708;1;Annamalaiyar Temple;8;Tiruvannamalai;Tamil Nadu;Annamalaiyar,Temple,Tiruvannamalai,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Tiruvannamalai
+709;1;Amirthi Zoological Park;8;Vellore;Tamil Nadu;Amirthi,Zoological,Park,Vellore,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Vellore
+710;1;Puliyancholai Falls;8;Tiruchirappalli;Tamil Nadu;Puliyancholai,Falls,Tiruchirappalli,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Tiruchirappalli
+711;1;Agaya Gangai Falls;8;Tiruchirappalli;Tamil Nadu;Agaya,Gangai,Falls,Tiruchirappalli,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Tiruchirappalli
+712;1;Pazhaya Courtallaruvi;8;Tenkasi;Tamil Nadu;Pazhaya,Courtallaruvi,Tenkasi,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Tenkasi
+713;1;Five Falls / Aintharuvi;8;Tenkasi;Tamil Nadu;Five,Falls,/,Aintharuvi,Tenkasi,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Tenkasi
+714;1;Courtallam Falls / Kutralam Falls;8;Tenkasi;Tamil Nadu;Courtallam,Falls,/,Kutralam,Falls,Tenkasi,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Tenkasi
+715;1;Pykara Falls;8;Ooty;Tamil Nadu;Pykara,Falls,Ooty,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Ooty
+716;1;Kalhatty Falls;8;Ooty;Tamil Nadu;Kalhatty,Falls,Ooty,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Ooty
+717;1;Suruli Waterfalls;8;Madurai;Tamil Nadu;Suruli,Waterfalls,Madurai,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Madurai
+718;1;Kumbakkarai Waterfalls;8;Madurai;Tamil Nadu;Kumbakkarai,Waterfalls,Madurai,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Madurai
+719;1;Thiruparappu Waterfalls;8;Kanyakumari;Tamil Nadu;Thiruparappu,Waterfalls,Kanyakumari,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Kanyakumari
+720;1;Olakkay Aruvi Waterfalls;8;Kanyakumari;Tamil Nadu;Olakkay,Aruvi,Waterfalls,Kanyakumari,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Kanyakumari
+721;1;Thalaiyar Falls / Rat Tail Falls;8;Kodaikanal;Tamil Nadu;Thalaiyar,Falls,/,Rat,Tail,Falls,Kodaikanal,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Kodaikanal
+722;1;Silver Cascade;8;Kodaikanal;Tamil Nadu;Silver,Cascade,Kodaikanal,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Kodaikanal
+723;1;Pambar Falls;8;Kodaikanal;Tamil Nadu;Pambar,Falls,Kodaikanal,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Kodaikanal
+724;1;Fairy Falls;8;Kodaikanal;Tamil Nadu;Fairy,Falls,Kodaikanal,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Kodaikanal
+725;1;Bear Shola Falls;8;Kodaikanal;Tamil Nadu;Bear,Shola,Falls,Kodaikanal,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Kodaikanal
+726;1;Law's Falls;8;Coonoor;Tamil Nadu;Law's,Falls,Coonoor,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Coonoor
+727;1;Catherine Falls;8;Coonoor;Tamil Nadu;Catherine,Falls,Coonoor,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Coonoor
+728;1;Vaideki Waterfalls;8;Coimbatore;Tamil Nadu;Vaideki,Waterfalls,Coimbatore,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Coimbatore
+729;1;Monkey Waterfalls;8;Coimbatore;Tamil Nadu;Monkey,Waterfalls,Coimbatore,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Coimbatore
+730;1;Kodiveri Dam & Waterfalls;8;Coimbatore;Tamil Nadu;Kodiveri,Dam,&,Waterfalls,Coimbatore,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Coimbatore
+731;1;Hogenakkal Waterfall;8;Dharmapuri;Tamil Nadu;Hogenakkal,Waterfall,Dharmapuri,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Dharmapuri
+732;1;Kanyakumari Beach;8;Kanyakumari;Tamil Nadu;Kanyakumari,Beach,Kanyakumari,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Kanyakumari
+733;1;Mahabalipuram Beach;8;Mahabalipuram;Tamil Nadu;Mahabalipuram,Beach,Mahabalipuram,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Mahabalipuram
+734;1;Poompuhar Port;8;Chidambaram;Tamil Nadu;Poompuhar,Port,Chidambaram,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Chidambaram
+735;1;Elliot's Beach;8;Chennai;Tamil Nadu;Elliot's,Beach,Chennai,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Chennai
+736;1;V.G.P. Golden Beach;8;Chennai;Tamil Nadu;V.G.P.,Golden,Beach,Chennai,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Chennai
+737;1;Marina Beach & Aquarium;8;Chennai;Tamil Nadu;Marina,Beach,&,Aquarium,Chennai,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Chennai
+738;1;Thiruchendur;8;Kanyakumari;Tamil Nadu;Thiruchendur,Kanyakumari,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Kanyakumari
+739;1;Covelong Beach;8;Mahabalipuram;Tamil Nadu;Covelong,Beach,Mahabalipuram,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Mahabalipuram
+740;1;Sadras Beach Resort;8;Mahabalipuram;Tamil Nadu;Sadras,Beach,Resort,Mahabalipuram,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Mahabalipuram
+741;1;Nagapattinam Beach;8;Thanjavur;Tamil Nadu;Nagapattinam,Beach,Thanjavur,Tamil,Nadu;State:Tamil Nadu,Dist/Location:Thanjavur
+742;1;Vengpui Peak;8;Lawngtlai;Mizoram;Vengpui,Peak,Lawngtlai,Mizoram;State:Mizoram,Dist/Location:Lawngtlai
+743;1;Lohawka Wildlife Sanctuary;8;Lawngtlai;Mizoram;Lohawka,Wildlife,Sanctuary,Lawngtlai,Mizoram;State:Mizoram,Dist/Location:Lawngtlai
+744;1;Sinemon Wildlife Sanctuary;8;Lawngtlai;Mizoram;Sinemon,Wildlife,Sanctuary,Lawngtlai,Mizoram;State:Mizoram,Dist/Location:Lawngtlai
+745;1;Kawmzawl;8;Lawngtlai;Mizoram;Kawmzawl,Lawngtlai,Mizoram;State:Mizoram,Dist/Location:Lawngtlai
+746;1;Ngengpui Wildlife Sanctuary;8;Lawngtlai;Mizoram;Ngengpui,Wildlife,Sanctuary,Lawngtlai,Mizoram;State:Mizoram,Dist/Location:Lawngtlai
+747;1;Vantawng WaterWaterfalls;8;Serchhip;Mizoram;Vantawng,WaterWaterfalls,Serchhip,Mizoram;State:Mizoram,Dist/Location:Serchhip
+748;1;Zoluti Hriatrengna Lung;8;Serchhip;Mizoram;Zoluti,Hriatrengna,Lung,Serchhip,Mizoram;State:Mizoram,Dist/Location:Serchhip
+749;1;Chhingpuii Thlan;8;Serchhip;Mizoram;Chhingpuii,Thlan,Serchhip,Mizoram;State:Mizoram,Dist/Location:Serchhip
+750;1;Thenzawl Deer Park;8;Serchhip;Mizoram;Thenzawl,Deer,Park,Serchhip,Mizoram;State:Mizoram,Dist/Location:Serchhip
+751;1;Lunglei – Bridge of Rock;8;Lunglei;Mizoram;Lunglei,–,Bridge,of,Rock,Lunglei,Mizoram;State:Mizoram,Dist/Location:Lunglei
+752;1;Serkawn;8;Lunglei;Mizoram;Serkawn,Lunglei,Mizoram;State:Mizoram,Dist/Location:Lunglei
+753;1;Khawnglung Wildlife Sanctuary;8;Lunglei;Mizoram;Khawnglung,Wildlife,Sanctuary,Lunglei,Mizoram;State:Mizoram,Dist/Location:Lunglei
+754;1;Nghasih Stream;8;Lunglei;Mizoram;Nghasih,Stream,Lunglei,Mizoram;State:Mizoram,Dist/Location:Lunglei
+755;1;Theiriat Tlang;8;Lunglei;Mizoram;Theiriat,Tlang,Lunglei,Mizoram;State:Mizoram,Dist/Location:Lunglei
+756;1;Thorangtlang Wildlife Sanctuary;8;Lunglei;Mizoram;Thorangtlang,Wildlife,Sanctuary,Lunglei,Mizoram;State:Mizoram,Dist/Location:Lunglei
+757;1;Saza Wildlife Sanctuary;8;Lunglei;Mizoram;Saza,Wildlife,Sanctuary,Lunglei,Mizoram;State:Mizoram,Dist/Location:Lunglei
+758;1;Murlen National Park;8;;Mizoram;Murlen,National,Park,Mizoram;State:Mizoram,Dist/Location:
+759;1;Rih Dil Lake;8;Champhai;Mizoram;Rih,Dil,Lake,Champhai,Mizoram;State:Mizoram,Dist/Location:Champhai
+760;1;Kawlkulh;8;Champhai;Mizoram;Kawlkulh,Champhai,Mizoram;State:Mizoram,Dist/Location:Champhai
+761;1;Phawngpui Peak;8;Champhai;Mizoram;Phawngpui,Peak,Champhai,Mizoram;State:Mizoram,Dist/Location:Champhai
+762;1;Lengteng Hills;8;Champhai;Mizoram;Lengteng,Hills,Champhai,Mizoram;State:Mizoram,Dist/Location:Champhai
+763;1;Lengteng Wildlife Sanctuary;8;Champhai;Mizoram;Lengteng,Wildlife,Sanctuary,Champhai,Mizoram;State:Mizoram,Dist/Location:Champhai
+764;1;Lamsial Puk;8;Champhai;Mizoram;Lamsial,Puk,Champhai,Mizoram;State:Mizoram,Dist/Location:Champhai
+765;1;Palak Wildlife Sanctuary;8;Champhai;Mizoram;Palak,Wildlife,Sanctuary,Champhai,Mizoram;State:Mizoram,Dist/Location:Champhai
+766;1;Fiara Tui;8;Champhai;Mizoram;Fiara,Tui,Champhai,Mizoram;State:Mizoram,Dist/Location:Champhai
+767;1;Kungawrhi Puk;8;Champhai;Mizoram;Kungawrhi,Puk,Champhai,Mizoram;State:Mizoram,Dist/Location:Champhai
+768;1;Mura Puk;8;Champhai;Mizoram;Mura,Puk,Champhai,Mizoram;State:Mizoram,Dist/Location:Champhai
+769;1;Thasiama Seno Neihna;8;Champhai;Mizoram;Thasiama,Seno,Neihna,Champhai,Mizoram;State:Mizoram,Dist/Location:Champhai
+770;1;Hnahlan;8;Champhai;Mizoram;Hnahlan,Champhai,Mizoram;State:Mizoram,Dist/Location:Champhai
+771;1;Lalruanga Lung;8;Champhai;Mizoram;Lalruanga,Lung,Champhai,Mizoram;State:Mizoram,Dist/Location:Champhai
+772;1;Durtlang Hills;8;Aizawl;Mizoram;Durtlang,Hills,Aizawl,Mizoram;State:Mizoram,Dist/Location:Aizawl
+773;1;Bung;8;Aizawl;Mizoram;Bung,Aizawl,Mizoram;State:Mizoram,Dist/Location:Aizawl
+774;1;Tamdil Lake;8;Aizawl;Mizoram;Tamdil,Lake,Aizawl,Mizoram;State:Mizoram,Dist/Location:Aizawl
+775;1;Paikhai;8;Aizawl;Mizoram;Paikhai,Aizawl,Mizoram;State:Mizoram,Dist/Location:Aizawl
+776;1;Mini Zoological Garden;8;Aizawl;Mizoram;Mini,Zoological,Garden,Aizawl,Mizoram;State:Mizoram,Dist/Location:Aizawl
+777;1;Mizoram State Museum;8;Aizawl;Mizoram;Mizoram,State,Museum,Aizawl,Mizoram;State:Mizoram,Dist/Location:Aizawl
+778;1;Luangmual Handicrafts Centre;8;Aizawl;Mizoram;Luangmual,Handicrafts,Centre,Aizawl,Mizoram;State:Mizoram,Dist/Location:Aizawl
+779;1;Sibuta Lung;8;Aizawl;Mizoram;Sibuta,Lung,Aizawl,Mizoram;State:Mizoram,Dist/Location:Aizawl
+780;1;Khawnlung Wildlife Santuary;8;Aizawl;Mizoram;Khawnlung,Wildlife,Santuary,Aizawl,Mizoram;State:Mizoram,Dist/Location:Aizawl

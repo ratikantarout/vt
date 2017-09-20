@@ -1,0 +1,69 @@
+ID	Active (0/1)	Name *	Categories (x,y,z...)	Reference #	Tags (x,y,z...)	Tags,(x,y,z...)
+1	1	Taj mahal	4,8	Agra	Taj mahal	Agra,Taj,mahal
+8	1	Puri Jagannath	4,8	Puri	Puri Jagannath	Puri,Puri,Jagannath
+9	1	Konak sun Temple	4,8	Khurda	Konak sun Temple	Khurda,Konak,sun,Temple
+10	1	Chilika lake	4,8	Khurda,Ganjam	Chilika lake	Khurda,Ganjam,Chilika,lake
+11	1	Lingaraj Temple	4,8	Khurda	Lingaraj Temple	Khurda,Lingaraj,Temple
+12	1	Puri Beach	4,8	Puri	Puri Beach	Puri,Puri,Beach
+13	1	Lokonatha Shiv temple	4,8	Puri	Lokonatha Shiv temple	Puri,Lokonatha,Shiv,temple
+14	1	Mata Matha	4,8	Puri	Mata Matha	Puri,Mata,Matha
+15	1	Dhauligiri Caves	4,8	Khurda	Dhauligiri Caves	Khurda,Dhauligiri,Caves
+16	1	Udayagiri Caves	4,8	Khurda	Udayagiri Caves	Khurda,Udayagiri,Caves
+17	1	Kandagiri Caves	4,8	Khurda	Kandagiri Caves	Khurda,Kandagiri,Caves
+18	1	Raja Rani Temple	4,8	Khurda	Raja Rani Temple	Khurda,Raja,Rani,Temple
+19	1	Similipal National Park	4,8	Mayurbhanj	Similipal National Park	Mayurbhanj,Similipal,National,Park
+20	1	Nandan Kanan	4,8	Bhubaneswar	Nandan Kanan	Bhubaneswar,Nandan,Kanan
+21	1	Barabati Durga	4,8	Cuttack	Barabati Durga	Cuttack,Barabati,Durga
+22	1	Ratna Giri	4,8	Jajpur	Ratna Giri	Jajpur,Ratna,Giri
+23	1	Kapilasa	4,8	Dhenkanal	Kapilasa	Dhenkanal,Kapilasa
+24	1	Sapta Sajya	4,8	Dhenkanal	Sapta Sajya	Dhenkanal,Sapta,Sajya
+25	1	Khandadhar	4,8	Keonjhar	Khandadhar	Keonjhar,Khandadhar
+26	1	Joranda Gadi	4,8	Dhenkanal	Joranda Gadi	Dhenkanal,Joranda,Gadi
+27	1	Kalijai Temple	4,8	Khurdha	Kalijai Temple	Khurdha,Kalijai,Temple
+28	1	Puri Baliharchandi Temple	4,8	Puri	Puri Baliharchandi Temple	Puri,Puri,Baliharchandi,Temple
+29	1	Daringbadi	4,8	Phulbani	Daringbadi	Phulbani,Daringbadi
+30	1	Paradeep Port	4,8	Jagatsinghpur	Paradeep Port	Jagatsinghpur,Paradeep,Port
+31	1	Gopalapur Port	4,8	Ganjam	Gopalapur Port	Ganjam,Gopalapur,Port
+32	1	Kolab Dam	4,8	Koraput	Kolab Dam	Koraput,Kolab,Dam
+33	1	Duduma Waterfall	4,8	Koraput	Duduma Waterfall	Koraput,Duduma,Waterfall
+34	1	Gupteswara	4,8	Koraput	Gupteswara	Koraput,Gupteswara
+35	1	Tikarpada	4,8	Anugul	Tikarpada	Anugul,Tikarpada
+36	1	Hirakud Dam	4,8	Sambalpur	Hirakud Dam	Sambalpur,Hirakud,Dam
+37	1	Sanaghagara Waterfall	4,8	Keonjhar	Sanaghagara Waterfall	Keonjhar,Sanaghagara,Waterfall
+38	1	Badaghagara Waterfall	4,8	Keonjhar	Badaghagara Waterfall	Keonjhar,Badaghagara,Waterfall
+39	1	Maa Tarini Temple ,Ghatgaon	4,8	Keonjhar	Maa Tarini Temple ,Ghatgaon	Keonjhar,Maa,Tarini,Temple,Ghatgaon
+40	1	Taptapani	4,8	Ganjam	Taptapani	Ganjam,Taptapani
+41	1	Panchalingeswar	4,8	Baleswar	Panchalingeswar	Baleswar,Panchalingeswar
+42	1	Devkund	4,8	Mayurbhanj	Devkund	Mayurbhanj,Devkund
+43	1	Harishankar Waterfall	4,8	Balangir	Harishankar Waterfall	Balangir,Harishankar,Waterfall
+44	1	Pradhanpath Waterfall	4,8	Deogarh	Pradhanpath Waterfall	Deogarh,Pradhanpath,Waterfall
+45	1	Hatipathar Waterfall	4,8	Rayagada	Hatipathar Waterfall	Rayagada,Hatipathar,Waterfall
+46	1	Phurli Jharan Waterfall	4,8	Kalahandi,Bhabanipatna	Phurli Jharan Waterfall	Kalahandi,Bhabanipatna,Phurli,Jharan,Waterfall
+47	1	Nrusimhanath Waterfall	4,8	Bargarh	Nrusimhanath Waterfall	Bargarh,Nrusimhanath,Waterfall
+48	1	Mruga Mahadev Waterfall	4,8	Keonjhar	Mruga Mahadev Waterfall	Keonjhar,Mruga,Mahadev,Waterfall
+49	1	Handibhanga Waterfall	4,8	Mayurbhanj	Handibhanga Waterfall	Mayurbhanj,Handibhanga,Waterfall
+50	1	Khanduala Waterfall	4,8	Kalahandi,Bhabanipatna	Khanduala Waterfall	Kalahandi,Bhabanipatna,Khanduala,Waterfall
+51	1	Miriglotah Waterfall	4,8	Rourkela	Miriglotah Waterfall	Rourkela,Miriglotah,Waterfall
+52	1	Putudi Waterfall	4,8	Phulbani	Putudi Waterfall	Phulbani,Putudi,Waterfall
+53	1	Maa Chandi Temple	4,8	Cuttack	Maa Chandi Temple	Cuttack,Maa,Chandi,Temple
+54	1	Dhabaleswara Temple	4,8	Cuttack	Dhabaleswara Temple	Cuttack,Dhabaleswara,Temple
+55	1	Barehipani Waterfalls	4,8	Mayurbhanj	Barehipani Waterfalls	Mayurbhanj,Barehipani,Waterfalls
+56	1	Bagra Waterfall	4,8	Koraput	Bagra Waterfall	Koraput,Bagra,Waterfall
+57	1	Bhitarkanika National Forest	8	Kendrapada	Bhitarkanika National Forest	Kendrapada,Bhitarkanika,National,Forest
+58	1	Ushakothi,Badrama  Wildlife Sanctuary	8	Sambalpur	Ushakothi,Badrama  Wildlife Sanctuary	Sambalpur,Ushakothi,Badrama,Wildlife,Sanctuary
+59	1	Baisipalli  Wildlife Sanctuary	8	Nayagarh	Baisipalli  Wildlife Sanctuary	Nayagarh,Baisipalli,Wildlife,Sanctuary
+60	1	Balukhand Konark  Wildlife Sanctuary	8	Puri	Balukhand Konark  Wildlife Sanctuary	Puri,Balukhand,Konark,Wildlife,Sanctuary
+61	1	Bhitarkanika  Wildlife Sanctuary	8	Kendrapada	Bhitarkanika  Wildlife Sanctuary	Kendrapada,Bhitarkanika,Wildlife,Sanctuary
+62	1	Chandaka Dampara  Wildlife Sanctuary	8	Bhubaneswar	Chandaka Dampara  Wildlife Sanctuary	Bhubaneswar,Chandaka,Dampara,Wildlife,Sanctuary
+63	1	Chilika (Nalaban)  Wildlife Sanctuary	8	Khurda,Ganjam	Chilika (Nalaban)  Wildlife Sanctuary	Khurda,Ganjam,Chilika,(Nalaban),Wildlife,Sanctuary
+64	1	Debrigarh  Wildlife Sanctuary	8	Bargarh	Debrigarh  Wildlife Sanctuary	Bargarh,Debrigarh,Wildlife,Sanctuary
+65	1	Gahirmatha (Marine)  Wildlife Sanctuary	8	Kendrapada	Gahirmatha (Marine)  Wildlife Sanctuary	Kendrapada,Gahirmatha,(Marine),Wildlife,Sanctuary
+66	1	Hadgarh  Wildlife Sanctuary	8	Keonjhar	Hadgarh  Wildlife Sanctuary	Keonjhar,Hadgarh,Wildlife,Sanctuary
+67	1	Karlapat  Wildlife Sanctuary	8	Kalahandi,Bhabanipatna	Karlapat  Wildlife Sanctuary	Kalahandi,Bhabanipatna,Karlapat,Wildlife,Sanctuary
+68	1	Khalasuni  Wildlife Sanctuary	8	Sambalpur	Khalasuni  Wildlife Sanctuary	Sambalpur,Khalasuni,Wildlife,Sanctuary
+69	1	Kotagarh  Wildlife Sanctuary	8	Kandhamal	Kotagarh  Wildlife Sanctuary	Kandhamal,Kotagarh,Wildlife,Sanctuary
+70	1	Kuldiha  Wildlife Sanctuary	8	Baleswar	Kuldiha  Wildlife Sanctuary	Baleswar,Kuldiha,Wildlife,Sanctuary
+71	1	Lakhari Valley  Wildlife Sanctuary	8	Ganjam	Lakhari Valley  Wildlife Sanctuary	Ganjam,Lakhari,Valley,Wildlife,Sanctuary
+72	1	Satkosia Gorge  Wildlife Sanctuary	8	Anugul	Satkosia Gorge  Wildlife Sanctuary	Anugul,Satkosia,Gorge,Wildlife,Sanctuary
+73	1	Sunabeda  Wildlife Sanctuary	8	Nuapada	Sunabeda  Wildlife Sanctuary	Nuapada,Sunabeda,Wildlife,Sanctuary
+74	1	Gahirmatha Beach	8	Kendrapada	Gahirmatha Beach	Kendrapada,Gahirmatha,Beach
