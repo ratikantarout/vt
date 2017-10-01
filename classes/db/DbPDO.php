@@ -1,36 +1,12 @@
 <?php
-/*
-* 2007-2015 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Open Software License (OSL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/osl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2015 PrestaShop SA
-*  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*/
 
 /**
  * Class DbPDOCore
  *
  * @since 1.5.0.1
  */
-class DbPDOCore extends Db
-{
+class DbPDOCore extends Db {
+
     /** @var PDO */
     protected $link;
 
@@ -47,18 +23,17 @@ class DbPDOCore extends Db
      * @param int $timeout
      * @return PDO
      */
-    protected static function _getPDO($host, $user, $password, $dbname, $timeout = 5)
-    {
+    protected static function _getPDO($host, $user, $password, $dbname, $timeout = 5) {
         $dsn = 'mysql:';
         if ($dbname) {
-            $dsn .= 'dbname='.$dbname.';';
+            $dsn .= 'dbname=' . $dbname . ';';
         }
         if (preg_match('/^(.*):([0-9]+)$/', $host, $matches)) {
-            $dsn .= 'host='.$matches[1].';port='.$matches[2];
+            $dsn .= 'host=' . $matches[1] . ';port=' . $matches[2];
         } elseif (preg_match('#^.*:(/.*)$#', $host, $matches)) {
-            $dsn .= 'unix_socket='.$matches[1];
+            $dsn .= 'unix_socket=' . $matches[1];
         } else {
-            $dsn .= 'host='.$host;
+            $dsn .= 'host=' . $host;
         }
 
         return new PDO($dsn, $user, $password, array(PDO::ATTR_TIMEOUT => $timeout, PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true));
@@ -74,12 +49,11 @@ class DbPDOCore extends Db
      * @param bool $dropit If true, drops the created database.
      * @return bool|int
      */
-    public static function createDatabase($host, $user, $password, $dbname, $dropit = false)
-    {
+    public static function createDatabase($host, $user, $password, $dbname, $dropit = false) {
         try {
             $link = DbPDO::_getPDO($host, $user, $password, false);
-            $success = $link->exec('CREATE DATABASE `'.str_replace('`', '\\`', $dbname).'`');
-            if ($dropit && ($link->exec('DROP DATABASE `'.str_replace('`', '\\`', $dbname).'`') !== false)) {
+            $success = $link->exec('CREATE DATABASE `' . str_replace('`', '\\`', $dbname) . '`');
+            if ($dropit && ($link->exec('DROP DATABASE `' . str_replace('`', '\\`', $dbname) . '`') !== false)) {
                 return true;
             }
         } catch (PDOException $e) {
@@ -94,8 +68,7 @@ class DbPDOCore extends Db
      * @see DbCore::connect()
      * @return PDO
      */
-    public function connect()
-    {
+    public function connect() {
         try {
             $this->link = $this->_getPDO($this->server, $this->user, $this->password, $this->database, 5);
         } catch (PDOException $e) {
@@ -117,8 +90,7 @@ class DbPDOCore extends Db
      *
      * @see DbCore::disconnect()
      */
-    public function disconnect()
-    {
+    public function disconnect() {
         unset($this->link);
     }
 
@@ -129,8 +101,7 @@ class DbPDOCore extends Db
      * @param string $sql
      * @return PDOStatement
      */
-    protected function _query($sql)
-    {
+    protected function _query($sql) {
         return $this->link->query($sql);
     }
 
@@ -141,8 +112,7 @@ class DbPDOCore extends Db
      * @param bool $result
      * @return array|false|null
      */
-    public function nextRow($result = false)
-    {
+    public function nextRow($result = false) {
         if (!$result) {
             $result = $this->result;
         }
@@ -161,8 +131,7 @@ class DbPDOCore extends Db
      * @param bool $result
      * @return array|false|null
      */
-    protected function getAll($result = false)
-    {
+    protected function getAll($result = false) {
         if (!$result) {
             $result = $this->result;
         }
@@ -181,8 +150,7 @@ class DbPDOCore extends Db
      * @param PDOStatement $result
      * @return int
      */
-    protected function _numRows($result)
-    {
+    protected function _numRows($result) {
         return $result->rowCount();
     }
 
@@ -192,8 +160,7 @@ class DbPDOCore extends Db
      * @see DbCore::Insert_ID()
      * @return string|int
      */
-    public function Insert_ID()
-    {
+    public function Insert_ID() {
         return $this->link->lastInsertId();
     }
 
@@ -203,8 +170,7 @@ class DbPDOCore extends Db
      * @see DbCore::Affected_Rows()
      * @return int
      */
-    public function Affected_Rows()
-    {
+    public function Affected_Rows() {
         return $this->result->rowCount();
     }
 
@@ -215,8 +181,7 @@ class DbPDOCore extends Db
      * @param bool $query
      * @return string
      */
-    public function getMsgError($query = false)
-    {
+    public function getMsgError($query = false) {
         $error = $this->link->errorInfo();
         return ($error[0] == '00000') ? '' : $error[2];
     }
@@ -227,8 +192,7 @@ class DbPDOCore extends Db
      * @see DbCore::getNumberError()
      * @return int
      */
-    public function getNumberError()
-    {
+    public function getNumberError() {
         $error = $this->link->errorInfo();
         return isset($error[1]) ? $error[1] : 0;
     }
@@ -239,8 +203,7 @@ class DbPDOCore extends Db
      * @see DbCore::getVersion()
      * @return string
      */
-    public function getVersion()
-    {
+    public function getVersion() {
         return $this->getValue('SELECT VERSION()');
     }
 
@@ -251,8 +214,7 @@ class DbPDOCore extends Db
      * @param string $str
      * @return string
      */
-    public function _escape($str)
-    {
+    public function _escape($str) {
         $search = array("\\", "\0", "\n", "\r", "\x1a", "'", '"');
         $replace = array("\\\\", "\\0", "\\n", "\\r", "\Z", "\'", '\"');
         return str_replace($search, $replace, $str);
@@ -265,9 +227,8 @@ class DbPDOCore extends Db
      * @param string $db_name
      * @return int
      */
-    public function set_db($db_name)
-    {
-        return $this->link->exec('USE '.pSQL($db_name));
+    public function set_db($db_name) {
+        return $this->link->exec('USE ' . pSQL($db_name));
     }
 
     /**
@@ -281,17 +242,16 @@ class DbPDOCore extends Db
      * @param string $prefix Tables prefix
      * @return bool
      */
-    public static function hasTableWithSamePrefix($server, $user, $pwd, $db, $prefix)
-    {
+    public static function hasTableWithSamePrefix($server, $user, $pwd, $db, $prefix) {
         try {
             $link = DbPDO::_getPDO($server, $user, $pwd, $db, 5);
         } catch (PDOException $e) {
             return false;
         }
 
-        $sql = 'SHOW TABLES LIKE \''.$prefix.'%\'';
+        $sql = 'SHOW TABLES LIKE \'' . $prefix . '%\'';
         $result = $link->query($sql);
-        return (bool)$result->fetch();
+        return (bool) $result->fetch();
     }
 
     /**
@@ -305,8 +265,7 @@ class DbPDOCore extends Db
      * @param string|null $engine Table engine
      * @return bool|string True, false or error
      */
-    public static function checkCreatePrivilege($server, $user, $pwd, $db, $prefix, $engine = null)
-    {
+    public static function checkCreatePrivilege($server, $user, $pwd, $db, $prefix, $engine = null) {
         try {
             $link = DbPDO::_getPDO($server, $user, $pwd, $db, 5);
         } catch (PDOException $e) {
@@ -318,14 +277,14 @@ class DbPDOCore extends Db
         }
 
         $result = $link->query('
-		CREATE TABLE `'.$prefix.'test` (
+		CREATE TABLE `' . $prefix . 'test` (
 			`test` tinyint(1) unsigned NOT NULL
-		) ENGINE='.$engine);
+		) ENGINE=' . $engine);
         if (!$result) {
             $error = $link->errorInfo();
             return $error[2];
         }
-        $link->query('DROP TABLE `'.$prefix.'test`');
+        $link->query('DROP TABLE `' . $prefix . 'test`');
         return true;
     }
 
@@ -342,8 +301,7 @@ class DbPDOCore extends Db
      * @param int $timeout
      * @return int Error code or 0 if connection was successful
      */
-    public static function tryToConnect($server, $user, $pwd, $db, $new_db_link = true, $engine = null, $timeout = 5)
-    {
+    public static function tryToConnect($server, $user, $pwd, $db, $new_db_link = true, $engine = null, $timeout = 5) {
         try {
             $link = DbPDO::_getPDO($server, $user, $pwd, $db, $timeout);
         } catch (PDOException $e) {
@@ -359,8 +317,7 @@ class DbPDOCore extends Db
      *
      * @return string
      */
-    public function getBestEngine()
-    {
+    public function getBestEngine() {
         $value = 'InnoDB';
 
         $sql = 'SHOW VARIABLES WHERE Variable_name = \'have_innodb\'';
@@ -397,8 +354,7 @@ class DbPDOCore extends Db
      * @param string $pwd Password for database connection
      * @return bool
      */
-    public static function tryUTF8($server, $user, $pwd)
-    {
+    public static function tryUTF8($server, $user, $pwd) {
         try {
             $link = DbPDO::_getPDO($server, $user, $pwd, false, 5);
         } catch (PDOException $e) {
@@ -418,16 +374,16 @@ class DbPDOCore extends Db
      * @param string $pwd
      * @return bool
      */
-    public static function checkAutoIncrement($server, $user, $pwd)
-    {
+    public static function checkAutoIncrement($server, $user, $pwd) {
         try {
             $link = DbPDO::_getPDO($server, $user, $pwd, false, 5);
         } catch (PDOException $e) {
             return false;
         }
-        $ret = (bool)(($result = $link->query('SELECT @@auto_increment_increment as aii')) && ($row = $result->fetch()) && $row['aii'] == 1);
-        $ret &= (bool)(($result = $link->query('SELECT @@auto_increment_offset as aio')) && ($row = $result->fetch()) && $row['aio'] == 1);
+        $ret = (bool) (($result = $link->query('SELECT @@auto_increment_increment as aii')) && ($row = $result->fetch()) && $row['aii'] == 1);
+        $ret &= (bool) (($result = $link->query('SELECT @@auto_increment_offset as aio')) && ($row = $result->fetch()) && $row['aio'] == 1);
         unset($link);
         return $ret;
     }
+
 }

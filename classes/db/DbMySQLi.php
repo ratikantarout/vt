@@ -1,36 +1,12 @@
 <?php
-/*
-* 2007-2015 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Open Software License (OSL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/osl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2015 PrestaShop SA
-*  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*/
 
 /**
  * Class DbMySQLiCore
  *
  * @since 1.5.0,1
  */
-class DbMySQLiCore extends Db
-{
+class DbMySQLiCore extends Db {
+
     /** @var mysqli */
     protected $link;
 
@@ -44,8 +20,7 @@ class DbMySQLiCore extends Db
      * @return mysqli
      * @throws PrestaShopDatabaseException
      */
-    public function connect()
-    {
+    public function connect() {
         $socket = false;
         $port = false;
         if (Tools::strpos($this->server, ':') !== false) {
@@ -89,16 +64,15 @@ class DbMySQLiCore extends Db
      * @param bool $dropit If true, drops the created database.
      * @return bool|mysqli_result
      */
-    public static function createDatabase($host, $user = null, $password = null, $database = null, $dropit = false)
-    {
+    public static function createDatabase($host, $user = null, $password = null, $database = null, $dropit = false) {
         if (strpos($host, ':') !== false) {
             list($host, $port) = explode(':', $host);
             $link = @new mysqli($host, $user, $password, null, $port);
         } else {
             $link = @new mysqli($host, $user, $password);
         }
-        $success = $link->query('CREATE DATABASE `'.str_replace('`', '\\`', $database).'`');
-        if ($dropit && ($link->query('DROP DATABASE `'.str_replace('`', '\\`', $database).'`') !== false)) {
+        $success = $link->query('CREATE DATABASE `' . str_replace('`', '\\`', $database) . '`');
+        if ($dropit && ($link->query('DROP DATABASE `' . str_replace('`', '\\`', $database) . '`') !== false)) {
             return true;
         }
         return $success;
@@ -109,8 +83,7 @@ class DbMySQLiCore extends Db
      *
      * @see DbCore::disconnect()
      */
-    public function disconnect()
-    {
+    public function disconnect() {
         @$this->link->close();
     }
 
@@ -121,8 +94,7 @@ class DbMySQLiCore extends Db
      * @param string $sql
      * @return bool|mysqli_result
      */
-    protected function _query($sql)
-    {
+    protected function _query($sql) {
         return $this->link->query($sql);
     }
 
@@ -133,8 +105,7 @@ class DbMySQLiCore extends Db
      * @param bool|mysqli_result $result
      * @return array|bool
      */
-    public function nextRow($result = false)
-    {
+    public function nextRow($result = false) {
         if (!$result) {
             $result = $this->result;
         }
@@ -153,8 +124,7 @@ class DbMySQLiCore extends Db
      * @param bool|mysqli_result $result
      * @return array|false
      */
-    protected function getAll($result = false)
-    {
+    protected function getAll($result = false) {
         if (!$result) {
             $result = $this->result;
         }
@@ -183,8 +153,7 @@ class DbMySQLiCore extends Db
      * @param bool|mysqli_result $result
      * @return int
      */
-    protected function _numRows($result)
-    {
+    protected function _numRows($result) {
         return $result->num_rows;
     }
 
@@ -194,8 +163,7 @@ class DbMySQLiCore extends Db
      * @see DbCore::Insert_ID()
      * @return string|int
      */
-    public function Insert_ID()
-    {
+    public function Insert_ID() {
         return $this->link->insert_id;
     }
 
@@ -205,8 +173,7 @@ class DbMySQLiCore extends Db
      * @see DbCore::Affected_Rows()
      * @return int
      */
-    public function Affected_Rows()
-    {
+    public function Affected_Rows() {
         return $this->link->affected_rows;
     }
 
@@ -217,8 +184,7 @@ class DbMySQLiCore extends Db
      * @param bool $query
      * @return string
      */
-    public function getMsgError($query = false)
-    {
+    public function getMsgError($query = false) {
         return $this->link->error;
     }
 
@@ -228,8 +194,7 @@ class DbMySQLiCore extends Db
      * @see DbCore::getNumberError()
      * @return int
      */
-    public function getNumberError()
-    {
+    public function getNumberError() {
         return $this->link->errno;
     }
 
@@ -239,8 +204,7 @@ class DbMySQLiCore extends Db
      * @see DbCore::getVersion()
      * @return string
      */
-    public function getVersion()
-    {
+    public function getVersion() {
         return $this->getValue('SELECT VERSION()');
     }
 
@@ -251,8 +215,7 @@ class DbMySQLiCore extends Db
      * @param string $str
      * @return string
      */
-    public function _escape($str)
-    {
+    public function _escape($str) {
         return $this->link->real_escape_string($str);
     }
 
@@ -263,9 +226,8 @@ class DbMySQLiCore extends Db
      * @param string $db_name
      * @return bool
      */
-    public function set_db($db_name)
-    {
-        return $this->link->query('USE `'.bqSQL($db_name).'`');
+    public function set_db($db_name) {
+        return $this->link->query('USE `' . bqSQL($db_name) . '`');
     }
 
     /**
@@ -279,16 +241,15 @@ class DbMySQLiCore extends Db
      * @param string $prefix Tables prefix
      * @return bool
      */
-    public static function hasTableWithSamePrefix($server, $user, $pwd, $db, $prefix)
-    {
+    public static function hasTableWithSamePrefix($server, $user, $pwd, $db, $prefix) {
         $link = @new mysqli($server, $user, $pwd, $db);
         if (mysqli_connect_error()) {
             return false;
         }
 
-        $sql = 'SHOW TABLES LIKE \''.$prefix.'%\'';
+        $sql = 'SHOW TABLES LIKE \'' . $prefix . '%\'';
         $result = $link->query($sql);
-        return (bool)$result->fetch_assoc();
+        return (bool) $result->fetch_assoc();
     }
 
     /**
@@ -304,8 +265,7 @@ class DbMySQLiCore extends Db
      * @param int $timeout
      * @return int Error code or 0 if connection was successful
      */
-    public static function tryToConnect($server, $user, $pwd, $db, $new_db_link = true, $engine = null, $timeout = 5)
-    {
+    public static function tryToConnect($server, $user, $pwd, $db, $new_db_link = true, $engine = null, $timeout = 5) {
         $link = mysqli_init();
         if (!$link) {
             return -1;
@@ -329,8 +289,7 @@ class DbMySQLiCore extends Db
      *
      * @return string
      */
-    public function getBestEngine()
-    {
+    public function getBestEngine() {
         $value = 'InnoDB';
 
         $sql = 'SHOW VARIABLES WHERE Variable_name = \'have_innodb\'';
@@ -369,8 +328,7 @@ class DbMySQLiCore extends Db
      * @param string|null $engine Table engine
      * @return bool|string True, false or error
      */
-    public static function checkCreatePrivilege($server, $user, $pwd, $db, $prefix, $engine = null)
-    {
+    public static function checkCreatePrivilege($server, $user, $pwd, $db, $prefix, $engine = null) {
         $link = @new mysqli($server, $user, $pwd, $db);
         if (mysqli_connect_error()) {
             return false;
@@ -381,15 +339,15 @@ class DbMySQLiCore extends Db
         }
 
         $result = $link->query('
-		CREATE TABLE `'.$prefix.'test` (
+		CREATE TABLE `' . $prefix . 'test` (
 			`test` tinyint(1) unsigned NOT NULL
-		) ENGINE='.$engine);
+		) ENGINE=' . $engine);
 
         if (!$result) {
             return $link->error;
         }
 
-        $link->query('DROP TABLE `'.$prefix.'test`');
+        $link->query('DROP TABLE `' . $prefix . 'test`');
         return true;
     }
 
@@ -402,8 +360,7 @@ class DbMySQLiCore extends Db
      * @param string $pwd Password for database connection
      * @return bool
      */
-    public static function tryUTF8($server, $user, $pwd)
-    {
+    public static function tryUTF8($server, $user, $pwd) {
         $link = @new mysqli($server, $user, $pwd);
         $ret = $link->query("SET NAMES 'UTF8'");
         $link->close();
@@ -418,12 +375,12 @@ class DbMySQLiCore extends Db
      * @param string $pwd
      * @return bool
      */
-    public static function checkAutoIncrement($server, $user, $pwd)
-    {
+    public static function checkAutoIncrement($server, $user, $pwd) {
         $link = @new mysqli($server, $user, $pwd);
-        $ret = (bool)(($result = $link->query('SELECT @@auto_increment_increment as aii')) && ($row = $result->fetch_assoc()) && $row['aii'] == 1);
-        $ret &= (bool)(($result = $link->query('SELECT @@auto_increment_offset as aio')) && ($row = $result->fetch_assoc()) && $row['aio'] == 1);
+        $ret = (bool) (($result = $link->query('SELECT @@auto_increment_increment as aii')) && ($row = $result->fetch_assoc()) && $row['aii'] == 1);
+        $ret &= (bool) (($result = $link->query('SELECT @@auto_increment_offset as aio')) && ($row = $result->fetch_assoc()) && $row['aio'] == 1);
         $link->close();
         return $ret;
     }
+
 }
