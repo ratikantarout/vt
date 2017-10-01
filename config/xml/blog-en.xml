@@ -6,12 +6,21 @@
     <language>en</language>
      <atom:link href="https://www.prestashop.com/en/blog/feed.xml" rel="self" type="application/rss+xml" />
       <item>
+    <title>Meet Mohamadou, Ambassador of the month | September 2017</title>
+    <link>https://www.prestashop.com/en/blog/prestashop-ambassadors/meet-mohamadou-ambassador-of-the-month-september-2017</link>
+    <description>Mohamadou is our Ambassador in Dakar, Senegal, and recently got himself talked about on </description>
+     <pubDate>Thu, 21 Sep 2017 15:30:58 +0200</pubDate>
+ <dc:creator>Manon Plommet</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/prestashop-ambassadors/meet-mohamadou-ambassador-of-the-month-september-2017</guid>
+  </item>
+  <item>
     <title>Create the ERP software your business needs with PrestaShop ERP by Boost My Shop </title>
-    <link>https://www.prestashop.com/en/blog/prestashop-news/create-the-erp-software-your-business-needs-with-prestashop-erp-by-boost-my-shop-2</link>
-    <description>Few weeks after introducing its new stock management system in 1.7.2, PrestaShop is proud to launch PrestaShop ERP and its first part: Procurement, its purchase order management to</description>
+    <link>https://www.prestashop.com/en/blog/prestashop-news/introducing-prestashop-erp</link>
+    <description>PrestaShop introduces PrestaShop ERP
+Create the ERP software your business needs with PrestaShop ERP by Boost my Shop</description>
      <pubDate>Tue, 19 Sep 2017 10:24:20 +0200</pubDate>
  <dc:creator>emmanuelfages</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/en/blog/prestashop-news/create-the-erp-software-your-business-needs-with-prestashop-erp-by-boost-my-shop-2</guid>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/prestashop-news/introducing-prestashop-erp</guid>
   </item>
   <item>
     <title>3 Easy Steps To Increase Conversion Of Your Store By Up To 30%</title>
@@ -78,14 +87,6 @@ The challenge is on…starting now!
      <pubDate>Fri, 16 Jun 2017 00:00:00 +0200</pubDate>
  <dc:creator>Manon Plommet</dc:creator>
  <guid isPermaLink="false">https://www.prestashop.com/en/blog/prestashop-ambassadors/meet-claudia-ambassador-of-the-month-june-2017</guid>
-  </item>
-  <item>
-    <title>10 years - 10 “portrait” interviews: Geoffrey Bruyère, co-founder of a PrestaShop e-store</title>
-    <link>https://www.prestashop.com/en/blog/prestashop-news/10-years-10-portrait-interviews-geoffrey-bruyere-co-founder-of-a-prestashop-e-store</link>
-    <description>The pitch / The men’s fashion blog BonneGueule is also celebrating its 10th anniversary in 2017.</description>
-     <pubDate>Tue, 13 Jun 2017 10:50:25 +0200</pubDate>
- <dc:creator>Mpierrot</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/en/blog/prestashop-news/10-years-10-portrait-interviews-geoffrey-bruyere-co-founder-of-a-prestashop-e-store</guid>
   </item>
   </channel>
 </rss>
