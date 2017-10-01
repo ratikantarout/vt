@@ -1,3 +1,0 @@
-*ERROR* 	2016/04/08 - 10:38:09: Dispatcher::createUrl() miss required parameter "id" for route "product_rule" at line 661 in file classes/Dispatcher.php
-*ERROR* 	2016/04/08 - 10:38:14: Dispatcher::createUrl() miss required parameter "id" for route "product_rule" at line 661 in file classes/Dispatcher.php
-*ERROR* 	2016/04/08 - 10:38:50: Dispatcher::createUrl() miss required parameter "id" for route "product_rule" at line 661 in file classes/Dispatcher.php
