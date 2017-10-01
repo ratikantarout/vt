@@ -227,54 +227,6 @@
     'type' => 'class',
     'override' => false,
   ),
-  'AdminCarrierWizardController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminCarrierWizardControllerCore' => 
-  array (
-    'path' => 'controllers/admin/AdminCarrierWizardController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminCarriersController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminCarriersControllerCore' => 
-  array (
-    'path' => 'controllers/admin/AdminCarriersController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminCartRulesController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminCartRulesControllerCore' => 
-  array (
-    'path' => 'controllers/admin/AdminCartRulesController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminCartsController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminCartsControllerCore' => 
-  array (
-    'path' => 'controllers/admin/AdminCartsController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
   'AdminCategoriesController' => 
   array (
     'path' => '',
@@ -416,18 +368,6 @@
   'AdminDashboardControllerCore' => 
   array (
     'path' => 'controllers/admin/AdminDashboardController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminDeliverySlipController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminDeliverySlipControllerCore' => 
-  array (
-    'path' => 'controllers/admin/AdminDeliverySlipController.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -611,30 +551,6 @@
     'type' => 'class',
     'override' => false,
   ),
-  'AdminManufacturersController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminManufacturersControllerCore' => 
-  array (
-    'path' => 'controllers/admin/AdminManufacturersController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminMarketingController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminMarketingControllerCore' => 
-  array (
-    'path' => 'controllers/admin/AdminMarketingController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
   'AdminMetaController' => 
   array (
     'path' => '',
@@ -683,42 +599,6 @@
     'type' => 'class',
     'override' => false,
   ),
-  'AdminOrderMessageController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminOrderMessageControllerCore' => 
-  array (
-    'path' => 'controllers/admin/AdminOrderMessageController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminOrderPreferencesController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminOrderPreferencesControllerCore' => 
-  array (
-    'path' => 'controllers/admin/AdminOrderPreferencesController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminOrdersController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminOrdersControllerCore' => 
-  array (
-    'path' => 'controllers/admin/AdminOrdersController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
   'AdminOutstandingController' => 
   array (
     'path' => '',
@@ -752,18 +632,6 @@
   'AdminPatternsControllerCore' => 
   array (
     'path' => 'controllers/admin/AdminPatternsController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminPaymentController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminPaymentControllerCore' => 
-  array (
-    'path' => 'controllers/admin/AdminPaymentController.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -1007,18 +875,6 @@
     'type' => 'class',
     'override' => false,
   ),
-  'AdminSpecificPriceRuleController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminSpecificPriceRuleControllerCore' => 
-  array (
-    'path' => 'controllers/admin/AdminSpecificPriceRuleController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
   'AdminStatesController' => 
   array (
     'path' => '',
@@ -1067,66 +923,6 @@
     'type' => 'class',
     'override' => false,
   ),
-  'AdminStockConfigurationController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminStockConfigurationControllerCore' => 
-  array (
-    'path' => 'controllers/admin/AdminStockConfigurationController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminStockCoverController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminStockCoverControllerCore' => 
-  array (
-    'path' => 'controllers/admin/AdminStockCoverController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminStockInstantStateController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminStockInstantStateControllerCore' => 
-  array (
-    'path' => 'controllers/admin/AdminStockInstantStateController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminStockManagementController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminStockManagementControllerCore' => 
-  array (
-    'path' => 'controllers/admin/AdminStockManagementController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminStockMvtController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminStockMvtControllerCore' => 
-  array (
-    'path' => 'controllers/admin/AdminStockMvtController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
   'AdminStoresController' => 
   array (
     'path' => '',
@@ -1136,30 +932,6 @@
   'AdminStoresControllerCore' => 
   array (
     'path' => 'controllers/admin/AdminStoresController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminSuppliersController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminSuppliersControllerCore' => 
-  array (
-    'path' => 'controllers/admin/AdminSuppliersController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminSupplyOrdersController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminSupplyOrdersControllerCore' => 
-  array (
-    'path' => 'controllers/admin/AdminSupplyOrdersController.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -1199,30 +971,6 @@
     'type' => 'class',
     'override' => false,
   ),
-  'AdminTaxRulesGroupController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminTaxRulesGroupControllerCore' => 
-  array (
-    'path' => 'controllers/admin/AdminTaxRulesGroupController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminTaxesController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminTaxesControllerCore' => 
-  array (
-    'path' => 'controllers/admin/AdminTaxesController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
   'AdminThemesController' => 
   array (
     'path' => '',
@@ -1256,18 +1004,6 @@
   'AdminTranslationsControllerCore' => 
   array (
     'path' => 'controllers/admin/AdminTranslationsController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminWarehousesController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'AdminWarehousesControllerCore' => 
-  array (
-    'path' => 'controllers/admin/AdminWarehousesController.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -1370,18 +1106,6 @@
   'AverageTaxOfProductsTaxCalculator' => 
   array (
     'path' => 'classes/tax/AverageTaxOfProductsTaxCalculator.php',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'BestSalesController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'BestSalesControllerCore' => 
-  array (
-    'path' => 'controllers/front/BestSalesController.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -1547,18 +1271,6 @@
     'type' => 'class',
     'override' => false,
   ),
-  'CartController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'CartControllerCore' => 
-  array (
-    'path' => 'controllers/front/CartController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
   'CartCore' => 
   array (
     'path' => 'classes/Cart.php',
@@ -1598,18 +1310,6 @@
   'CategoryCore' => 
   array (
     'path' => 'classes/Category.php',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'ChangeCurrencyController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'ChangeCurrencyControllerCore' => 
-  array (
-    'path' => 'controllers/front/ChangeCurrencyController.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -2090,18 +1790,6 @@
   'Discount' => 
   array (
     'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'DiscountController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'DiscountControllerCore' => 
-  array (
-    'path' => 'controllers/front/DiscountController.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -2675,12 +2363,6 @@
     'type' => 'class',
     'override' => false,
   ),
-  'ManufacturerControllerCore' => 
-  array (
-    'path' => 'controllers/front/ManufacturerController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
   'ManufacturerCore' => 
   array (
     'path' => 'classes/Manufacturer.php',
@@ -2897,30 +2579,6 @@
     'type' => 'class',
     'override' => false,
   ),
-  'OrderConfirmationController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'OrderConfirmationControllerCore' => 
-  array (
-    'path' => 'controllers/front/OrderConfirmationController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'OrderController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'OrderControllerCore' => 
-  array (
-    'path' => 'controllers/front/OrderController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
   'OrderCore' => 
   array (
     'path' => 'classes/order/Order.php',
@@ -2930,18 +2588,6 @@
   'OrderDetail' => 
   array (
     'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'OrderDetailController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'OrderDetailControllerCore' => 
-  array (
-    'path' => 'controllers/front/OrderDetailController.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -2960,18 +2606,6 @@
   'OrderDiscountCore' => 
   array (
     'path' => 'classes/order/OrderDiscount.php',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'OrderFollowController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'OrderFollowControllerCore' => 
-  array (
-    'path' => 'controllers/front/OrderFollowController.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -3011,18 +2645,6 @@
     'type' => 'class',
     'override' => false,
   ),
-  'OrderOpcController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'OrderOpcControllerCore' => 
-  array (
-    'path' => 'controllers/front/OrderOpcController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
   'OrderPayment' => 
   array (
     'path' => '',
@@ -3038,18 +2660,6 @@
   'OrderReturn' => 
   array (
     'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'OrderReturnController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'OrderReturnControllerCore' => 
-  array (
-    'path' => 'controllers/front/OrderReturnController.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -3074,18 +2684,6 @@
   'OrderSlip' => 
   array (
     'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'OrderSlipController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'OrderSlipControllerCore' => 
-  array (
-    'path' => 'controllers/front/OrderSlipController.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -3167,18 +2765,6 @@
     'type' => 'class',
     'override' => false,
   ),
-  'ParentOrderController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'ParentOrderControllerCore' => 
-  array (
-    'path' => 'controllers/front/ParentOrderController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
   'PasswordController' => 
   array (
     'path' => '',
@@ -3213,42 +2799,6 @@
   array (
     'path' => 'classes/PaymentModule.php',
     'type' => 'abstract class',
-    'override' => false,
-  ),
-  'PdfInvoiceController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'PdfInvoiceControllerCore' => 
-  array (
-    'path' => 'controllers/front/PdfInvoiceController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'PdfOrderReturnController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'PdfOrderReturnControllerCore' => 
-  array (
-    'path' => 'controllers/front/PdfOrderReturnController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'PdfOrderSlipController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'PdfOrderSlipControllerCore' => 
-  array (
-    'path' => 'controllers/front/PdfOrderSlipController.php',
-    'type' => 'class',
     'override' => false,
   ),
   'PrestaShopAutoload' => 
@@ -3338,18 +2888,6 @@
   'PrestaShopPaymentExceptionCore' => 
   array (
     'path' => 'classes/exception/PrestaShopPaymentException.php',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'PricesDropController' => 
-  array (
-    'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'PricesDropControllerCore' => 
-  array (
-    'path' => 'controllers/front/PricesDropController.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -3800,12 +3338,6 @@
   'SupplierController' => 
   array (
     'path' => 'override/controllers/front/SupplierController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'SupplierControllerCore' => 
-  array (
-    'path' => 'controllers/front/SupplierController.php',
     'type' => 'class',
     'override' => false,
   ),
