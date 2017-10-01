@@ -1,49 +1,25 @@
 <?php
-/*
-* 2007-2015 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Open Software License (OSL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/osl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2015 PrestaShop SA
-*  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*/
 
-define('_PS_SMARTY_DIR_', _PS_TOOL_DIR_.'smarty/');
+define('_PS_SMARTY_DIR_', _PS_TOOL_DIR_ . 'smarty/');
 
-require_once(_PS_SMARTY_DIR_.'Smarty.class.php');
+require_once(_PS_SMARTY_DIR_ . 'Smarty.class.php');
 
 global $smarty;
 $smarty = new SmartyCustom();
-$smarty->setCompileDir(_PS_CACHE_DIR_.'smarty/compile');
-$smarty->setCacheDir(_PS_CACHE_DIR_.'smarty/cache');
+$smarty->setCompileDir(_PS_CACHE_DIR_ . 'smarty/compile');
+$smarty->setCacheDir(_PS_CACHE_DIR_ . 'smarty/cache');
 if (!Tools::getSafeModeStatus()) {
     $smarty->use_sub_dirs = true;
 }
-$smarty->setConfigDir(_PS_SMARTY_DIR_.'configs');
+$smarty->setConfigDir(_PS_SMARTY_DIR_ . 'configs');
 $smarty->caching = false;
 if (Configuration::get('PS_SMARTY_CACHING_TYPE') == 'mysql') {
-    include(_PS_CLASS_DIR_.'/SmartyCacheResourceMysql.php');
+    include(_PS_CLASS_DIR_ . '/SmartyCacheResourceMysql.php');
     $smarty->caching_type = 'mysql';
 }
 $smarty->force_compile = (Configuration::get('PS_SMARTY_FORCE_COMPILE') == _PS_SMARTY_FORCE_COMPILE_) ? true : false;
 $smarty->compile_check = (Configuration::get('PS_SMARTY_FORCE_COMPILE') >= _PS_SMARTY_CHECK_COMPILE_) ? true : false;
-$smarty->debug_tpl = _PS_ALL_THEMES_DIR_.'debug.tpl';
+$smarty->debug_tpl = _PS_ALL_THEMES_DIR_ . 'debug.tpl';
 
 /* Use this constant if you want to load smarty without all PrestaShop functions */
 if (defined('_PS_SMARTY_FAST_LOAD_') && _PS_SMARTY_FAST_LOAD_) {
@@ -51,9 +27,9 @@ if (defined('_PS_SMARTY_FAST_LOAD_') && _PS_SMARTY_FAST_LOAD_) {
 }
 
 if (defined('_PS_ADMIN_DIR_')) {
-    require_once(dirname(__FILE__).'/smartyadmin.config.inc.php');
+    require_once(dirname(__FILE__) . '/smartyadmin.config.inc.php');
 } else {
-    require_once(dirname(__FILE__).'/smartyfront.config.inc.php');
+    require_once(dirname(__FILE__) . '/smartyfront.config.inc.php');
 }
 
 smartyRegisterFunction($smarty, 'modifier', 'truncate', 'smarty_modifier_truncate');
@@ -84,47 +60,42 @@ smartyRegisterFunction($smarty, 'block', 'addJsDefL', array('Media', 'addJsDefL'
 smartyRegisterFunction($smarty, 'modifier', 'boolval', array('Tools', 'boolval'));
 smartyRegisterFunction($smarty, 'modifier', 'cleanHtml', 'smartyCleanHtml');
 
-function smartyDieObject($params, &$smarty)
-{
+function smartyDieObject($params, &$smarty) {
     return Tools::d($params['var']);
 }
 
-function smartyShowObject($params, &$smarty)
-{
+function smartyShowObject($params, &$smarty) {
     return Tools::p($params['var']);
 }
 
-function smartyMaxWords($params, &$smarty)
-{
+function smartyMaxWords($params, &$smarty) {
     Tools::displayAsDeprecated();
     $params['s'] = str_replace('...', ' ...', html_entity_decode($params['s'], ENT_QUOTES, 'UTF-8'));
     $words = explode(' ', $params['s']);
 
     foreach ($words as &$word) {
         if (Tools::strlen($word) > $params['n']) {
-            $word = Tools::substr(trim(chunk_split($word, $params['n']-1, '- ')), 0, -1);
+            $word = Tools::substr(trim(chunk_split($word, $params['n'] - 1, '- ')), 0, -1);
         }
     }
 
-    return implode(' ',  Tools::htmlentitiesUTF8($words));
+    return implode(' ', Tools::htmlentitiesUTF8($words));
 }
 
-function smartyTruncate($params, &$smarty)
-{
+function smartyTruncate($params, &$smarty) {
     Tools::displayAsDeprecated();
     $text = isset($params['strip']) ? strip_tags($params['text']) : $params['text'];
     $length = $params['length'];
     $sep = isset($params['sep']) ? $params['sep'] : '...';
 
     if (Tools::strlen($text) > $length + Tools::strlen($sep)) {
-        $text = Tools::substr($text, 0, $length).$sep;
+        $text = Tools::substr($text, 0, $length) . $sep;
     }
 
     return (isset($params['encode']) ? Tools::htmlentitiesUTF8($text, ENT_NOQUOTES) : $text);
 }
 
-function smarty_modifier_truncate($string, $length = 80, $etc = '...', $break_words = false, $middle = false, $charset = 'UTF-8')
-{
+function smarty_modifier_truncate($string, $length = 80, $etc = '...', $break_words = false, $middle = false, $charset = 'UTF-8') {
     if (!$length) {
         return '';
     }
@@ -134,20 +105,19 @@ function smarty_modifier_truncate($string, $length = 80, $etc = '...', $break_wo
     if (Tools::strlen($string) > $length) {
         $length -= min($length, Tools::strlen($etc));
         if (!$break_words && !$middle) {
-            $string = preg_replace('/\s+?(\S+)?$/u', '', Tools::substr($string, 0, $length+1, $charset));
+            $string = preg_replace('/\s+?(\S+)?$/u', '', Tools::substr($string, 0, $length + 1, $charset));
         }
-        return !$middle ? Tools::substr($string, 0, $length, $charset).$etc : Tools::substr($string, 0, $length/2, $charset).$etc.Tools::substr($string, -$length/2, $length, $charset);
+        return !$middle ? Tools::substr($string, 0, $length, $charset) . $etc : Tools::substr($string, 0, $length / 2, $charset) . $etc . Tools::substr($string, -$length / 2, $length, $charset);
     } else {
         return $string;
     }
 }
 
-function smarty_modifier_htmlentitiesUTF8($string)
-{
+function smarty_modifier_htmlentitiesUTF8($string) {
     return Tools::htmlentitiesUTF8($string);
 }
-function smartyMinifyHTML($tpl_output, &$smarty)
-{
+
+function smartyMinifyHTML($tpl_output, &$smarty) {
     $context = Context::getContext();
     if (isset($context->controller) && in_array($context->controller->php_self, array('pdf-invoice', 'pdf-order-return', 'pdf-order-slip'))) {
         return $tpl_output;
@@ -156,8 +126,7 @@ function smartyMinifyHTML($tpl_output, &$smarty)
     return $tpl_output;
 }
 
-function smartyPackJSinHTML($tpl_output, &$smarty)
-{
+function smartyPackJSinHTML($tpl_output, &$smarty) {
     $context = Context::getContext();
     if (isset($context->controller) && in_array($context->controller->php_self, array('pdf-invoice', 'pdf-order-return', 'pdf-order-slip'))) {
         return $tpl_output;
@@ -166,8 +135,7 @@ function smartyPackJSinHTML($tpl_output, &$smarty)
     return $tpl_output;
 }
 
-function smartyRegisterFunction($smarty, $type, $function, $params, $lazy = true)
-{
+function smartyRegisterFunction($smarty, $type, $function, $params, $lazy = true) {
     if (!in_array($type, array('function', 'modifier', 'block'))) {
         return false;
     }
@@ -188,8 +156,7 @@ function smartyRegisterFunction($smarty, $type, $function, $params, $lazy = true
     }
 }
 
-function smartyHook($params, &$smarty)
-{
+function smartyHook($params, &$smarty) {
     if (!empty($params['h'])) {
         $id_module = null;
         $hook_params = $params;
@@ -206,24 +173,22 @@ function smartyHook($params, &$smarty)
     }
 }
 
-function smartyCleanHtml($data)
-{
+function smartyCleanHtml($data) {
     // Prevent xss injection.
     if (Validate::isCleanHtml($data)) {
         return $data;
     }
 }
 
-function toolsConvertPrice($params, &$smarty)
-{
+function toolsConvertPrice($params, &$smarty) {
     return Tools::convertPrice($params['price'], Context::getContext()->currency);
 }
 
 /**
  * Used to delay loading of external classes with smarty->register_plugin
  */
-class SmartyLazyRegister
-{
+class SmartyLazyRegister {
+
     protected $registry = array();
     protected static $instance;
 
@@ -231,8 +196,7 @@ class SmartyLazyRegister
      * Register a function or method to be dynamically called later
      * @param string|array $params function name or array(object name, method name)
      */
-    public function register($params)
-    {
+    public function register($params) {
         if (is_array($params)) {
             $this->registry[$params[1]] = $params;
         } else {
@@ -247,13 +211,12 @@ class SmartyLazyRegister
      * @param mixed $arguments function argument
      * @return mixed function return
      */
-    public function __call($name, $arguments)
-    {
+    public function __call($name, $arguments) {
         $item = $this->registry[$name];
 
         // case 1: call to static method - case 2 : call to static function
         if (is_array($item[1])) {
-            return call_user_func_array($item[1].'::'.$item[0], array($arguments[0], &$arguments[1]));
+            return call_user_func_array($item[1] . '::' . $item[0], array($arguments[0], &$arguments[1]));
         } else {
             $args = array();
 
@@ -269,11 +232,11 @@ class SmartyLazyRegister
         }
     }
 
-    public static function getInstance()
-    {
+    public static function getInstance() {
         if (!self::$instance) {
             self::$instance = new SmartyLazyRegister();
         }
         return self::$instance;
     }
+
 }
