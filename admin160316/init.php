@@ -1,28 +1,4 @@
 <?php
-/*
-* 2007-2015 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Open Software License (OSL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/osl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2015 PrestaShop SA
-*  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*/
 
 ob_start();
 $timerStart = microtime(true);
@@ -37,28 +13,28 @@ try {
     }
 
     if (!isset($context->employee) || !$context->employee->isLoggedBack()) {
-        Tools::redirectAdmin('index.php?controller=AdminLogin&redirect='.$_SERVER['REQUEST_URI']);
+        Tools::redirectAdmin('index.php?controller=AdminLogin&redirect=' . $_SERVER['REQUEST_URI']);
     }
 
     // Set current index
     // @deprecated global
     global $currentIndex; // retrocompatibility;
-    $currentIndex = $_SERVER['SCRIPT_NAME'].(($controller = Tools::getValue('controller')) ? '?controller='.$controller: '');
+    $currentIndex = $_SERVER['SCRIPT_NAME'] . (($controller = Tools::getValue('controller')) ? '?controller=' . $controller : '');
 
     if ($back = Tools::getValue('back')) {
-        $currentIndex .= '&back='.urlencode($back);
+        $currentIndex .= '&back=' . urlencode($back);
     }
     AdminTab::$currentIndex = $currentIndex;
 
     $iso = $context->language->iso_code;
-    if (file_exists(_PS_TRANSLATIONS_DIR_.$iso.'/errors.php')) {
-        include(_PS_TRANSLATIONS_DIR_.$iso.'/errors.php');
+    if (file_exists(_PS_TRANSLATIONS_DIR_ . $iso . '/errors.php')) {
+        include(_PS_TRANSLATIONS_DIR_ . $iso . '/errors.php');
     }
-    if (file_exists(_PS_TRANSLATIONS_DIR_.$iso.'/fields.php')) {
-        include(_PS_TRANSLATIONS_DIR_.$iso.'/fields.php');
+    if (file_exists(_PS_TRANSLATIONS_DIR_ . $iso . '/fields.php')) {
+        include(_PS_TRANSLATIONS_DIR_ . $iso . '/fields.php');
     }
-    if (file_exists(_PS_TRANSLATIONS_DIR_.$iso.'/admin.php')) {
-        include(_PS_TRANSLATIONS_DIR_.$iso.'/admin.php');
+    if (file_exists(_PS_TRANSLATIONS_DIR_ . $iso . '/admin.php')) {
+        include(_PS_TRANSLATIONS_DIR_ . $iso . '/admin.php');
     }
 
     /* Server Params */
@@ -73,19 +49,19 @@ try {
         define('_PS_BASE_URL_SSL_', Tools::getShopDomainSsl(true));
     }
 
-    $path = dirname(__FILE__).'/themes/';
+    $path = dirname(__FILE__) . '/themes/';
     // if the current employee theme is not valid (check layout.tpl presence),
     // reset to default theme
     if (empty($context->employee->bo_theme) ||
-        !file_exists($path.$context->employee->bo_theme.'/template/layout.tpl')) {
+            !file_exists($path . $context->employee->bo_theme . '/template/layout.tpl')) {
         // default admin theme is "default".
         $context->employee->bo_theme = '';
-        if (file_exists($path.'default/template/layout.tpl')) {
+        if (file_exists($path . 'default/template/layout.tpl')) {
             $context->employee->bo_theme = 'default';
         } else {
             // if default theme doesn't exists, try to find one, otherwise throw exception
             foreach (scandir($path) as $theme) {
-                if ($theme[0] != '.' && file_exists($path.$theme.'/template/layout.tpl')) {
+                if ($theme[0] != '.' && file_exists($path . $theme . '/template/layout.tpl')) {
                     $context->employee->bo_theme = $theme;
                     break;
                 }
