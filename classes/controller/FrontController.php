@@ -218,10 +218,6 @@ class FrontControllerCore extends Controller {
         $link = new Link($protocol_link, $protocol_content);
         $this->context->link = $link;
 
-        if ($id_cart = (int) $this->recoverCart()) {
-            $this->context->cookie->id_cart = (int) $id_cart;
-        }
-
         if ($this->auth && !$this->context->customer->isLogged($this->guestAllowed)) {
             Tools::redirect('index.php?controller=authentication' . ($this->authRedirection ? '&back=' . $this->authRedirection : ''));
         }
@@ -269,52 +265,6 @@ class FrontControllerCore extends Controller {
             Tools::redirect(isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null);
         }
 
-        /* Cart already exists */
-        if ((int) $this->context->cookie->id_cart) {
-            if (!isset($cart)) {
-                $cart = new Cart($this->context->cookie->id_cart);
-            }
-
-            if (Validate::isLoadedObject($cart) && $cart->OrderExists()) {
-                PrestaShopLogger::addLog('Frontcontroller::init - Cart cannot be loaded or an order has already been placed using this cart', 1, null, 'Cart', (int) $this->context->cookie->id_cart, true);
-                unset($this->context->cookie->id_cart, $cart, $this->context->cookie->checkedTOS);
-                $this->context->cookie->check_cgv = false;
-            }
-            /* Delete product of cart, if user can't make an order from his country */ elseif (intval(Configuration::get('PS_GEOLOCATION_ENABLED')) &&
-                    !in_array(strtoupper($this->context->cookie->iso_code_country), explode(';', Configuration::get('PS_ALLOWED_COUNTRIES'))) &&
-                    $cart->nbProducts() && intval(Configuration::get('PS_GEOLOCATION_NA_BEHAVIOR')) != -1 &&
-                    !FrontController::isInWhitelistForGeolocation() &&
-                    !in_array($_SERVER['SERVER_NAME'], array('localhost', '127.0.0.1'))) {
-                PrestaShopLogger::addLog('Frontcontroller::init - GEOLOCATION is deleting a cart', 1, null, 'Cart', (int) $this->context->cookie->id_cart, true);
-                unset($this->context->cookie->id_cart, $cart);
-            }
-            // update cart values
-            elseif ($this->context->cookie->id_customer != $cart->id_customer || $this->context->cookie->id_lang != $cart->id_lang || $currency->id != $cart->id_currency) {
-                if ($this->context->cookie->id_customer) {
-                    $cart->id_customer = (int) $this->context->cookie->id_customer;
-                }
-                $cart->id_lang = (int) $this->context->cookie->id_lang;
-                $cart->id_currency = (int) $currency->id;
-                $cart->update();
-            }
-            /* Select an address if not set */
-            if (isset($cart) && (!isset($cart->id_address_delivery) || $cart->id_address_delivery == 0 ||
-                    !isset($cart->id_address_invoice) || $cart->id_address_invoice == 0) && $this->context->cookie->id_customer) {
-                $to_update = false;
-                if (!isset($cart->id_address_delivery) || $cart->id_address_delivery == 0) {
-                    $to_update = true;
-                    $cart->id_address_delivery = (int) Address::getFirstCustomerAddressId($cart->id_customer);
-                }
-                if (!isset($cart->id_address_invoice) || $cart->id_address_invoice == 0) {
-                    $to_update = true;
-                    $cart->id_address_invoice = (int) Address::getFirstCustomerAddressId($cart->id_customer);
-                }
-                if ($to_update) {
-                    $cart->update();
-                }
-            }
-        }
-
         if (!isset($cart) || !$cart->id) {
             $cart = new Cart();
             $cart->id_lang = (int) $this->context->cookie->id_lang;
@@ -333,7 +283,6 @@ class FrontControllerCore extends Controller {
 
             // Needed if the merchant want to give a free product to every visitors
             $this->context->cart = $cart;
-            CartRule::autoAddToCart($this->context);
         } else {
             $this->context->cart = $cart;
         }
@@ -376,14 +325,7 @@ class FrontControllerCore extends Controller {
         Product::initPricesComputation();
 
         $display_tax_label = $this->context->country->display_tax_label;
-        if (isset($cart->{Configuration::get('PS_TAX_ADDRESS_TYPE')}) && $cart->{Configuration::get('PS_TAX_ADDRESS_TYPE')}) {
-            $infos = Address::getCountryAndState((int) $cart->{Configuration::get('PS_TAX_ADDRESS_TYPE')});
-            $country = new Country((int) $infos['id_country']);
-            $this->context->country = $country;
-            if (Validate::isLoadedObject($country)) {
-                $display_tax_label = $country->display_tax_label;
-            }
-        }
+
 
         $languages = Language::getLanguages(true, $this->context->shop->id);
         $meta_language = array();
@@ -399,11 +341,9 @@ class FrontControllerCore extends Controller {
 
 
         $this->context->smarty->assign(array(
-            'catoptlist' => Category::getCatsAsOptLst(),
             // Useful for layout.tpl
             'mobile_device' => $this->context->getMobileDevice(),
             'link' => $link,
-            'cart' => $cart,
             'currency' => $currency,
             'currencyRate' => (float) $currency->getConversationRate(),
             'cookie' => $this->context->cookie,
@@ -423,11 +363,9 @@ class FrontControllerCore extends Controller {
             'lang_id' => (int) $this->context->language->id,
             'language_code' => $this->context->language->language_code ? $this->context->language->language_code : $this->context->language->iso_code,
             'come_from' => Tools::getHttpHost(true, true) . Tools::htmlentitiesUTF8(str_replace(array('\'', '\\'), '', urldecode($_SERVER['REQUEST_URI']))),
-            'cart_qties' => (int) $cart->nbProducts(),
             'currencies' => Currency::getCurrencies(),
             'languages' => $languages,
             'meta_language' => implode(',', $meta_language),
-            'priceDisplay' => Product::getTaxCalculationMethod((int) $this->context->cookie->id_customer),
             'is_logged' => (bool) $this->context->customer->isLogged(),
             'is_guest' => (bool) $this->context->customer->isGuest(),
             'add_prod_display' => (int) Configuration::get('PS_ATTRIBUTE_CATEGORY_DISPLAY'),
@@ -439,10 +377,7 @@ class FrontControllerCore extends Controller {
             'vat_management' => (int) Configuration::get('VATNUMBER_MANAGEMENT'),
             'opc' => (bool) Configuration::get('PS_ORDER_PROCESS_TYPE'),
             'PS_CATALOG_MODE' => (bool) Configuration::get('PS_CATALOG_MODE') || (Group::isFeatureActive() && !(bool) Group::getCurrent()->show_prices),
-            'b2b_enable' => (bool) Configuration::get('PS_B2B_ENABLE'),
             'request' => $link->getPaginationLink(false, false, false, true),
-            'PS_STOCK_MANAGEMENT' => Configuration::get('PS_STOCK_MANAGEMENT'),
-            'quick_view' => (bool) Configuration::get('PS_QUICK_VIEW'),
             'shop_phone' => Configuration::get('PS_SHOP_PHONE'),
             'compared_products' => is_array($compared_products) ? $compared_products : array(),
             'comparator_max_item' => (int) Configuration::get('PS_COMPARATOR_MAX_ITEM'),
@@ -521,7 +456,7 @@ class FrontControllerCore extends Controller {
         }
 
         $this->iso = $iso;
-        $this->context->cart = $cart;
+//        $this->context->cart = $cart;
         $this->context->currency = $currency;
     }
 
@@ -936,14 +871,6 @@ class FrontControllerCore extends Controller {
             $this->addJqueryUI('ui.sortable');
             $this->addjqueryPlugin('fancybox');
             $this->addJS(_PS_JS_DIR_ . 'hookLiveEdit.js');
-        }
-
-        if (Configuration::get('PS_QUICK_VIEW')) {
-            $this->addjqueryPlugin('fancybox');
-        }
-
-        if (Configuration::get('PS_COMPARATOR_MAX_ITEM') > 0) {
-            $this->addJS(_THEME_JS_DIR_ . 'products-comparison.js');
         }
 
         // Execute Hook FrontController SetMedia
@@ -1515,12 +1442,6 @@ class FrontControllerCore extends Controller {
         $this->context->smarty->assign(array(
             'categoriesTree' => Category::getRootCategory()->recurseLiteCategTree(0),
             'categoriescmsTree' => CMSCategory::getRecurseCategory($this->context->language->id, 1, 1, 1),
-            'voucherAllowed' => (int) CartRule::isFeatureActive(),
-            'display_manufacturer_link' => (bool) $blockmanufacturer->active,
-            'display_supplier_link' => (bool) $blocksupplier->active,
-            'PS_DISPLAY_SUPPLIERS' => Configuration::get('PS_DISPLAY_SUPPLIERS'),
-            'PS_DISPLAY_BEST_SELLERS' => Configuration::get('PS_DISPLAY_BEST_SELLERS'),
-            'display_store' => Configuration::get('PS_STORES_DISPLAY_SITEMAP'),
             'conditions' => Configuration::get('PS_CONDITIONS'),
             'id_cgv' => Configuration::get('PS_CONDITIONS_CMS_ID'),
             'PS_SHOP_NAME' => Configuration::get('PS_SHOP_NAME'),
