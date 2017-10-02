@@ -2357,12 +2357,6 @@
     'type' => 'class',
     'override' => false,
   ),
-  'ManufacturerController' => 
-  array (
-    'path' => 'override/controllers/front/ManufacturerController.php',
-    'type' => 'class',
-    'override' => false,
-  ),
   'ManufacturerCore' => 
   array (
     'path' => 'classes/Manufacturer.php',
@@ -2563,7 +2557,7 @@
   ),
   'OrderCarrierCore' => 
   array (
-    'path' => 'classes/order/OrderCarrier.php',
+    'path' => 'classes/order_2/OrderCarrier.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -2575,13 +2569,13 @@
   ),
   'OrderCartRuleCore' => 
   array (
-    'path' => 'classes/order/OrderCartRule.php',
+    'path' => 'classes/order_2/OrderCartRule.php',
     'type' => 'class',
     'override' => false,
   ),
   'OrderCore' => 
   array (
-    'path' => 'classes/order/Order.php',
+    'path' => 'classes/order_2/Order.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -2593,7 +2587,7 @@
   ),
   'OrderDetailCore' => 
   array (
-    'path' => 'classes/order/OrderDetail.php',
+    'path' => 'classes/order_2/OrderDetail.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -2605,7 +2599,7 @@
   ),
   'OrderDiscountCore' => 
   array (
-    'path' => 'classes/order/OrderDiscount.php',
+    'path' => 'classes/order_2/OrderDiscount.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -2617,7 +2611,7 @@
   ),
   'OrderHistoryCore' => 
   array (
-    'path' => 'classes/order/OrderHistory.php',
+    'path' => 'classes/order_2/OrderHistory.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -2629,7 +2623,7 @@
   ),
   'OrderInvoiceCore' => 
   array (
-    'path' => 'classes/order/OrderInvoice.php',
+    'path' => 'classes/order_2/OrderInvoice.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -2641,7 +2635,7 @@
   ),
   'OrderMessageCore' => 
   array (
-    'path' => 'classes/order/OrderMessage.php',
+    'path' => 'classes/order_2/OrderMessage.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -2653,7 +2647,7 @@
   ),
   'OrderPaymentCore' => 
   array (
-    'path' => 'classes/order/OrderPayment.php',
+    'path' => 'classes/order_2/OrderPayment.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -2665,7 +2659,7 @@
   ),
   'OrderReturnCore' => 
   array (
-    'path' => 'classes/order/OrderReturn.php',
+    'path' => 'classes/order_2/OrderReturn.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -2677,7 +2671,7 @@
   ),
   'OrderReturnStateCore' => 
   array (
-    'path' => 'classes/order/OrderReturnState.php',
+    'path' => 'classes/order_2/OrderReturnState.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -2689,7 +2683,7 @@
   ),
   'OrderSlipCore' => 
   array (
-    'path' => 'classes/order/OrderSlip.php',
+    'path' => 'classes/order_2/OrderSlip.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -2701,7 +2695,7 @@
   ),
   'OrderStateCore' => 
   array (
-    'path' => 'classes/order/OrderState.php',
+    'path' => 'classes/order_2/OrderState.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -3332,12 +3326,6 @@
   'Supplier' => 
   array (
     'path' => '',
-    'type' => 'class',
-    'override' => false,
-  ),
-  'SupplierController' => 
-  array (
-    'path' => 'override/controllers/front/SupplierController.php',
     'type' => 'class',
     'override' => false,
   ),
