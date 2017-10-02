@@ -1,36 +1,11 @@
 <?php
-/*
-* 2007-2015 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Open Software License (OSL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/osl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2015 PrestaShop SA
-*  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*/
 
 /**
  * @property RangePrice $object
  */
-class AdminRangePriceControllerCore extends AdminController
-{
-    public function __construct()
-    {
+class AdminRangePriceControllerCore extends AdminController {
+
+    public function __construct() {
         $this->bootstrap = true;
         $this->table = 'range_price';
         $this->className = 'RangePrice';
@@ -46,7 +21,7 @@ class AdminRangePriceControllerCore extends AdminController
             'delimiter1' => array('title' => $this->l('From'), 'width' => 86, 'type' => 'price', 'align' => 'right'),
             'delimiter2' => array('title' => $this->l('To'), 'width' => 86, 'type' => 'price', 'align' => 'right'));
 
-        $this->_join = 'LEFT JOIN '._DB_PREFIX_.'carrier ca ON (ca.`id_carrier` = a.`id_carrier`)';
+        $this->_join = 'LEFT JOIN ' . _DB_PREFIX_ . 'carrier ca ON (ca.`id_carrier` = a.`id_carrier`)';
         $this->_select = 'ca.`name` AS carrier_name';
         $this->_where = 'AND ca.`deleted` = 0';
         $this->_use_found_rows = false;
@@ -54,11 +29,10 @@ class AdminRangePriceControllerCore extends AdminController
         parent::__construct();
     }
 
-    public function initPageHeaderToolbar()
-    {
+    public function initPageHeaderToolbar() {
         $this->page_header_toolbar_title = $this->l('Price ranges');
         $this->page_header_toolbar_btn['new_price_range'] = array(
-            'href' => self::$currentIndex.'&addrange_price&token='.$this->token,
+            'href' => self::$currentIndex . '&addrange_price&token=' . $this->token,
             'desc' => $this->l('Add new price range', null, null, false),
             'icon' => 'process-icon-new'
         );
@@ -66,10 +40,9 @@ class AdminRangePriceControllerCore extends AdminController
         parent::initPageHeaderToolbar();
     }
 
-    public function renderForm()
-    {
+    public function renderForm() {
         $currency = $this->context->currency;
-        $carriers = Carrier::getCarriers((int)Configuration::get('PS_LANG_DEFAULT'), true, false, false, null, Carrier::PS_CARRIERS_AND_CARRIER_MODULES_NEED_RANGE);
+        $carriers = Carrier::getCarriers((int) Configuration::get('PS_LANG_DEFAULT'), true, false, false, null, Carrier::PS_CARRIERS_AND_CARRIER_MODULES_NEED_RANGE);
 
         foreach ($carriers as $key => $carrier) {
             if ($carrier['is_free']) {
@@ -94,14 +67,14 @@ class AdminRangePriceControllerCore extends AdminController
                         'id' => 'id_carrier',
                         'name' => 'name'
                     ),
-                    'empty_message' => '<p class="alert alert-block">'.$this->l('There is no carrier available for this price range.').'</p>'
+                    'empty_message' => '<p class="alert alert-block">' . $this->l('There is no carrier available for this price range.') . '</p>'
                 ),
                 array(
                     'type' => 'text',
                     'label' => $this->l('From'),
                     'name' => 'delimiter1',
                     'required' => true,
-                    'suffix' => $currency->getSign('right').' '.$this->l('(Tax Incl.)'),
+                    'suffix' => $currency->getSign('right') . ' ' . $this->l('(Tax Incl.)'),
                     'hint' => $this->l('Start range (included).'),
                     'string_format' => '%.2f'
                 ),
@@ -110,7 +83,7 @@ class AdminRangePriceControllerCore extends AdminController
                     'label' => $this->l('To'),
                     'name' => 'delimiter2',
                     'required' => true,
-                    'suffix' => $currency->getSign('right').' '.$this->l('(Tax Incl.)'),
+                    'suffix' => $currency->getSign('right') . ' ' . $this->l('(Tax Incl.)'),
                     'hint' => $this->l('End range (excluded).'),
                     'string_format' => '%.2f'
                 ),
@@ -124,8 +97,7 @@ class AdminRangePriceControllerCore extends AdminController
         return parent::renderForm();
     }
 
-    public function getList($id_lang, $order_by = null, $order_way = null, $start = 0, $limit = null, $id_lang_shop = false)
-    {
+    public function getList($id_lang, $order_by = null, $order_way = null, $start = 0, $limit = null, $id_lang_shop = false) {
         parent::getList($id_lang, $order_by, $order_way, $start, $limit, $id_lang_shop);
         if ($this->_list && is_array($this->_list)) {
             foreach ($this->_list as $key => $list) {
@@ -136,15 +108,14 @@ class AdminRangePriceControllerCore extends AdminController
         }
     }
 
-    public function postProcess()
-    {
-        $id = (int)Tools::getValue('id_'.$this->table);
-        if (Tools::getValue('submitAdd'.$this->table)) {
+    public function postProcess() {
+        $id = (int) Tools::getValue('id_' . $this->table);
+        if (Tools::getValue('submitAdd' . $this->table)) {
             if (Tools::getValue('delimiter1') >= Tools::getValue('delimiter2')) {
                 $this->errors[] = Tools::displayError('Invalid range');
-            } elseif (!$id && RangePrice::rangeExist((int)Tools::getValue('id_carrier'), (float)Tools::getValue('delimiter1'), (float)Tools::getValue('delimiter2'))) {
+            } elseif (!$id && RangePrice::rangeExist((int) Tools::getValue('id_carrier'), (float) Tools::getValue('delimiter1'), (float) Tools::getValue('delimiter2'))) {
                 $this->errors[] = Tools::displayError('The range already exists');
-            } elseif (RangePrice::isOverlapping((int)Tools::getValue('id_carrier'), (float)Tools::getValue('delimiter1'), (float)Tools::getValue('delimiter2'), ($id ? (int)$id : null))) {
+            } elseif (RangePrice::isOverlapping((int) Tools::getValue('id_carrier'), (float) Tools::getValue('delimiter1'), (float) Tools::getValue('delimiter2'), ($id ? (int) $id : null))) {
                 $this->errors[] = Tools::displayError('Error: Ranges are overlapping');
             } elseif (!count($this->errors)) {
                 parent::postProcess();
@@ -153,4 +124,5 @@ class AdminRangePriceControllerCore extends AdminController
             parent::postProcess();
         }
     }
+
 }

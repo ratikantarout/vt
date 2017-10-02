@@ -1,38 +1,13 @@
 <?php
-/*
-* 2007-2015 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Open Software License (OSL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/osl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2015 PrestaShop SA
-*  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*/
 
 /**
  * @property Alias $object
  */
-class AdminSearchConfControllerCore extends AdminController
-{
+class AdminSearchConfControllerCore extends AdminController {
+
     protected $toolbar_scroll = false;
 
-    public function __construct()
-    {
+    public function __construct() {
         $this->bootstrap = true;
         $this->table = 'alias';
         $this->className = 'Alias';
@@ -64,39 +39,39 @@ class AdminSearchConfControllerCore extends AdminController
 
         // Search options
         $current_file_name = array_reverse(explode('/', $_SERVER['SCRIPT_NAME']));
-        $cron_url = Tools::getHttpHost(true, true).__PS_BASE_URI__.basename(_PS_ADMIN_DIR_).
-            '/searchcron.php?full=1&token='.substr(_COOKIE_KEY_, 34, 8).(Shop::getContext() == Shop::CONTEXT_SHOP ? '&id_shop='.(int)Context::getContext()->shop->id : '');
+        $cron_url = Tools::getHttpHost(true, true) . __PS_BASE_URI__ . basename(_PS_ADMIN_DIR_) .
+                '/searchcron.php?full=1&token=' . substr(_COOKIE_KEY_, 34, 8) . (Shop::getContext() == Shop::CONTEXT_SHOP ? '&id_shop=' . (int) Context::getContext()->shop->id : '');
 
-        list($total, $indexed) = Db::getInstance()->getRow('SELECT COUNT(*) as "0", SUM(product_shop.indexed) as "1" FROM '._DB_PREFIX_.'product p '.Shop::addSqlAssociation('product', 'p').' WHERE product_shop.`visibility` IN ("both", "search") AND product_shop.`active` = 1');
+        list($total, $indexed) = Db::getInstance()->getRow('SELECT COUNT(*) as "0", SUM(product_shop.indexed) as "1" FROM ' . _DB_PREFIX_ . 'product p ' . Shop::addSqlAssociation('product', 'p') . ' WHERE product_shop.`visibility` IN ("both", "search") AND product_shop.`active` = 1');
 
         $this->fields_options = array(
             'indexation' => array(
                 'title' => $this->l('Indexing'),
                 'icon' => 'icon-cogs',
                 'info' => '<p>
-						'.$this->l('The "indexed" products have been analyzed by PrestaShop and will appear in the results of a front office search.').'<br />
-						'.$this->l('Indexed products').' <strong>'.(int)$indexed.' / '.(int)$total.'</strong>.
+						' . $this->l('The "indexed" products have been analyzed by PrestaShop and will appear in the results of a front office search.') . '<br />
+						' . $this->l('Indexed products') . ' <strong>' . (int) $indexed . ' / ' . (int) $total . '</strong>.
 					</p>
 					<p>
-						'.$this->l('Building the product index may take a few minutes.').'
-						'.$this->l('If your server stops before the process ends, you can resume the indexing by clicking "Add missing products to the index".').'
+						' . $this->l('Building the product index may take a few minutes.') . '
+						' . $this->l('If your server stops before the process ends, you can resume the indexing by clicking "Add missing products to the index".') . '
 					</p>
-					<a href="searchcron.php?token='.substr(_COOKIE_KEY_, 34, 8).'&amp;redirect=1'.(Shop::getContext() == Shop::CONTEXT_SHOP ? '&id_shop='.(int)Context::getContext()->shop->id : '').'" class="btn-link">
+					<a href="searchcron.php?token=' . substr(_COOKIE_KEY_, 34, 8) . '&amp;redirect=1' . (Shop::getContext() == Shop::CONTEXT_SHOP ? '&id_shop=' . (int) Context::getContext()->shop->id : '') . '" class="btn-link">
 						<i class="icon-external-link-sign"></i>
-						'.$this->l('Add missing products to the index').'
+						' . $this->l('Add missing products to the index') . '
 					</a><br />
-					<a href="searchcron.php?full=1&amp;token='.substr(_COOKIE_KEY_, 34, 8).'&amp;redirect=1'.(Shop::getContext() == Shop::CONTEXT_SHOP ? '&id_shop='.(int)Context::getContext()->shop->id : '').'" class="btn-link">
+					<a href="searchcron.php?full=1&amp;token=' . substr(_COOKIE_KEY_, 34, 8) . '&amp;redirect=1' . (Shop::getContext() == Shop::CONTEXT_SHOP ? '&id_shop=' . (int) Context::getContext()->shop->id : '') . '" class="btn-link">
 						<i class="icon-external-link-sign"></i>
-						'.$this->l('Re-build the entire index').'
+						' . $this->l('Re-build the entire index') . '
 					</a><br /><br />
 					<p>
-						'.$this->l('You can set a cron job that will rebuild your index using the following URL:').'<br />
-						<a href="'.Tools::safeOutput($cron_url).'">
+						' . $this->l('You can set a cron job that will rebuild your index using the following URL:') . '<br />
+						<a href="' . Tools::safeOutput($cron_url) . '">
 							<i class="icon-external-link-sign"></i>
-							'.Tools::safeOutput($cron_url).'
+							' . Tools::safeOutput($cron_url) . '
 						</a>
 					</p><br />',
-                'fields' =>    array(
+                'fields' => array(
                     'PS_SEARCH_INDEXATION' => array(
                         'title' => $this->l('Indexing'),
                         'validation' => 'isBool',
@@ -108,9 +83,9 @@ class AdminSearchConfControllerCore extends AdminController
                 'submit' => array('title' => $this->l('Save'))
             ),
             'search' => array(
-                'title' =>    $this->l('Search'),
-                'icon' =>    'icon-search',
-                'fields' =>    array(
+                'title' => $this->l('Search'),
+                'icon' => 'icon-search',
+                'fields' => array(
                     'PS_SEARCH_AJAX' => array(
                         'title' => $this->l('Ajax search'),
                         'validation' => 'isBool',
@@ -136,8 +111,8 @@ class AdminSearchConfControllerCore extends AdminController
                         'validation' => 'isBool',
                         'cast' => 'intval',
                         'type' => 'bool',
-                        'desc' => $this->l('By default, to search for “blouse”, you have to enter “blous”, “blo”, etc (beginning of the word) – but not “lous” (within the word).').'<br/>'.
-                                  $this->l('With this option enabled, it also gives the good result if you search for “lous”, “ouse”, or anything contained in the word.'),
+                        'desc' => $this->l('By default, to search for “blouse”, you have to enter “blous”, “blo”, etc (beginning of the word) – but not “lous” (within the word).') . '<br/>' .
+                        $this->l('With this option enabled, it also gives the good result if you search for “lous”, “ouse”, or anything contained in the word.'),
                         'hint' => array(
                             $this->l('Enable search within a whole word, rather than from its beginning only.'),
                             $this->l('It checks if the searched term is contained in the indexed word. This may be resource-consuming.')
@@ -148,8 +123,8 @@ class AdminSearchConfControllerCore extends AdminController
                         'validation' => 'isBool',
                         'cast' => 'intval',
                         'type' => 'bool',
-                        'desc' => $this->l('By default, if you search "book", you will have "book", "bookcase" and "bookend".').'<br/>'.
-                                  $this->l('With this option enabled, it only gives one result “book”, as exact end of the indexed word is matching.'),
+                        'desc' => $this->l('By default, if you search "book", you will have "book", "bookcase" and "bookend".') . '<br/>' .
+                        $this->l('With this option enabled, it only gives one result “book”, as exact end of the indexed word is matching.'),
                         'hint' => array(
                             $this->l('Enable more precise search with the end of the word.'),
                             $this->l('It checks if the searched term is the exact end of the indexed word.')
@@ -172,14 +147,14 @@ class AdminSearchConfControllerCore extends AdminController
                 'submit' => array('title' => $this->l('Save'))
             ),
             'relevance' => array(
-                'title' =>    $this->l('Weight'),
-                'icon' =>    'icon-cogs',
+                'title' => $this->l('Weight'),
+                'icon' => 'icon-cogs',
                 'info' =>
-                        $this->l('The "weight" represents its importance and relevance for the ranking of the products when completing a new search.').'<br />
-						'.$this->l('A word with a weight of eight will have four times more value than a word with a weight of two.').'<br /><br />
-						'.$this->l('We advise you to set a greater weight for words which appear in the name or reference of a product. This will allow the search results to be as precise and relevant as possible.').'<br /><br />
-						'.$this->l('Setting a weight to 0 will exclude that field from search index. Re-build of the entire index is required when changing to or from 0'),
-                'fields' =>    array(
+                $this->l('The "weight" represents its importance and relevance for the ranking of the products when completing a new search.') . '<br />
+						' . $this->l('A word with a weight of eight will have four times more value than a word with a weight of two.') . '<br /><br />
+						' . $this->l('We advise you to set a greater weight for words which appear in the name or reference of a product. This will allow the search results to be as precise and relevant as possible.') . '<br /><br />
+						' . $this->l('Setting a weight to 0 will exclude that field from search index. Re-build of the entire index is required when changing to or from 0'),
+                'fields' => array(
                     'PS_SEARCH_WEIGHT_PNAME' => array(
                         'title' => $this->l('Product name weight'),
                         'validation' => 'isUnsignedInt',
@@ -240,11 +215,10 @@ class AdminSearchConfControllerCore extends AdminController
         );
     }
 
-    public function initPageHeaderToolbar()
-    {
+    public function initPageHeaderToolbar() {
         if (empty($this->display)) {
             $this->page_header_toolbar_btn['new_alias'] = array(
-                'href' => self::$currentIndex.'&addalias&token='.$this->token,
+                'href' => self::$currentIndex . '&addalias&token=' . $this->token,
                 'desc' => $this->l('Add new alias', null, null, false),
                 'icon' => 'process-icon-new'
             );
@@ -253,14 +227,13 @@ class AdminSearchConfControllerCore extends AdminController
         parent::initPageHeaderToolbar();
         if ($this->can_import) {
             $this->toolbar_btn['import'] = array(
-                'href' => $this->context->link->getAdminLink('AdminImport', true).'&import_type=alias',
+                'href' => $this->context->link->getAdminLink('AdminImport', true) . '&import_type=alias',
                 'desc' => $this->l('Import', null, null, false)
             );
         }
     }
 
-    public function initProcess()
-    {
+    public function initProcess() {
         parent::initProcess();
         // This is a composite page, we don't want the "options" display mode
         if ($this->display == 'options') {
@@ -271,15 +244,14 @@ class AdminSearchConfControllerCore extends AdminController
     /**
      * Function used to render the options for this controller
      */
-    public function renderOptions()
-    {
+    public function renderOptions() {
         if ($this->fields_options && is_array($this->fields_options)) {
             $helper = new HelperOptions($this);
             $this->setHelperDisplay($helper);
             $helper->toolbar_scroll = true;
             $helper->toolbar_btn = array('save' => array(
-                'href' => '#',
-                'desc' => $this->l('Save')
+                    'href' => '#',
+                    'desc' => $this->l('Save')
             ));
             $helper->id = $this->id;
             $helper->tpl_vars = $this->tpl_option_vars;
@@ -289,8 +261,7 @@ class AdminSearchConfControllerCore extends AdminController
         }
     }
 
-    public function renderForm()
-    {
+    public function renderForm() {
         $this->fields_form = array(
             'legend' => array(
                 'title' => $this->l('Aliases'),
@@ -325,8 +296,7 @@ class AdminSearchConfControllerCore extends AdminController
         return parent::renderForm();
     }
 
-    public function processSave()
-    {
+    public function processSave() {
         $search = strval(Tools::getValue('search'));
         $string = strval(Tools::getValue('alias'));
         $aliases = explode(',', $string);
@@ -334,11 +304,11 @@ class AdminSearchConfControllerCore extends AdminController
             $this->errors[] = $this->l('Aliases and results are both required.');
         }
         if (!Validate::isValidSearch($search)) {
-            $this->errors[] = $search.' '.$this->l('Is not a valid result');
+            $this->errors[] = $search . ' ' . $this->l('Is not a valid result');
         }
         foreach ($aliases as $alias) {
             if (!Validate::isValidSearch($alias)) {
-                $this->errors[] = $alias.' '.$this->l('Is not a valid alias');
+                $this->errors[] = $alias . ' ' . $this->l('Is not a valid alias');
             }
         }
 
@@ -353,4 +323,5 @@ class AdminSearchConfControllerCore extends AdminController
             $this->confirmations[] = $this->l('Creation successful');
         }
     }
+
 }

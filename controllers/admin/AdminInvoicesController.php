@@ -1,33 +1,8 @@
 <?php
-/*
-* 2007-2015 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Open Software License (OSL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/osl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2015 PrestaShop SA
-*  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*/
 
-class AdminInvoicesControllerCore extends AdminController
-{
-    public function __construct()
-    {
+class AdminInvoicesControllerCore extends AdminController {
+
+    public function __construct() {
         $this->bootstrap = true;
         $this->table = 'invoice';
 
@@ -35,8 +10,8 @@ class AdminInvoicesControllerCore extends AdminController
 
         $this->fields_options = array(
             'general' => array(
-                'title' =>    $this->l('Invoice options'),
-                'fields' =>    array(
+                'title' => $this->l('Invoice options'),
+                'fields' => array(
                     'PS_INVOICE' => array(
                         'title' => $this->l('Enable invoices'),
                         'desc' => $this->l('If enabled, your customers will receive an invoice for their purchase(s).'),
@@ -123,8 +98,7 @@ class AdminInvoicesControllerCore extends AdminController
         );
     }
 
-    public function initFormByDate()
-    {
+    public function initFormByDate() {
         $this->fields_form = array(
             'legend' => array(
                 'title' => $this->l('By date'),
@@ -167,8 +141,7 @@ class AdminInvoicesControllerCore extends AdminController
         return parent::renderForm();
     }
 
-    public function initFormByStatus()
-    {
+    public function initFormByStatus() {
         $this->fields_form = array(
             'legend' => array(
                 'title' => $this->l('By order status'),
@@ -196,9 +169,9 @@ class AdminInvoicesControllerCore extends AdminController
 
         $result = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS('
 			SELECT COUNT( o.id_order ) AS nbOrders, o.current_state as id_order_state
-			FROM `'._DB_PREFIX_.'order_invoice` oi
-			LEFT JOIN `'._DB_PREFIX_.'orders` o ON oi.id_order = o.id_order
-			WHERE o.id_shop IN('.implode(', ', Shop::getContextListShopID()).')
+			FROM `' . _DB_PREFIX_ . 'order_invoice` oi
+			LEFT JOIN `' . _DB_PREFIX_ . 'orders` o ON oi.id_order = o.id_order
+			WHERE o.id_shop IN(' . implode(', ', Shop::getContextListShopID()) . ')
 			AND oi.number > 0
 			GROUP BY o.current_state
 		 ');
@@ -218,8 +191,7 @@ class AdminInvoicesControllerCore extends AdminController
         return parent::renderForm();
     }
 
-    public function initContent()
-    {
+    public function initContent() {
         $this->display = 'edit';
         $this->initTabModuleList();
         $this->initToolbar();
@@ -231,26 +203,23 @@ class AdminInvoicesControllerCore extends AdminController
 
         $this->context->smarty->assign(array(
             'content' => $this->content,
-            'url_post' => self::$currentIndex.'&token='.$this->token,
+            'url_post' => self::$currentIndex . '&token=' . $this->token,
             'show_page_header_toolbar' => $this->show_page_header_toolbar,
             'page_header_toolbar_title' => $this->page_header_toolbar_title,
             'page_header_toolbar_btn' => $this->page_header_toolbar_btn
         ));
     }
 
-    public function initToolbarTitle()
-    {
+    public function initToolbarTitle() {
         $this->toolbar_title = array_unique($this->breadcrumbs);
     }
 
-    public function initPageHeaderToolbar()
-    {
+    public function initPageHeaderToolbar() {
         parent::initPageHeaderToolbar();
         unset($this->page_header_toolbar_btn['cancel']);
     }
 
-    public function postProcess()
-    {
+    public function postProcess() {
         if (Tools::isSubmit('submitAddinvoice_date')) {
             if (!Validate::isDate(Tools::getValue('date_from'))) {
                 $this->errors[] = $this->l('Invalid "From" date');
@@ -262,7 +231,7 @@ class AdminInvoicesControllerCore extends AdminController
 
             if (!count($this->errors)) {
                 if (count(OrderInvoice::getByDateInterval(Tools::getValue('date_from'), Tools::getValue('date_to')))) {
-                    Tools::redirectAdmin($this->context->link->getAdminLink('AdminPdf').'&submitAction=generateInvoicesPDF&date_from='.urlencode(Tools::getValue('date_from')).'&date_to='.urlencode(Tools::getValue('date_to')));
+                    Tools::redirectAdmin($this->context->link->getAdminLink('AdminPdf') . '&submitAction=generateInvoicesPDF&date_from=' . urlencode(Tools::getValue('date_from')) . '&date_to=' . urlencode(Tools::getValue('date_to')));
                 }
 
                 $this->errors[] = $this->l('No invoice has been found for this period.');
@@ -272,8 +241,8 @@ class AdminInvoicesControllerCore extends AdminController
                 $this->errors[] = $this->l('You must select at least one order status.');
             } else {
                 foreach ($status_array as $id_order_state) {
-                    if (count(OrderInvoice::getByStatus((int)$id_order_state))) {
-                        Tools::redirectAdmin($this->context->link->getAdminLink('AdminPdf').'&submitAction=generateInvoicesPDF2&id_order_state='.implode('-', $status_array));
+                    if (count(OrderInvoice::getByStatus((int) $id_order_state))) {
+                        Tools::redirectAdmin($this->context->link->getAdminLink('AdminPdf') . '&submitAction=generateInvoicesPDF2&id_order_state=' . implode('-', $status_array));
                     }
                 }
 
@@ -284,15 +253,13 @@ class AdminInvoicesControllerCore extends AdminController
         }
     }
 
-    public function beforeUpdateOptions()
-    {
-        if ((int)Tools::getValue('PS_INVOICE_START_NUMBER') != 0 && (int)Tools::getValue('PS_INVOICE_START_NUMBER') <= Order::getLastInvoiceNumber()) {
-            $this->errors[] = $this->l('Invalid invoice number.').Order::getLastInvoiceNumber().')';
+    public function beforeUpdateOptions() {
+        if ((int) Tools::getValue('PS_INVOICE_START_NUMBER') != 0 && (int) Tools::getValue('PS_INVOICE_START_NUMBER') <= Order::getLastInvoiceNumber()) {
+            $this->errors[] = $this->l('Invalid invoice number.') . Order::getLastInvoiceNumber() . ')';
         }
     }
 
-    protected function getInvoicesModels()
-    {
+    protected function getInvoicesModels() {
         $models = array(
             array(
                 'value' => 'invoice',
@@ -300,7 +267,7 @@ class AdminInvoicesControllerCore extends AdminController
             )
         );
 
-        $templates_override = $this->getInvoicesModelsFromDir(_PS_THEME_DIR_.'pdf/');
+        $templates_override = $this->getInvoicesModelsFromDir(_PS_THEME_DIR_ . 'pdf/');
         $templates_default = $this->getInvoicesModelsFromDir(_PS_PDF_DIR_);
 
         foreach (array_merge($templates_default, $templates_override) as $template) {
@@ -310,12 +277,11 @@ class AdminInvoicesControllerCore extends AdminController
         return $models;
     }
 
-    protected function getInvoicesModelsFromDir($directory)
-    {
+    protected function getInvoicesModelsFromDir($directory) {
         $templates = false;
 
         if (is_dir($directory)) {
-            $templates = glob($directory.'invoice-*.tpl');
+            $templates = glob($directory . 'invoice-*.tpl');
         }
 
         if (!$templates) {
@@ -324,4 +290,5 @@ class AdminInvoicesControllerCore extends AdminController
 
         return $templates;
     }
+
 }

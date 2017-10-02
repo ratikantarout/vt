@@ -1,36 +1,11 @@
 <?php
-/*
-* 2007-2015 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Open Software License (OSL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/osl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2015 PrestaShop SA
-*  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*/
 
 /**
  * @property Configuration $object
  */
-class AdminPPreferencesControllerCore extends AdminController
-{
-    public function __construct()
-    {
+class AdminPPreferencesControllerCore extends AdminController {
+
+    public function __construct() {
         $this->bootstrap = true;
         $this->className = 'Configuration';
         $this->table = 'configuration';
@@ -38,13 +13,13 @@ class AdminPPreferencesControllerCore extends AdminController
         parent::__construct();
 
         $warehouse_list = Warehouse::getWarehouses();
-        $warehouse_no = array(array('id_warehouse' => 0,'name' => $this->l('No default warehouse (default setting)')));
+        $warehouse_no = array(array('id_warehouse' => 0, 'name' => $this->l('No default warehouse (default setting)')));
         $warehouse_list = array_merge($warehouse_no, $warehouse_list);
 
         $this->fields_options = array(
             'products' => array(
-                'title' =>    $this->l('Products (general)'),
-                'fields' =>    array(
+                'title' => $this->l('Products (general)'),
+                'fields' => array(
                     'PS_CATALOG_MODE' => array(
                         'title' => $this->l('Catalog mode'),
                         'hint' => $this->l('When active, all shopping features will be disabled.'),
@@ -113,8 +88,8 @@ class AdminPPreferencesControllerCore extends AdminController
                 'submit' => array('title' => $this->l('Save'))
             ),
             'order_by_pagination' => array(
-                'title' =>    $this->l('Pagination'),
-                'fields' =>    array(
+                'title' => $this->l('Pagination'),
+                'fields' => array(
                     'PS_PRODUCTS_PER_PAGE' => array(
                         'title' => $this->l('Products per page'),
                         'hint' => $this->l('Number of products displayed per page. Default is 10.'),
@@ -158,8 +133,8 @@ class AdminPPreferencesControllerCore extends AdminController
                 'submit' => array('title' => $this->l('Save'))
             ),
             'fo_product_page' => array(
-                'title' =>    $this->l('Product page'),
-                'fields' =>    array(
+                'title' => $this->l('Product page'),
+                'fields' => array(
                     'PS_DISPLAY_QTIES' => array(
                         'title' => $this->l('Display available quantities on the product page'),
                         'validation' => 'isBool',
@@ -217,8 +192,8 @@ class AdminPPreferencesControllerCore extends AdminController
                 'submit' => array('title' => $this->l('Save'))
             ),
             'stock' => array(
-                'title' =>    $this->l('Products stock'),
-                'fields' =>    array(
+                'title' => $this->l('Products stock'),
+                'fields' => array(
                     'PS_ORDER_OUT_OF_STOCK' => array(
                         'title' => $this->l('Allow ordering of out-of-stock products'),
                         'hint' => $this->l('By default, the Add to Cart button is hidden when a product is unavailable. You can choose to have it displayed in all cases.'),
@@ -268,9 +243,9 @@ class AdminPPreferencesControllerCore extends AdminController
                         'identifier' => 'id_warehouse'
                     ),
                     'PS_PACK_STOCK_TYPE' => array(
-                        'title' =>  $this->l('Default pack stock management'),
+                        'title' => $this->l('Default pack stock management'),
                         'type' => 'select',
-                        'list' =>array(
+                        'list' => array(
                             array(
                                 'pack_stock' => 0,
                                 'name' => $this->l('Decrement pack only.')
@@ -293,24 +268,23 @@ class AdminPPreferencesControllerCore extends AdminController
         );
     }
 
-    public function beforeUpdateOptions()
-    {
+    public function beforeUpdateOptions() {
         if (!Tools::getValue('PS_STOCK_MANAGEMENT', true)) {
             $_POST['PS_ORDER_OUT_OF_STOCK'] = 1;
             $_POST['PS_DISPLAY_QTIES'] = 0;
         }
 
         // if advanced stock management is disabled, updates concerned tables
-        if (Configuration::get('PS_ADVANCED_STOCK_MANAGEMENT') == 1 && (int)Tools::getValue('PS_ADVANCED_STOCK_MANAGEMENT') == 0) {
+        if (Configuration::get('PS_ADVANCED_STOCK_MANAGEMENT') == 1 && (int) Tools::getValue('PS_ADVANCED_STOCK_MANAGEMENT') == 0) {
             $id_shop_list = Shop::getContextListShopID();
-            $sql_shop = 'UPDATE `'._DB_PREFIX_.'product_shop` SET `advanced_stock_management` = 0 WHERE
-			`advanced_stock_management` = 1 AND (`id_shop` = '.implode(' OR `id_shop` = ', $id_shop_list).')';
+            $sql_shop = 'UPDATE `' . _DB_PREFIX_ . 'product_shop` SET `advanced_stock_management` = 0 WHERE
+			`advanced_stock_management` = 1 AND (`id_shop` = ' . implode(' OR `id_shop` = ', $id_shop_list) . ')';
 
-            $sql_stock = 'UPDATE `'._DB_PREFIX_.'stock_available` SET `depends_on_stock` = 0, `quantity` = 0
-					 WHERE `depends_on_stock` = 1 AND (`id_shop` = '.implode(' OR `id_shop` = ', $id_shop_list).')';
+            $sql_stock = 'UPDATE `' . _DB_PREFIX_ . 'stock_available` SET `depends_on_stock` = 0, `quantity` = 0
+					 WHERE `depends_on_stock` = 1 AND (`id_shop` = ' . implode(' OR `id_shop` = ', $id_shop_list) . ')';
 
-            $sql = 'UPDATE `'._DB_PREFIX_.'product` SET `advanced_stock_management` = 0 WHERE
-			`advanced_stock_management` = 1 AND (`id_shop_default` = '.implode(' OR `id_shop_default` = ', $id_shop_list).')';
+            $sql = 'UPDATE `' . _DB_PREFIX_ . 'product` SET `advanced_stock_management` = 0 WHERE
+			`advanced_stock_management` = 1 AND (`id_shop_default` = ' . implode(' OR `id_shop_default` = ', $id_shop_list) . ')';
 
             Db::getInstance()->execute($sql_shop);
             Db::getInstance()->execute($sql_stock);
@@ -322,4 +296,5 @@ class AdminPPreferencesControllerCore extends AdminController
             Media::clearCache();
         }
     }
+
 }

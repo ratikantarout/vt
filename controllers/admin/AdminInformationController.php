@@ -1,57 +1,28 @@
 <?php
-/*
-* 2007-2015 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Open Software License (OSL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/osl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2015 PrestaShop SA
-*  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*/
 
-class AdminInformationControllerCore extends AdminController
-{
-    public function __construct()
-    {
+class AdminInformationControllerCore extends AdminController {
+
+    public function __construct() {
         $this->bootstrap = true;
         parent::__construct();
     }
 
-    public function initContent()
-    {
+    public function initContent() {
         $this->show_toolbar = false;
         $this->display = 'view';
         parent::initContent();
     }
 
-    public function initToolbarTitle()
-    {
+    public function initToolbarTitle() {
         $this->toolbar_title = array_unique($this->breadcrumbs);
     }
 
-    public function initPageHeaderToolbar()
-    {
+    public function initPageHeaderToolbar() {
         parent::initPageHeaderToolbar();
         unset($this->page_header_toolbar_btn['back']);
     }
 
-    public function renderView()
-    {
+    public function renderView() {
         $this->initPageHeaderToolbar();
 
         $hosting_vars = array();
@@ -72,7 +43,7 @@ class AdminInformationControllerCore extends AdminController
                     'engine' => _MYSQL_ENGINE_,
                     'driver' => Db::getClass(),
                 ),
-                'uname' => function_exists('php_uname') ? php_uname('s').' '.php_uname('v').' '.php_uname('m') : '',
+                'uname' => function_exists('php_uname') ? php_uname('s') . ' ' . php_uname('v') . ' ' . php_uname('m') : '',
                 'apache_instaweb' => Tools::apacheModExists('mod_instaweb')
             );
         }
@@ -104,8 +75,7 @@ class AdminInformationControllerCore extends AdminController
      *
      * @return array of test results
      */
-    public function getTestResult()
-    {
+    public function getTestResult() {
         $tests_errors = array(
             'phpversion' => $this->l('Update your PHP version.'),
             'upload' => $this->l('Configure your server to allow file uploads.'),
@@ -143,7 +113,7 @@ class AdminInformationControllerCore extends AdminController
         if ($fail_required && $params_required_results['files'] != 'ok') {
             $tmp = ConfigurationTest::test_files(true);
             if (is_array($tmp) && count($tmp)) {
-                $tests_errors['files'] = $tests_errors['files'].'<br/>('.implode(', ', $tmp).')';
+                $tests_errors['files'] = $tests_errors['files'] . '<br/>(' . implode(', ', $tmp) . ')';
             }
         }
 
@@ -163,10 +133,9 @@ class AdminInformationControllerCore extends AdminController
         return $results;
     }
 
-    public function displayAjaxCheckFiles()
-    {
+    public function displayAjaxCheckFiles() {
         $this->file_list = array('missing' => array(), 'updated' => array());
-        $xml = @simplexml_load_file(_PS_API_URL_.'/xml/md5/'._PS_VERSION_.'.xml');
+        $xml = @simplexml_load_file(_PS_API_URL_ . '/xml/md5/' . _PS_VERSION_ . '.xml');
         if (!$xml) {
             die(Tools::jsonEncode($this->file_list));
         }
@@ -175,29 +144,29 @@ class AdminInformationControllerCore extends AdminController
         die(Tools::jsonEncode($this->file_list));
     }
 
-    public function getListOfUpdatedFiles(SimpleXMLElement $dir, $path = '')
-    {
+    public function getListOfUpdatedFiles(SimpleXMLElement $dir, $path = '') {
         $exclude_regexp = '(install(-dev|-new)?|themes|tools|cache|docs|download|img|localization|log|mails|translations|upload|modules|override/(:?.*)index.php$)';
         $admin_dir = basename(_PS_ADMIN_DIR_);
 
         foreach ($dir->md5file as $file) {
-            $filename = preg_replace('#^admin/#', $admin_dir.'/', $path.$file['name']);
-            if (preg_match('#^'.$exclude_regexp.'#', $filename)) {
+            $filename = preg_replace('#^admin/#', $admin_dir . '/', $path . $file['name']);
+            if (preg_match('#^' . $exclude_regexp . '#', $filename)) {
                 continue;
             }
 
-            if (!file_exists(_PS_ROOT_DIR_.'/'.$filename)) {
+            if (!file_exists(_PS_ROOT_DIR_ . '/' . $filename)) {
                 $this->file_list['missing'][] = $filename;
             } else {
-                $md5_local = md5_file(_PS_ROOT_DIR_.'/'.$filename);
-                if ($md5_local != (string)$file) {
+                $md5_local = md5_file(_PS_ROOT_DIR_ . '/' . $filename);
+                if ($md5_local != (string) $file) {
                     $this->file_list['updated'][] = $filename;
                 }
             }
         }
 
         foreach ($dir->dir as $subdir) {
-            $this->getListOfUpdatedFiles($subdir, $path.$subdir['name'].'/');
+            $this->getListOfUpdatedFiles($subdir, $path . $subdir['name'] . '/');
         }
     }
+
 }

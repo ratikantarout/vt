@@ -1,36 +1,11 @@
 <?php
-/*
-* 2007-2015 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Open Software License (OSL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/osl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2015 PrestaShop SA
-*  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*/
 
 /**
  * @property Currency $object
  */
-class AdminCurrenciesControllerCore extends AdminController
-{
-    public function __construct()
-    {
+class AdminCurrenciesControllerCore extends AdminController {
+
+    public function __construct() {
         $this->bootstrap = true;
         $this->table = 'currency';
         $this->className = 'Currency';
@@ -56,7 +31,7 @@ class AdminCurrenciesControllerCore extends AdminController
 
         $this->fields_options = array(
             'change' => array(
-                'title' =>    $this->l('Currency rates'),
+                'title' => $this->l('Currency rates'),
                 'image' => '../img/admin/exchangesrate.gif',
                 'description' => $this->l('Use PrestaShop\'s webservice to update your currency\'s exchange rates. However, please use caution: rates are provided as-is.'),
                 'submit' => array(
@@ -65,10 +40,10 @@ class AdminCurrenciesControllerCore extends AdminController
                 )
             ),
             'cron' => array(
-                'title' =>    $this->l('Automatically update currency rates'),
+                'title' => $this->l('Automatically update currency rates'),
                 'image' => '../img/admin/tab-tools.gif',
-                'info' => '<div class="alert alert-block"><p>'.$this->l('Use PrestaShop\'s webservice to update your currency exchange rates. However, please use caution: rates are provided as-is.').'<br/>'.$this->l('You can place the following URL in your crontab file, or you can click it yourself regularly:').'</p>
-					<p><strong><a href="'.Tools::getShopDomain(true, true).__PS_BASE_URI__.basename(_PS_ADMIN_DIR_).'/cron_currency_rates.php?secure_key='.md5(_COOKIE_KEY_.Configuration::get('PS_SHOP_NAME')).'" onclick="return !window.open($(this).attr(\'href\'));">'.Tools::getShopDomain(true, true).__PS_BASE_URI__.basename(_PS_ADMIN_DIR_).'/cron_currency_rates.php?secure_key='.md5(_COOKIE_KEY_.Configuration::get('PS_SHOP_NAME')).'</a></strong></p></div>',
+                'info' => '<div class="alert alert-block"><p>' . $this->l('Use PrestaShop\'s webservice to update your currency exchange rates. However, please use caution: rates are provided as-is.') . '<br/>' . $this->l('You can place the following URL in your crontab file, or you can click it yourself regularly:') . '</p>
+					<p><strong><a href="' . Tools::getShopDomain(true, true) . __PS_BASE_URI__ . basename(_PS_ADMIN_DIR_) . '/cron_currency_rates.php?secure_key=' . md5(_COOKIE_KEY_ . Configuration::get('PS_SHOP_NAME')) . '" onclick="return !window.open($(this).attr(\'href\'));">' . Tools::getShopDomain(true, true) . __PS_BASE_URI__ . basename(_PS_ADMIN_DIR_) . '/cron_currency_rates.php?secure_key=' . md5(_COOKIE_KEY_ . Configuration::get('PS_SHOP_NAME')) . '</a></strong></p></div>',
             )
         );
 
@@ -79,8 +54,7 @@ class AdminCurrenciesControllerCore extends AdminController
         $this->_group .= 'GROUP BY a.id_currency';
     }
 
-    public function renderList()
-    {
+    public function renderList() {
         $this->addRowAction('edit');
         $this->addRowAction('delete');
 
@@ -89,8 +63,7 @@ class AdminCurrenciesControllerCore extends AdminController
         return parent::renderList();
     }
 
-    public function renderForm()
-    {
+    public function renderForm() {
         $this->fields_form = array(
             'legend' => array(
                 'title' => $this->l('Currencies'),
@@ -144,11 +117,11 @@ class AdminCurrenciesControllerCore extends AdminController
                     'name' => 'format',
                     'maxlength' => 11,
                     'required' => true,
-                    'hint' =>$this->l('Applies to all prices (e.g. $1,240.15).'),
+                    'hint' => $this->l('Applies to all prices (e.g. $1,240.15).'),
                     'options' => array(
                         'query' => array(
-                            array('key' => 1, 'name' => 'X0,000.00 ('.$this->l('Such as with Dollars').')'),
-                            array('key' => 2, 'name' => '0 000,00X ('.$this->l('Such as with Euros').')'),
+                            array('key' => 1, 'name' => 'X0,000.00 (' . $this->l('Such as with Dollars') . ')'),
+                            array('key' => 2, 'name' => '0 000,00X (' . $this->l('Such as with Euros') . ')'),
                             array('key' => 3, 'name' => 'X0.000,00'),
                             array('key' => 4, 'name' => '0,000.00X'),
                             array('key' => 5, 'name' => '0\'000.00X') // Added for the switzerland currency
@@ -234,8 +207,7 @@ class AdminCurrenciesControllerCore extends AdminController
         return parent::renderForm();
     }
 
-    protected function checkDeletion($object)
-    {
+    protected function checkDeletion($object) {
         if (Validate::isLoadedObject($object)) {
             if ($object->id == Configuration::get('PS_CURRENCY_DEFAULT')) {
                 $this->errors[] = $this->l('You cannot delete the default currency');
@@ -243,15 +215,14 @@ class AdminCurrenciesControllerCore extends AdminController
                 return true;
             }
         } else {
-            $this->errors[] = Tools::displayError('An error occurred while deleting the object.').'
-				<b>'.$this->table.'</b> '.Tools::displayError('(cannot load object)');
+            $this->errors[] = Tools::displayError('An error occurred while deleting the object.') . '
+				<b>' . $this->table . '</b> ' . Tools::displayError('(cannot load object)');
         }
 
         return false;
     }
 
-    protected function checkDisableStatus($object)
-    {
+    protected function checkDisableStatus($object) {
         if (Validate::isLoadedObject($object)) {
             if ($object->active && $object->id == Configuration::get('PS_CURRENCY_DEFAULT')) {
                 $this->errors[] = $this->l('You cannot disable the default currency');
@@ -259,8 +230,8 @@ class AdminCurrenciesControllerCore extends AdminController
                 return true;
             }
         } else {
-            $this->errors[] = Tools::displayError('An error occurred while updating the status for an object.').'
-				<b>'.$this->table.'</b> '.Tools::displayError('(cannot load object)');
+            $this->errors[] = Tools::displayError('An error occurred while updating the status for an object.') . '
+				<b>' . $this->table . '</b> ' . Tools::displayError('(cannot load object)');
         }
 
         return false;
@@ -269,8 +240,7 @@ class AdminCurrenciesControllerCore extends AdminController
     /**
      * @see AdminController::processDelete()
      */
-    public function processDelete()
-    {
+    public function processDelete() {
         $object = $this->loadObject();
         if (!$this->checkDeletion($object)) {
             return false;
@@ -278,11 +248,10 @@ class AdminCurrenciesControllerCore extends AdminController
         return parent::processDelete();
     }
 
-    protected function processBulkDelete()
-    {
+    protected function processBulkDelete() {
         if (is_array($this->boxes) && !empty($this->boxes)) {
             foreach ($this->boxes as $id_currency) {
-                $object = new Currency((int)$id_currency);
+                $object = new Currency((int) $id_currency);
                 if (!$this->checkDeletion($object)) {
                     return false;
                 }
@@ -295,8 +264,7 @@ class AdminCurrenciesControllerCore extends AdminController
     /**
      * @see AdminController::processStatus()
      */
-    public function processStatus()
-    {
+    public function processStatus() {
         $object = $this->loadObject();
         if (!$this->checkDisableStatus($object)) {
             return false;
@@ -305,11 +273,10 @@ class AdminCurrenciesControllerCore extends AdminController
         return parent::processStatus();
     }
 
-    protected function processBulkDisableSelection()
-    {
+    protected function processBulkDisableSelection() {
         if (is_array($this->boxes) && !empty($this->boxes)) {
             foreach ($this->boxes as $id_currency) {
-                $object = new Currency((int)$id_currency);
+                $object = new Currency((int) $id_currency);
                 if (!$this->checkDisableStatus($object)) {
                     return false;
                 }
@@ -321,18 +288,16 @@ class AdminCurrenciesControllerCore extends AdminController
     /**
      * Update currency exchange rates
      */
-    public function processExchangeRates()
-    {
+    public function processExchangeRates() {
         if (!$this->errors = Currency::refreshCurrencies()) {
-            Tools::redirectAdmin(self::$currentIndex.'&conf=6&token='.$this->token);
+            Tools::redirectAdmin(self::$currentIndex . '&conf=6&token=' . $this->token);
         }
     }
 
     /**
      * @see AdminController::initProcess()
      */
-    public function initProcess()
-    {
+    public function initProcess() {
         if (Tools::isSubmit('SubmitExchangesRates')) {
             if ($this->tabAccess['edit'] === '1') {
                 $this->action = 'exchangeRates';
@@ -343,17 +308,16 @@ class AdminCurrenciesControllerCore extends AdminController
         if (Tools::isSubmit('submitAddcurrency') && !Tools::getValue('id_currency') && Currency::exists(Tools::getValue('iso_code'), Tools::getValue('iso_code_num'))) {
             $this->errors[] = Tools::displayError('This currency already exists.');
         }
-        if (Tools::isSubmit('submitAddcurrency') && (float)Tools::getValue('conversion_rate') <= 0) {
+        if (Tools::isSubmit('submitAddcurrency') && (float) Tools::getValue('conversion_rate') <= 0) {
             $this->errors[] = Tools::displayError('The currency conversion rate can not be equal to 0.');
         }
         parent::initProcess();
     }
 
-    public function initPageHeaderToolbar()
-    {
+    public function initPageHeaderToolbar() {
         if (empty($this->display)) {
             $this->page_header_toolbar_btn['new_currency'] = array(
-                'href' => self::$currentIndex.'&addcurrency&token='.$this->token,
+                'href' => self::$currentIndex . '&addcurrency&token=' . $this->token,
                 'desc' => $this->l('Add new currency', null, null, false),
                 'icon' => 'process-icon-new'
             );
@@ -361,4 +325,5 @@ class AdminCurrenciesControllerCore extends AdminController
 
         parent::initPageHeaderToolbar();
     }
+
 }

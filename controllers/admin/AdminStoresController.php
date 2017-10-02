@@ -1,36 +1,11 @@
 <?php
-/*
-* 2007-2015 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Open Software License (OSL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/osl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2015 PrestaShop SA
-*  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*/
 
 /**
  * @property Store $object
  */
-class AdminStoresControllerCore extends AdminController
-{
-    public function __construct()
-    {
+class AdminStoresControllerCore extends AdminController {
+
+    public function __construct() {
         $this->bootstrap = true;
         $this->table = 'store';
         $this->className = 'Store';
@@ -115,8 +90,7 @@ class AdminStoresControllerCore extends AdminController
         $this->_buildOrderedFieldsShop($this->_getDefaultFieldsContent());
     }
 
-    public function renderOptions()
-    {
+    public function renderOptions() {
         // Set toolbar options
         $this->display = 'options';
         $this->show_toolbar = true;
@@ -126,8 +100,7 @@ class AdminStoresControllerCore extends AdminController
         return parent::renderOptions();
     }
 
-    public function initToolbar()
-    {
+    public function initToolbar() {
         parent::initToolbar();
 
         if ($this->display == 'options') {
@@ -137,11 +110,10 @@ class AdminStoresControllerCore extends AdminController
         }
     }
 
-    public function initPageHeaderToolbar()
-    {
+    public function initPageHeaderToolbar() {
         if (empty($this->display)) {
             $this->page_header_toolbar_btn['new_store'] = array(
-                'href' => self::$currentIndex.'&addstore&token='.$this->token,
+                'href' => self::$currentIndex . '&addstore&token=' . $this->token,
                 'desc' => $this->l('Add new store', null, null, false),
                 'icon' => 'process-icon-new'
             );
@@ -150,8 +122,7 @@ class AdminStoresControllerCore extends AdminController
         parent::initPageHeaderToolbar();
     }
 
-    public function renderList()
-    {
+    public function renderList() {
         // Set toolbar options
         $this->display = null;
         $this->initToolbar();
@@ -161,31 +132,29 @@ class AdminStoresControllerCore extends AdminController
 
         $this->_select = 'cl.`name` country, st.`name` state';
         $this->_join = '
-			LEFT JOIN `'._DB_PREFIX_.'country_lang` cl
+			LEFT JOIN `' . _DB_PREFIX_ . 'country_lang` cl
 				ON (cl.`id_country` = a.`id_country`
-				AND cl.`id_lang` = '.(int)$this->context->language->id.')
-			LEFT JOIN `'._DB_PREFIX_.'state` st
+				AND cl.`id_lang` = ' . (int) $this->context->language->id . ')
+			LEFT JOIN `' . _DB_PREFIX_ . 'state` st
 				ON (st.`id_state` = a.`id_state`)';
 
         return parent::renderList();
     }
 
-    public function renderForm()
-    {
+    public function renderForm() {
         if (!($obj = $this->loadObject(true))) {
             return;
         }
 
-        $image = _PS_STORE_IMG_DIR_.$obj->id.'.jpg';
-        $image_url = ImageManager::thumbnail($image, $this->table.'_'.(int)$obj->id.'.'.$this->imageType, 350,
-            $this->imageType, true, true);
+        $image = _PS_STORE_IMG_DIR_ . $obj->id . '.jpg';
+        $image_url = ImageManager::thumbnail($image, $this->table . '_' . (int) $obj->id . '.' . $this->imageType, 350, $this->imageType, true, true);
         $image_size = file_exists($image) ? filesize($image) / 1000 : false;
 
         $tmp_addr = new Address();
         $res = $tmp_addr->getFieldsRequiredDatabase();
         $required_fields = array();
         foreach ($res as $row) {
-            $required_fields[(int)$row['id_required_field']] = $row['field_name'];
+            $required_fields[(int) $row['id_required_field']] = $row['field_name'];
         }
 
         $this->fields_form = array(
@@ -232,7 +201,7 @@ class AdminStoresControllerCore extends AdminController
                     'label' => $this->l('Country'),
                     'name' => 'id_country',
                     'required' => true,
-                    'default_value' => (int)$this->context->country->id,
+                    'default_value' => (int) $this->context->country->id,
                     'options' => array(
                         'query' => Country::getCountries($this->context->language->id),
                         'id' => 'id_country',
@@ -349,9 +318,8 @@ class AdminStoresControllerCore extends AdminController
         return parent::renderForm();
     }
 
-    public function postProcess()
-    {
-        if (isset($_POST['submitAdd'.$this->table])) {
+    public function postProcess() {
+        if (isset($_POST['submitAdd' . $this->table])) {
             /* Cleaning fields */
             foreach ($_POST as $kp => $vp) {
                 if (!in_array($kp, array('checkBoxShopGroupAsso_store', 'checkBoxShopAsso_store'))) {
@@ -360,25 +328,25 @@ class AdminStoresControllerCore extends AdminController
             }
 
             /* Rewrite latitude and longitude to 8 digits */
-            $_POST['latitude'] = number_format((float)$_POST['latitude'], 8);
-            $_POST['longitude'] = number_format((float)$_POST['longitude'], 8);
+            $_POST['latitude'] = number_format((float) $_POST['latitude'], 8);
+            $_POST['longitude'] = number_format((float) $_POST['longitude'], 8);
 
             /* If the selected country does not contain states */
-            $id_state = (int)Tools::getValue('id_state');
-            $id_country = (int)Tools::getValue('id_country');
-            $country = new Country((int)$id_country);
+            $id_state = (int) Tools::getValue('id_state');
+            $id_country = (int) Tools::getValue('id_country');
+            $country = new Country((int) $id_country);
 
-            if ($id_country && $country && !(int)$country->contains_states && $id_state) {
+            if ($id_country && $country && !(int) $country->contains_states && $id_state) {
                 $this->errors[] = Tools::displayError('You\'ve selected a state for a country that does not contain states.');
             }
 
             /* If the selected country contains states, then a state have to be selected */
-            if ((int)$country->contains_states && !$id_state) {
+            if ((int) $country->contains_states && !$id_state) {
                 $this->errors[] = Tools::displayError('An address located in a country containing states must have a state selected.');
             }
 
-            $latitude = (float)Tools::getValue('latitude');
-            $longitude = (float)Tools::getValue('longitude');
+            $latitude = (float) Tools::getValue('latitude');
+            $longitude = (float) Tools::getValue('longitude');
 
             if (empty($latitude) || empty($longitude)) {
                 $this->errors[] = Tools::displayError('Latitude and longitude are required.');
@@ -387,7 +355,7 @@ class AdminStoresControllerCore extends AdminController
             $postcode = Tools::getValue('postcode');
             /* Check zip code format */
             if ($country->zip_code_format && !$country->checkZipCode($postcode)) {
-                $this->errors[] = Tools::displayError('Your Zip/postal code is incorrect.').'<br />'.Tools::displayError('It must be entered as follows:').' '.str_replace('C', $country->iso_code, str_replace('N', '0', str_replace('L', 'A', $country->zip_code_format)));
+                $this->errors[] = Tools::displayError('Your Zip/postal code is incorrect.') . '<br />' . Tools::displayError('It must be entered as follows:') . ' ' . str_replace('C', $country->iso_code, str_replace('N', '0', str_replace('L', 'A', $country->zip_code_format)));
             } elseif (empty($postcode) && $country->need_zip_code) {
                 $this->errors[] = Tools::displayError('A Zip/postal code is required.');
             } elseif ($postcode && !Validate::isPostCode($postcode)) {
@@ -397,7 +365,7 @@ class AdminStoresControllerCore extends AdminController
             /* Store hours */
             $_POST['hours'] = array();
             for ($i = 1; $i < 8; $i++) {
-                $_POST['hours'][] .= Tools::getValue('hours_'.(int)$i);
+                $_POST['hours'][] .= Tools::getValue('hours_' . (int) $i);
             }
             $_POST['hours'] = serialize($_POST['hours']);
         }
@@ -409,23 +377,18 @@ class AdminStoresControllerCore extends AdminController
         }
     }
 
-    protected function postImage($id)
-    {
+    protected function postImage($id) {
         $ret = parent::postImage($id);
-        $generate_hight_dpi_images = (bool)Configuration::get('PS_HIGHT_DPI');
+        $generate_hight_dpi_images = (bool) Configuration::get('PS_HIGHT_DPI');
 
-        if (($id_store = (int)Tools::getValue('id_store')) && isset($_FILES) && count($_FILES) && file_exists(_PS_STORE_IMG_DIR_.$id_store.'.jpg')) {
+        if (($id_store = (int) Tools::getValue('id_store')) && isset($_FILES) && count($_FILES) && file_exists(_PS_STORE_IMG_DIR_ . $id_store . '.jpg')) {
             $images_types = ImageType::getImagesTypes('stores');
             foreach ($images_types as $k => $image_type) {
-                ImageManager::resize(_PS_STORE_IMG_DIR_.$id_store.'.jpg',
-                    _PS_STORE_IMG_DIR_.$id_store.'-'.stripslashes($image_type['name']).'.jpg',
-                    (int)$image_type['width'], (int)$image_type['height']
+                ImageManager::resize(_PS_STORE_IMG_DIR_ . $id_store . '.jpg', _PS_STORE_IMG_DIR_ . $id_store . '-' . stripslashes($image_type['name']) . '.jpg', (int) $image_type['width'], (int) $image_type['height']
                 );
 
                 if ($generate_hight_dpi_images) {
-                    ImageManager::resize(_PS_STORE_IMG_DIR_.$id_store.'.jpg',
-                        _PS_STORE_IMG_DIR_.$id_store.'-'.stripslashes($image_type['name']).'2x.jpg',
-                        (int)$image_type['width']*2, (int)$image_type['height']*2
+                    ImageManager::resize(_PS_STORE_IMG_DIR_ . $id_store . '.jpg', _PS_STORE_IMG_DIR_ . $id_store . '-' . stripslashes($image_type['name']) . '2x.jpg', (int) $image_type['width'] * 2, (int) $image_type['height'] * 2
                     );
                 }
             }
@@ -433,8 +396,7 @@ class AdminStoresControllerCore extends AdminController
         return $ret;
     }
 
-    protected function _getDefaultFieldsContent()
-    {
+    protected function _getDefaultFieldsContent() {
         $this->context = Context::getContext();
         $countryList = array();
         $countryList[] = array('id' => '0', 'name' => $this->l('Choose your country'));
@@ -497,7 +459,7 @@ class AdminStoresControllerCore extends AdminController
                 'list' => $countryList,
                 'identifier' => 'id',
                 'cast' => 'intval',
-                'defaultValue' => (int)$this->context->country->id
+                'defaultValue' => (int) $this->context->country->id
             ),
             'PS_SHOP_STATE_ID' => array(
                 'title' => $this->l('State'),
@@ -522,46 +484,43 @@ class AdminStoresControllerCore extends AdminController
         return $formFields;
     }
 
-    protected function _buildOrderedFieldsShop($formFields)
-    {
+    protected function _buildOrderedFieldsShop($formFields) {
         // You cannot do that, because the fields must be sorted for the country you've selected.
         // Simple example: the current country is France, where we don't display the state. You choose "US" as a country in the form. The state is not dsplayed at the right place...
-
         // $associatedOrderKey = array(
-            // 'PS_SHOP_NAME' => 'company',
-            // 'PS_SHOP_ADDR1' => 'address1',
-            // 'PS_SHOP_ADDR2' => 'address2',
-            // 'PS_SHOP_CITY' => 'city',
-            // 'PS_SHOP_STATE_ID' => 'State:name',
-            // 'PS_SHOP_CODE' => 'postcode',
-            // 'PS_SHOP_COUNTRY_ID' => 'Country:name',
-            // 'PS_SHOP_PHONE' => 'phone');
+        // 'PS_SHOP_NAME' => 'company',
+        // 'PS_SHOP_ADDR1' => 'address1',
+        // 'PS_SHOP_ADDR2' => 'address2',
+        // 'PS_SHOP_CITY' => 'city',
+        // 'PS_SHOP_STATE_ID' => 'State:name',
+        // 'PS_SHOP_CODE' => 'postcode',
+        // 'PS_SHOP_COUNTRY_ID' => 'Country:name',
+        // 'PS_SHOP_PHONE' => 'phone');
         // $fields = array();
         // $orderedFields = AddressFormat::getOrderedAddressFields(Configuration::get('PS_SHOP_COUNTRY_ID'), false, true);
         // foreach ($orderedFields as $lineFields)
-            // if (($patterns = explode(' ', $lineFields)))
-                // foreach ($patterns as $pattern)
-                    // if (($key = array_search($pattern, $associatedOrderKey)))
-                        // $fields[$key] = $formFields[$key];
+        // if (($patterns = explode(' ', $lineFields)))
+        // foreach ($patterns as $pattern)
+        // if (($key = array_search($pattern, $associatedOrderKey)))
+        // $fields[$key] = $formFields[$key];
         // foreach ($formFields as $key => $value)
-            // if (!isset($fields[$key]))
-                // $fields[$key] = $formFields[$key];
+        // if (!isset($fields[$key]))
+        // $fields[$key] = $formFields[$key];
 
         $fields = $formFields;
         $this->fields_options['contact'] = array(
-            'title' =>    $this->l('Contact details'),
-            'icon' =>    'icon-user',
-            'fields' =>    $fields,
+            'title' => $this->l('Contact details'),
+            'icon' => 'icon-user',
+            'fields' => $fields,
             'submit' => array('title' => $this->l('Save'))
         );
     }
 
-    public function beforeUpdateOptions()
-    {
+    public function beforeUpdateOptions() {
         if (isset($_POST['PS_SHOP_STATE_ID']) && $_POST['PS_SHOP_STATE_ID'] != '0') {
-            $sql = 'SELECT `active` FROM `'._DB_PREFIX_.'state`
-					WHERE `id_country` = '.(int)Tools::getValue('PS_SHOP_COUNTRY_ID').'
-						AND `id_state` = '.(int)Tools::getValue('PS_SHOP_STATE_ID');
+            $sql = 'SELECT `active` FROM `' . _DB_PREFIX_ . 'state`
+					WHERE `id_country` = ' . (int) Tools::getValue('PS_SHOP_COUNTRY_ID') . '
+						AND `id_state` = ' . (int) Tools::getValue('PS_SHOP_STATE_ID');
             $isStateOk = Db::getInstance()->getValue($sql);
             if ($isStateOk != 1) {
                 $this->errors[] = Tools::displayError('The specified state is not located in this country.');
@@ -569,8 +528,7 @@ class AdminStoresControllerCore extends AdminController
         }
     }
 
-    public function updateOptionPsShopCountryId($value)
-    {
+    public function updateOptionPsShopCountryId($value) {
         if (!$this->errors && $value) {
             $country = new Country($value, $this->context->language->id);
             if ($country->id) {
@@ -580,8 +538,7 @@ class AdminStoresControllerCore extends AdminController
         }
     }
 
-    public function updateOptionPsShopStateId($value)
-    {
+    public function updateOptionPsShopStateId($value) {
         if (!$this->errors && $value) {
             $state = new State($value);
             if ($state->id) {
@@ -590,4 +547,5 @@ class AdminStoresControllerCore extends AdminController
             }
         }
     }
+
 }

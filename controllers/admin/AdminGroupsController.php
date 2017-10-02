@@ -1,36 +1,11 @@
 <?php
-/*
-* 2007-2015 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Open Software License (OSL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/osl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2015 PrestaShop SA
-*  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*/
 
 /**
  * @property Group $object
  */
-class AdminGroupsControllerCore extends AdminController
-{
-    public function __construct()
-    {
+class AdminGroupsControllerCore extends AdminController {
+
+    public function __construct() {
         $this->bootstrap = true;
         $this->table = 'group';
         $this->className = 'Group';
@@ -92,10 +67,10 @@ class AdminGroupsControllerCore extends AdminController
         parent::__construct();
 
         $this->_select .= '(SELECT COUNT(jcg.`id_customer`)
-		FROM `'._DB_PREFIX_.'customer_group` jcg
-		LEFT JOIN `'._DB_PREFIX_.'customer` jc ON (jc.`id_customer` = jcg.`id_customer`)
+		FROM `' . _DB_PREFIX_ . 'customer_group` jcg
+		LEFT JOIN `' . _DB_PREFIX_ . 'customer` jc ON (jc.`id_customer` = jcg.`id_customer`)
 		WHERE jc.`deleted` != 1
-		'.Shop::addSqlRestriction(Shop::SHARE_CUSTOMER).'
+		' . Shop::addSqlRestriction(Shop::SHARE_CUSTOMER) . '
 		AND jcg.`id_group` = a.`id_group`) AS nb';
         $this->_use_found_rows = false;
 
@@ -103,8 +78,8 @@ class AdminGroupsControllerCore extends AdminController
         if (Shop::isFeatureActive()) {
             $this->fields_options = array(
                 'general' => array(
-                    'title' =>    $this->l('Default groups options'),
-                    'fields' =>    array(
+                    'title' => $this->l('Default groups options'),
+                    'fields' => array(
                         'PS_UNIDENTIFIED_GROUP' => array(
                             'title' => $this->l('Visitors group'),
                             'desc' => $this->l('The group defined for your un-identified visitors.'),
@@ -138,15 +113,13 @@ class AdminGroupsControllerCore extends AdminController
         }
     }
 
-    public function setMedia()
-    {
+    public function setMedia() {
         parent::setMedia();
         $this->addJqueryPlugin('fancybox');
         $this->addJqueryUi('ui.sortable');
     }
 
-    public function initToolbar()
-    {
+    public function initToolbar() {
         if ($this->display == 'add' || $this->display == 'edit') {
             $this->toolbar_btn['save-and-stay'] = array(
                 'short' => 'SaveAndStay',
@@ -158,11 +131,10 @@ class AdminGroupsControllerCore extends AdminController
         parent::initToolbar();
     }
 
-    public function initPageHeaderToolbar()
-    {
+    public function initPageHeaderToolbar() {
         if (empty($this->display)) {
             $this->page_header_toolbar_btn['new_group'] = array(
-                'href' => self::$currentIndex.'&addgroup&token='.$this->token,
+                'href' => self::$currentIndex . '&addgroup&token=' . $this->token,
                 'desc' => $this->l('Add new group', null, null, false),
                 'icon' => 'process-icon-new'
             );
@@ -171,9 +143,8 @@ class AdminGroupsControllerCore extends AdminController
         parent::initPageHeaderToolbar();
     }
 
-    public function initProcess()
-    {
-        $this->id_object = Tools::getValue('id_'.$this->table);
+    public function initProcess() {
+        $this->id_object = Tools::getValue('id_' . $this->table);
 
         if (Tools::isSubmit('changeShowPricesVal') && $this->id_object) {
             $this->action = 'change_show_prices_val';
@@ -182,7 +153,7 @@ class AdminGroupsControllerCore extends AdminController
         if (Tools::getIsset('viewgroup')) {
             $this->list_id = 'customer_group';
 
-            if (isset($_POST['submitReset'.$this->list_id])) {
+            if (isset($_POST['submitReset' . $this->list_id])) {
                 $this->processResetFilters();
             }
         } else {
@@ -192,8 +163,7 @@ class AdminGroupsControllerCore extends AdminController
         parent::initProcess();
     }
 
-    public function renderView()
-    {
+    public function renderView() {
         $this->context = Context::getContext();
         if (!($group = $this->loadObject(true))) {
             return;
@@ -209,13 +179,12 @@ class AdminGroupsControllerCore extends AdminController
         return parent::renderView();
     }
 
-    protected function renderCustomersList($group)
-    {
+    protected function renderCustomersList($group) {
         $genders = array(0 => '?');
         $genders_icon = array('default' => 'unknown.gif');
         foreach (Gender::getGenders() as $gender) {
             /** @var Gender $gender */
-            $genders_icon[$gender->id] = '../genders/'.(int)$gender->id.'.jpg';
+            $genders_icon[$gender->id] = '../genders/' . (int) $gender->id . '.jpg';
             $genders[$gender->id] = $gender->name;
         }
         $this->table = 'customer_group';
@@ -239,23 +208,20 @@ class AdminGroupsControllerCore extends AdminController
             'active' => array('title' => $this->l('Enabled'), 'align' => 'center', 'class' => 'fixed-width-sm', 'type' => 'bool', 'search' => false, 'orderby' => false, 'filter_key' => 'c!active', 'callback' => 'printOptinIcon')
         ));
         $this->_select = 'c.*, a.id_group';
-        $this->_join = 'LEFT JOIN `'._DB_PREFIX_.'customer` c ON (a.`id_customer` = c.`id_customer`)';
-        $this->_where = 'AND a.`id_group` = '.(int)$group->id.' AND c.`deleted` != 1';
+        $this->_join = 'LEFT JOIN `' . _DB_PREFIX_ . 'customer` c ON (a.`id_customer` = c.`id_customer`)';
+        $this->_where = 'AND a.`id_group` = ' . (int) $group->id . ' AND c.`deleted` != 1';
         $this->_where .= Shop::addSqlRestriction(Shop::SHARE_CUSTOMER, 'c');
-        self::$currentIndex = self::$currentIndex.'&id_group='.(int)$group->id.'&viewgroup';
+        self::$currentIndex = self::$currentIndex . '&id_group=' . (int) $group->id . '&viewgroup';
 
         $this->processFilter();
         return parent::renderList();
     }
 
-    public function printOptinIcon($value, $customer)
-    {
+    public function printOptinIcon($value, $customer) {
         return ($value ? '<i class="icon-check"></i>' : '<i class="icon-remove"></i>');
     }
 
-
-    public function renderForm()
-    {
+    public function renderForm() {
         if (!($group = $this->loadObject(true))) {
             return;
         }
@@ -276,7 +242,7 @@ class AdminGroupsControllerCore extends AdminController
                     'required' => true,
                     'lang' => true,
                     'col' => 4,
-                    'hint' => $this->l('Forbidden characters:').' 0-9!&amp;lt;&amp;gt;,;?=+()@#"�{}_$%:'
+                    'hint' => $this->l('Forbidden characters:') . ' 0-9!&amp;lt;&amp;gt;,;?=+()@#"�{}_$%:'
                 ),
                 array(
                     'type' => 'text',
@@ -332,7 +298,7 @@ class AdminGroupsControllerCore extends AdminController
                     'type' => 'group_discount_category',
                     'label' => $this->l('Category discount'),
                     'name' => 'reduction',
-                    'values' => ($group->id ? $this->formatCategoryDiscountList((int)$group->id) : array())
+                    'values' => ($group->id ? $this->formatCategoryDiscountList((int) $group->id) : array())
                 ),
                 array(
                     'type' => 'modules',
@@ -358,14 +324,13 @@ class AdminGroupsControllerCore extends AdminController
         $this->fields_value['reduction'] = isset($group->reduction) ? $group->reduction : 0;
 
         $tree = new HelperTreeCategories('categories-tree');
-        $this->tpl_form_vars['categoryTreeView'] = $tree->setRootCategory((int)Category::getRootCategory()->id)->render();
+        $this->tpl_form_vars['categoryTreeView'] = $tree->setRootCategory((int) Category::getRootCategory()->id)->render();
 
         return parent::renderForm();
     }
 
-    protected function formatCategoryDiscountList($id_group)
-    {
-        $group_reductions = GroupReduction::getGroupReductions((int)$id_group, $this->context->language->id);
+    protected function formatCategoryDiscountList($id_group) {
+        $group_reductions = GroupReduction::getGroupReductions((int) $id_group, $this->context->language->id);
         $category_reductions = array();
         $category_reduction = Tools::getValue('category_reduction');
 
@@ -374,20 +339,20 @@ class AdminGroupsControllerCore extends AdminController
                 $category['reduction'] = $category_reduction[$category['id_category']];
             }
 
-            $category_reductions[(int)$category['id_category']] = array(
-                'path' => getPath(Context::getContext()->link->getAdminLink('AdminCategories'), (int)$category['id_category']),
-                'reduction' => (float)$category['reduction'] * 100,
-                'id_category' => (int)$category['id_category']
+            $category_reductions[(int) $category['id_category']] = array(
+                'path' => getPath(Context::getContext()->link->getAdminLink('AdminCategories'), (int) $category['id_category']),
+                'reduction' => (float) $category['reduction'] * 100,
+                'id_category' => (int) $category['id_category']
             );
         }
 
         if (is_array($category_reduction)) {
             foreach ($category_reduction as $key => $val) {
                 if (!array_key_exists($key, $category_reductions)) {
-                    $category_reductions[(int)$key] = array(
+                    $category_reductions[(int) $key] = array(
                         'path' => getPath(Context::getContext()->link->getAdminLink('AdminCategories'), $key),
-                        'reduction' => (float)$val * 100,
-                        'id_category' => (int)$key
+                        'reduction' => (float) $val * 100,
+                        'id_category' => (int) $key
                     );
                 }
             }
@@ -396,8 +361,7 @@ class AdminGroupsControllerCore extends AdminController
         return $category_reductions;
     }
 
-    public function formatModuleListAuth($id_group)
-    {
+    public function formatModuleListAuth($id_group) {
         $modules = Module::getModulesInstalled();
         $authorized_modules = '';
 
@@ -447,8 +411,7 @@ class AdminGroupsControllerCore extends AdminController
         return array('unauth_modules' => $unauth_modules, 'auth_modules' => $auth_modules);
     }
 
-    public function processSave()
-    {
+    public function processSave() {
         if (!$this->validateDiscount(Tools::getValue('reduction'))) {
             $this->errors[] = Tools::displayError('The discount value is incorrect (must be a percentage).');
         } else {
@@ -459,8 +422,7 @@ class AdminGroupsControllerCore extends AdminController
         }
     }
 
-    protected function validateDiscount($reduction)
-    {
+    protected function validateDiscount($reduction) {
         if (!Validate::isPrice($reduction) || $reduction > 100 || $reduction < 0) {
             return false;
         } else {
@@ -468,8 +430,7 @@ class AdminGroupsControllerCore extends AdminController
         }
     }
 
-    public function ajaxProcessAddCategoryReduction()
-    {
+    public function ajaxProcessAddCategoryReduction() {
         $category_reduction = Tools::getValue('category_reduction');
         $id_category = Tools::getValue('id_category'); //no cast validation is done with Validate::isUnsignedId($id_category)
 
@@ -481,8 +442,8 @@ class AdminGroupsControllerCore extends AdminController
             $result['errors'][] = Tools::displayError('The discount value is incorrect (must be a percentage).');
             $result['hasError'] = true;
         } else {
-            $result['id_category'] = (int)$id_category;
-            $result['catPath'] = getPath(self::$currentIndex.'?tab=AdminCategories', (int)$id_category);
+            $result['id_category'] = (int) $id_category;
+            $result['catPath'] = getPath(self::$currentIndex . '?tab=AdminCategories', (int) $id_category);
             $result['discount'] = $category_reduction;
             $result['hasError'] = false;
         }
@@ -492,13 +453,12 @@ class AdminGroupsControllerCore extends AdminController
     /**
      * Update (or create) restrictions for modules by group
      */
-    protected function updateRestrictions()
-    {
+    protected function updateRestrictions() {
         $id_group = Tools::getValue('id_group');
         $auth_modules = Tools::getValue('modulesBoxAuth');
         $return = true;
         if ($id_group) {
-            Group::truncateModulesRestrictions((int)$id_group);
+            Group::truncateModulesRestrictions((int) $id_group);
         }
         $shops = Shop::getShops(true, null, true);
         if (is_array($auth_modules)) {
@@ -507,16 +467,15 @@ class AdminGroupsControllerCore extends AdminController
         return $return;
     }
 
-    protected function updateCategoryReduction()
-    {
+    protected function updateCategoryReduction() {
         $category_reduction = Tools::getValue('category_reduction');
         Db::getInstance()->execute('
-			DELETE FROM `'._DB_PREFIX_.'group_reduction`
-			WHERE `id_group` = '.(int)Tools::getValue('id_group')
+			DELETE FROM `' . _DB_PREFIX_ . 'group_reduction`
+			WHERE `id_group` = ' . (int) Tools::getValue('id_group')
         );
         Db::getInstance()->execute('
-			DELETE FROM `'._DB_PREFIX_.'product_group_reduction_cache`
-			WHERE `id_group` = '.(int)Tools::getValue('id_group')
+			DELETE FROM `' . _DB_PREFIX_ . 'product_group_reduction_cache`
+			WHERE `id_group` = ' . (int) Tools::getValue('id_group')
         );
         if (is_array($category_reduction) && count($category_reduction)) {
             if (!Configuration::getGlobalValue('PS_GROUP_FEATURE_ACTIVE')) {
@@ -526,12 +485,12 @@ class AdminGroupsControllerCore extends AdminController
                 if (!Validate::isUnsignedId($cat) || !$this->validateDiscount($reduction)) {
                     $this->errors[] = Tools::displayError('The discount value is incorrect.');
                 } else {
-                    $category = new Category((int)$cat);
-                    $category->addGroupsIfNoExist((int)Tools::getValue('id_group'));
+                    $category = new Category((int) $cat);
+                    $category->addGroupsIfNoExist((int) Tools::getValue('id_group'));
                     $group_reduction = new GroupReduction();
-                    $group_reduction->id_group = (int)Tools::getValue('id_group');
-                    $group_reduction->reduction = (float)($reduction / 100);
-                    $group_reduction->id_category = (int)$cat;
+                    $group_reduction->id_group = (int) Tools::getValue('id_group');
+                    $group_reduction->reduction = (float) ($reduction / 100);
+                    $group_reduction->id_category = (int) $cat;
                     if (!$group_reduction->save()) {
                         $this->errors[] = Tools::displayError('You cannot save group reductions.');
                     }
@@ -543,18 +502,17 @@ class AdminGroupsControllerCore extends AdminController
     /**
      * Toggle show prices flag
      */
-    public function processChangeShowPricesVal()
-    {
+    public function processChangeShowPricesVal() {
         $group = new Group($this->id_object);
         if (!Validate::isLoadedObject($group)) {
             $this->errors[] = Tools::displayError('An error occurred while updating this group.');
         }
-        $update = Db::getInstance()->execute('UPDATE `'._DB_PREFIX_.'group` SET show_prices = '.($group->show_prices ? 0 : 1).' WHERE `id_group` = '.(int)$group->id);
+        $update = Db::getInstance()->execute('UPDATE `' . _DB_PREFIX_ . 'group` SET show_prices = ' . ($group->show_prices ? 0 : 1) . ' WHERE `id_group` = ' . (int) $group->id);
         if (!$update) {
             $this->errors[] = Tools::displayError('An error occurred while updating this group.');
         }
         Tools::clearSmartyCache();
-        Tools::redirectAdmin(self::$currentIndex.'&token='.$this->token);
+        Tools::redirectAdmin(self::$currentIndex . '&token=' . $this->token);
     }
 
     /**
@@ -564,34 +522,29 @@ class AdminGroupsControllerCore extends AdminController
      * @param $tr array Row data
      * @return string HTML link and icon
      */
-    public function printShowPricesIcon($id_group, $tr)
-    {
+    public function printShowPricesIcon($id_group, $tr) {
         $group = new Group($tr['id_group']);
         if (!Validate::isLoadedObject($group)) {
             return;
         }
-        return '<a class="list-action-enable'.($group->show_prices ? ' action-enabled' : ' action-disabled').'" href="index.php?tab=AdminGroups&amp;id_group='.(int)$group->id.'&amp;changeShowPricesVal&amp;token='.Tools::getAdminTokenLite('AdminGroups').'">
-				'.($group->show_prices ? '<i class="icon-check"></i>' : '<i class="icon-remove"></i>').
-            '</a>';
+        return '<a class="list-action-enable' . ($group->show_prices ? ' action-enabled' : ' action-disabled') . '" href="index.php?tab=AdminGroups&amp;id_group=' . (int) $group->id . '&amp;changeShowPricesVal&amp;token=' . Tools::getAdminTokenLite('AdminGroups') . '">
+				' . ($group->show_prices ? '<i class="icon-check"></i>' : '<i class="icon-remove"></i>') .
+                '</a>';
     }
 
-    public function renderList()
-    {
+    public function renderList() {
         $unidentified = new Group(Configuration::get('PS_UNIDENTIFIED_GROUP'));
         $guest = new Group(Configuration::get('PS_GUEST_GROUP'));
         $default = new Group(Configuration::get('PS_CUSTOMER_GROUP'));
 
         $unidentified_group_information = sprintf(
-            $this->l('%s - All persons without a customer account or customers that are not logged in.'),
-            '<b>'.$unidentified->name[$this->context->language->id].'</b>'
+                $this->l('%s - All persons without a customer account or customers that are not logged in.'), '<b>' . $unidentified->name[$this->context->language->id] . '</b>'
         );
         $guest_group_information = sprintf(
-            $this->l('%s - All persons who placed an order through Guest Checkout.'),
-            '<b>'.$guest->name[$this->context->language->id].'</b>'
+                $this->l('%s - All persons who placed an order through Guest Checkout.'), '<b>' . $guest->name[$this->context->language->id] . '</b>'
         );
         $default_group_information = sprintf(
-            $this->l('%s - All persons who created an account on this site.'),
-            '<b>'.$default->name[$this->context->language->id].'</b>'
+                $this->l('%s - All persons who created an account on this site.'), '<b>' . $default->name[$this->context->language->id] . '</b>'
         );
 
         $this->displayInformation($this->l('PrestaShop has three default customer groups:'));
@@ -601,17 +554,16 @@ class AdminGroupsControllerCore extends AdminController
         return parent::renderList();
     }
 
-    public function displayEditLink($token = null, $id, $name = null)
-    {
+    public function displayEditLink($token = null, $id, $name = null) {
         $tpl = $this->createTemplate('helpers/list/list_action_edit.tpl');
         if (!array_key_exists('Edit', self::$cache_lang)) {
             self::$cache_lang['Edit'] = $this->l('Edit', 'Helper');
         }
 
-        $href = self::$currentIndex.'&'.$this->identifier.'='.$id.'&update'.$this->table.'&token='.($token != null ? $token : $this->token);
+        $href = self::$currentIndex . '&' . $this->identifier . '=' . $id . '&update' . $this->table . '&token=' . ($token != null ? $token : $this->token);
 
         if ($this->display == 'view') {
-            $href = Context::getContext()->link->getAdminLink('AdminCustomers').'&id_customer='.(int)$id.'&updatecustomer&back='.urlencode($href);
+            $href = Context::getContext()->link->getAdminLink('AdminCustomers') . '&id_customer=' . (int) $id . '&updatecustomer&back=' . urlencode($href);
         }
 
         $tpl->assign(array(
@@ -622,4 +574,5 @@ class AdminGroupsControllerCore extends AdminController
 
         return $tpl->fetch();
     }
+
 }

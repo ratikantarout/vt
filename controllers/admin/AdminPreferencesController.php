@@ -1,36 +1,11 @@
 <?php
-/*
-* 2007-2015 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Open Software License (OSL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/osl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2015 PrestaShop SA
-*  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*/
 
 /**
  * @property Configuration $object
  */
-class AdminPreferencesControllerCore extends AdminController
-{
-    public function __construct()
-    {
+class AdminPreferencesControllerCore extends AdminController {
+
+    public function __construct() {
         $this->bootstrap = true;
         $this->context = Context::getContext();
         $this->className = 'Configuration';
@@ -158,16 +133,16 @@ class AdminPreferencesControllerCore extends AdminController
                         array(
                             'name' => $this->l('Round on each item'),
                             'id' => Order::ROUND_ITEM
-                            ),
+                        ),
                         array(
                             'name' => $this->l('Round on each line'),
                             'id' => Order::ROUND_LINE
-                            ),
+                        ),
                         array(
                             'name' => $this->l('Round on the total'),
                             'id' => Order::ROUND_TOTAL
-                            ),
                         ),
+                    ),
                     'identifier' => 'id'
                 ),
                 'PS_PRICE_DISPLAY_PRECISION' => array(
@@ -213,15 +188,15 @@ class AdminPreferencesControllerCore extends AdminController
             // No HTTPS activation if you haven't already.
             if (!Tools::usingSecureMode() && !Configuration::get('PS_SSL_ENABLED')) {
                 $fields['PS_SSL_ENABLED']['type'] = 'disabled';
-                $fields['PS_SSL_ENABLED']['disabled'] = '<a class="btn btn-link" href="https://'.Tools::getShopDomainSsl().Tools::safeOutput($_SERVER['REQUEST_URI']).'">'.
-                    $this->l('Please click here to check if your shop supports HTTPS.').'</a>';
+                $fields['PS_SSL_ENABLED']['disabled'] = '<a class="btn btn-link" href="https://' . Tools::getShopDomainSsl() . Tools::safeOutput($_SERVER['REQUEST_URI']) . '">' .
+                        $this->l('Please click here to check if your shop supports HTTPS.') . '</a>';
             }
 
             $this->fields_options = array(
                 'general' => array(
-                    'title' =>    $this->l('General'),
-                    'icon' =>    'icon-cogs',
-                    'fields' =>    $fields,
+                    'title' => $this->l('General'),
+                    'icon' => 'icon-cogs',
+                    'fields' => $fields,
                     'submit' => array('title' => $this->l('Save')),
                 ),
             );
@@ -235,12 +210,12 @@ class AdminPreferencesControllerCore extends AdminController
      *
      * @param string $value
      */
-    public function updateOptionPsMultishopFeatureActive($value)
-    {
+    public function updateOptionPsMultishopFeatureActive($value) {
         Configuration::updateValue('PS_MULTISHOP_FEATURE_ACTIVE', $value);
 
         $tab = Tab::getInstanceFromClassName('AdminShopGroup');
-        $tab->active = (bool)Configuration::get('PS_MULTISHOP_FEATURE_ACTIVE');
+        $tab->active = (bool) Configuration::get('PS_MULTISHOP_FEATURE_ACTIVE');
         $tab->update();
     }
+
 }

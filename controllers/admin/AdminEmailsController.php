@@ -1,36 +1,11 @@
 <?php
-/*
-* 2007-2015 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Open Software License (OSL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/osl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2015 PrestaShop SA
-*  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*/
 
 /**
  * @property Mail $object
  */
-class AdminEmailsControllerCore extends AdminController
-{
-    public function __construct()
-    {
+class AdminEmailsControllerCore extends AdminController {
+
+    public function __construct() {
         $this->bootstrap = true;
 
         if (Configuration::get('PS_LOG_EMAILS')) {
@@ -75,7 +50,7 @@ class AdminEmailsControllerCore extends AdminController
                 )
             );
             $this->_select .= 'l.name as language';
-            $this->_join .= ' LEFT JOIN '._DB_PREFIX_.'lang l ON (a.id_lang = l.id_lang)';
+            $this->_join .= ' LEFT JOIN ' . _DB_PREFIX_ . 'lang l ON (a.id_lang = l.id_lang)';
             $this->_use_found_rows = false;
         }
 
@@ -89,7 +64,7 @@ class AdminEmailsControllerCore extends AdminController
             'email' => array(
                 'title' => $this->l('Email'),
                 'icon' => 'icon-envelope',
-                'fields' =>    array(
+                'fields' => array(
                     'PS_MAIL_EMAIL_MESSAGE' => array(
                         'title' => $this->l('Send email to'),
                         'desc' => $this->l('Where customers send messages from the order page.'),
@@ -131,7 +106,7 @@ class AdminEmailsControllerCore extends AdminController
             ),
             'smtp' => array(
                 'title' => $this->l('Email'),
-                'fields' =>    array(
+                'fields' => array(
                     'PS_MAIL_DOMAIN' => array(
                         'title' => $this->l('Mail domain name'),
                         'hint' => $this->l('Fully qualified domain name (keep this field empty if you don\'t know).'),
@@ -161,7 +136,7 @@ class AdminEmailsControllerCore extends AdminController
                     'PS_MAIL_SMTP_ENCRYPTION' => array(
                         'title' => $this->l('Encryption'),
                         'hint' => $this->l('Use an encrypt protocol'),
-                        'desc' => extension_loaded('openssl') ? '' : '/!\\ '.$this->l('SSL does not seem to be available on your server.'),
+                        'desc' => extension_loaded('openssl') ? '' : '/!\\ ' . $this->l('SSL does not seem to be available on your server.'),
                         'type' => 'select',
                         'cast' => 'strval',
                         'identifier' => 'mode',
@@ -192,9 +167,9 @@ class AdminEmailsControllerCore extends AdminController
                 'submit' => array('title' => $this->l('Save'))
             ),
             'test' => array(
-                'title' =>    $this->l('Test your email configuration'),
+                'title' => $this->l('Test your email configuration'),
                 'hide_multishop_checkbox' => true,
-                'fields' =>    array(
+                'fields' => array(
                     'PS_SHOP_EMAIL' => array(
                         'title' => $this->l('Send a test email to'),
                         'type' => 'text',
@@ -217,18 +192,16 @@ class AdminEmailsControllerCore extends AdminController
         );
 
         if (!defined('_PS_HOST_MODE_')) {
-            $this->fields_options['email']['fields']['PS_MAIL_METHOD']['choices'][1] =
-                $this->l('Use PHP\'s mail() function (recommended; works in most cases)');
+            $this->fields_options['email']['fields']['PS_MAIL_METHOD']['choices'][1] = $this->l('Use PHP\'s mail() function (recommended; works in most cases)');
         }
 
         ksort($this->fields_options['email']['fields']['PS_MAIL_METHOD']['choices']);
     }
 
-    public function setMedia()
-    {
+    public function setMedia() {
         parent::setMedia();
 
-        $this->addJs(_PS_JS_DIR_.'/admin/email.js');
+        $this->addJs(_PS_JS_DIR_ . '/admin/email.js');
 
         Media::addJsDefL('textMsg', $this->l('This is a test message. Your server is now configured to send email.', null, true, false));
         Media::addJsDefL('textSubject', $this->l('Test message -- Prestashop', null, true, false));
@@ -238,10 +211,9 @@ class AdminEmailsControllerCore extends AdminController
         Media::addJsDefL('errorMail', $this->l('This email address is not valid', null, true, false));
     }
 
-    public function processDelete()
-    {
-        if ((int)$id_mail = Tools::getValue('id_mail', 0)) {
-            $return = Mail::eraseLog((int)$id_mail);
+    public function processDelete() {
+        if ((int) $id_mail = Tools::getValue('id_mail', 0)) {
+            $return = Mail::eraseLog((int) $id_mail);
         } else {
             $return = Mail::eraseAllLogs();
         }
@@ -249,19 +221,17 @@ class AdminEmailsControllerCore extends AdminController
         return $return;
     }
 
-    public function initToolbar()
-    {
+    public function initToolbar() {
         parent::initToolbar();
         $this->toolbar_btn['delete'] = array(
             'short' => 'Erase',
             'desc' => $this->l('Erase all'),
-            'js' => 'if (confirm(\''.$this->l('Are you sure?').'\')) document.location = \''.Tools::safeOutput($this->context->link->getAdminLink('AdminEmails')).'&amp;token='.$this->token.'&amp;deletemail=1\';'
+            'js' => 'if (confirm(\'' . $this->l('Are you sure?') . '\')) document.location = \'' . Tools::safeOutput($this->context->link->getAdminLink('AdminEmails')) . '&amp;token=' . $this->token . '&amp;deletemail=1\';'
         );
         unset($this->toolbar_btn['new']);
     }
 
-    public function updateOptionPsMailPasswd($value)
-    {
+    public function updateOptionPsMailPasswd($value) {
         if (Tools::getValue('PS_MAIL_PASSWD') == '' && Configuration::get('PS_MAIL_PASSWD')) {
             return true;
         } else {
@@ -273,8 +243,7 @@ class AdminEmailsControllerCore extends AdminController
      * AdminController::initContent() override
      * @see AdminController::initContent()
      */
-    public function initContent()
-    {
+    public function initContent() {
         $this->initTabModuleList();
         $this->initToolbar();
         $this->initPageHeaderToolbar();
@@ -291,7 +260,7 @@ class AdminEmailsControllerCore extends AdminController
 
         $this->context->smarty->assign(array(
             'content' => $this->content,
-            'url_post' => self::$currentIndex.'&token='.$this->token,
+            'url_post' => self::$currentIndex . '&token=' . $this->token,
             'show_page_header_toolbar' => $this->show_page_header_toolbar,
             'page_header_toolbar_title' => $this->page_header_toolbar_title,
             'page_header_toolbar_btn' => $this->page_header_toolbar_btn
@@ -300,28 +269,25 @@ class AdminEmailsControllerCore extends AdminController
         return parent::initContent();
     }
 
-    public function beforeUpdateOptions()
-    {
+    public function beforeUpdateOptions() {
         /* PrestaShop demo mode */
         if (_PS_MODE_DEMO_) {
             $this->errors[] = Tools::displayError('This functionality has been disabled.');
             return;
         }
-        /* PrestaShop demo mode*/
+        /* PrestaShop demo mode */
 
         // We don't want to update the shop e-mail when sending test e-mails
         if (isset($_POST['PS_SHOP_EMAIL'])) {
             $_POST['PS_SHOP_EMAIL'] = Configuration::get('PS_SHOP_EMAIL');
         }
 
-        if (isset($_POST['PS_MAIL_METHOD']) && $_POST['PS_MAIL_METHOD'] == 2
-            && (empty($_POST['PS_MAIL_SERVER']) || empty($_POST['PS_MAIL_SMTP_PORT']))) {
+        if (isset($_POST['PS_MAIL_METHOD']) && $_POST['PS_MAIL_METHOD'] == 2 && (empty($_POST['PS_MAIL_SERVER']) || empty($_POST['PS_MAIL_SMTP_PORT']))) {
             $this->errors[] = Tools::displayError('You must define an SMTP server and an SMTP port. If you do not know it, use the PHP mail() function instead.');
         }
     }
 
-    public function ajaxProcessSendMailTest()
-    {
+    public function ajaxProcessSendMailTest() {
         /* PrestaShop demo mode */
         if (_PS_MODE_DEMO_) {
             die(Tools::displayError('This functionality has been disabled.'));
@@ -340,9 +306,7 @@ class AdminEmailsControllerCore extends AdminController
             $smtpPassword = Tools::getValue('smtpPassword');
             $smtpPassword = (!empty($smtpPassword)) ? urldecode($smtpPassword) : Configuration::get('PS_MAIL_PASSWD');
             $smtpPassword = str_replace(
-                array('&lt;', '&gt;', '&quot;', '&amp;'),
-                array('<', '>', '"', '&'),
-                Tools::htmlentitiesUTF8($smtpPassword)
+                    array('&lt;', '&gt;', '&quot;', '&amp;'), array('<', '>', '"', '&'), Tools::htmlentitiesUTF8($smtpPassword)
             );
 
             $smtpPort = Tools::getValue('smtpPort');
@@ -352,4 +316,5 @@ class AdminEmailsControllerCore extends AdminController
             die($result === true ? 'ok' : $result);
         }
     }
+
 }
